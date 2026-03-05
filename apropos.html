@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KalMydas — A propos</title>
+  <meta name="description" content="KalMydas rend le trading algorithmique professionnel accessible a tous. Decouvrez notre mission, notre technologie et notre vision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg-card: #12121a;
+      --bg-card-hover: #1a1a28;
+      --border: #1e1e2e;
+      --border-gold: #c9a84c33;
+      --gold: #c9a84c;
+      --gold-light: #e8d48b;
+      --gold-dark: #9a7a2e;
+      --text: #e8e8ed;
+      --text-dim: #8888a0;
+      --text-muted: #55556a;
+      --green: #22c55e;
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --red: #ef4444;
+      --gradient-gold: linear-gradient(135deg, #c9a84c, #e8d48b, #c9a84c);
+      --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #10101a 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    nav.scrolled { padding: 0.6rem 2rem; background: rgba(10, 10, 15, 0.95); }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      padding: 0.5rem 1.5rem;
+      background: var(--gradient-gold);
+      color: #0a0a0f !important;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      transition: transform 0.3s, box-shadow 0.3s !important;
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 400px;
+      background: radial-gradient(ellipse, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+    }
+
+    .page-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .page-header h1 span {
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-header .subtitle {
+      color: var(--text-dim);
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* ===== CONTENT ===== */
+    .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+
+    .content-section {
+      margin-bottom: 4rem;
+    }
+
+    .content-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .content-section p {
+      color: var(--text-dim);
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .content-section strong { color: var(--text); font-weight: 600; }
+
+    /* Tech terms */
+    .term { color: var(--gold-light); cursor: help; border-bottom: 1px dotted var(--gold-dark); }
+
+    /* Key numbers */
+    .key-numbers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .key-number {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .key-number:hover { border-color: var(--border-gold); }
+
+    .key-number .value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .key-number .label {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Strategy list */
+    .strategy-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .strategy-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+    }
+
+    .strategy-item .icon { font-size: 1.5rem; }
+    .strategy-item .name { font-weight: 600; color: var(--text); }
+    .strategy-item .desc { color: var(--text-dim); font-size: 0.9rem; margin-left: auto; }
+
+    /* Tokenomics breakdown */
+    .tokenomics-bar {
+      display: flex;
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .tokenomics-bar .segment { transition: width 0.5s; }
+    .tokenomics-bar .seg-curve { background: var(--gold); flex: 74.5; }
+    .tokenomics-bar .seg-rewards { background: var(--blue); flex: 20; }
+    .tokenomics-bar .seg-presale { background: var(--green); flex: 5; }
+    .tokenomics-bar .seg-airdrop { background: var(--orange); flex: 0.5; }
+
+    .tokenomics-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tokenomics-legend .item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .tokenomics-legend .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Warning box */
+    .warning-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .warning-box h3 {
+      color: var(--red);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .warning-box p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .warning-box ul {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .warning-box li { margin-bottom: 0.3rem; }
+
+    /* Glossary */
+    .glossary {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 3rem 0;
+    }
+
+    .glossary h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .glossary dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem 1.5rem;
+    }
+
+    .glossary dt {
+      color: var(--gold-light);
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .glossary dd {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    /* CTA */
+    .cta-box {
+      text-align: center;
+      padding: 4rem 2rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    .cta-box h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cta-box p {
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.8rem 2.5rem;
+      background: var(--gradient-gold);
+      color: #0a0a0f;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem; font-weight: 700;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+
+    /* Fade-in animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(10, 10, 15, 0.98);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border);
+        gap: 1rem;
+      }
+      .key-numbers { grid-template-columns: repeat(2, 1fr); }
+      .glossary dl { grid-template-columns: 1fr; }
+      .glossary dt { margin-bottom: -0.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .key-numbers { grid-template-columns: 1fr; }
+      .strategy-item { flex-direction: column; text-align: center; }
+      .strategy-item .desc { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="/" class="nav-logo">KalMydas</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#how">Comment ca marche</a></li>
+      <li><a href="/#strategies">Strategies</a></li>
+      <li><a href="/#token">Token KAL</a></li>
+      <li><a href="/apropos.html" class="active">A propos</a></li>
+      <li><a href="https://app.kalmydas.com" class="nav-cta">Lancer l'app &rarr;</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HEADER ===== -->
+  <header class="page-header">
+    <h1 class="fade-in">L'or, <span>algorithmiquement.</span></h1>
+    <p class="subtitle fade-in">Notre mission : rendre le trading algorithmique professionnel accessible, transparent et juste.</p>
+  </header>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="container">
+
+    <!-- ORIGINE -->
+    <section class="content-section fade-in">
+      <h2>Pourquoi KalMydas existe</h2>
+      <p>
+        KalMydas est ne d'une frustration simple : pourquoi le <strong>trading algorithmique professionnel</strong>,
+        qui genere des rendements stables depuis des decennies, reste-t-il reserve aux banques et aux
+        <span class="term">fonds institutionnels*</span> ?
+      </p>
+      <p>
+        Nous avons cree KalMydas pour changer ca. Notre plateforme, construite sur
+        <span class="term">Base L2*</span> (la solution de mise a l'echelle d'Ethereum par Coinbase),
+        donne a tout le monde &mdash; des <strong>10 $</strong> &mdash; acces aux memes strategies algorithmiques
+        que les institutions.
+      </p>
+    </section>
+
+    <!-- STRATEGIES -->
+    <section class="content-section fade-in">
+      <h2>5 robots, 20 ans de recherche</h2>
+      <p>
+        Nos 5 robots de trading sont developpes et optimises sur <span class="term">MetaTrader 4*</span>
+        depuis plus de 20 ans. Ils ont ete rigoureusement <span class="term">backtestes*</span>,
+        <span class="term">forward-testes*</span> et <span class="term">stress-testes*</span>
+        sur les crises de 2008 et 2020. Chaque strategie opere exclusivement sur le marche de l'or
+        (<span class="term">XAUUSD*</span>), un actif liquide et refuge reconnu mondialement.
+      </p>
+
+      <div class="strategy-list">
+        <div class="strategy-item">
+          <span class="icon">&#127749;</span>
+          <span class="name">HORIZON</span>
+          <span class="desc">Suivi de tendance &mdash; prudent</span>
+        </div>
+        <div class="strategy-item">
+          <span class="icon">&#9876;&#65039;</span>
+          <span class="name">VALKYRIE</span>
+          <span class="desc">Cassure de niveaux &mdash; equilibre</span>
+        </div>
+        <div class="strategy-item">
+          <span class="icon">&#128293;</span>
+          <span class="name">REVOLUTION</span>
+          <span class="desc">Triple filtre &mdash; dynamique</span>
+        </div>
+        <div class="strategy-item">
+          <span class="icon">&#127974;</span>
+          <span class="name">TREASURY</span>
+          <span class="desc">Suivi adaptatif &mdash; dynamique</span>
+        </div>
+        <div class="strategy-item">
+          <span class="icon">&#11088;</span>
+          <span class="name">ORION</span>
+          <span class="desc">Mission x10 &mdash; offensif</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIE -->
+    <section class="content-section fade-in">
+      <h2>Architecture technique</h2>
+      <p>L'infrastructure est conçue pour la transparence et la securite :</p>
+
+      <div class="key-numbers">
+        <div class="key-number">
+          <div class="value">15</div>
+          <div class="label"><span class="term">Contrats intelligents*</span> Solidity</div>
+        </div>
+        <div class="key-number">
+          <div class="value">171</div>
+          <div class="label">Tests unitaires (couverture 100%)</div>
+        </div>
+        <div class="key-number">
+          <div class="value">100%</div>
+          <div class="label">Fonds controles par les utilisateurs</div>
+        </div>
+        <div class="key-number">
+          <div class="value">24/7</div>
+          <div class="label">Retraits libres, sans delai</div>
+        </div>
+      </div>
+
+      <p>
+        Un pont securise relie les robots <span class="term">MT4*</span> a la <span class="term">blockchain*</span>.
+        Aucune cle privee n'est centralisee &mdash; vos fonds restent sous votre controle.
+        Tout est verifiable en temps reel sur <span class="term">BaseScan*</span>.
+      </p>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section class="content-section fade-in">
+      <h2>Le jeton KAL</h2>
+      <p>
+        Le jeton KAL (<span class="term">ERC-20*</span>, quantite maximale de 10 millions) fonctionne
+        avec une <span class="term">courbe de valorisation*</span> transparente : le prix monte
+        mecaniquement avec l'adoption.
+      </p>
+
+      <div class="tokenomics-bar">
+        <div class="segment seg-curve"></div>
+        <div class="segment seg-rewards"></div>
+        <div class="segment seg-presale"></div>
+        <div class="segment seg-airdrop"></div>
+      </div>
+
+      <div class="tokenomics-legend">
+        <div class="item"><span class="dot" style="background:var(--gold)"></span> 74,5% Courbe de valorisation</div>
+        <div class="item"><span class="dot" style="background:var(--blue)"></span> 20% Recompenses fournisseurs de liquidite</div>
+        <div class="item"><span class="dot" style="background:var(--green)"></span> 5% Pre-vente (0,10 $/KAL)</div>
+        <div class="item"><span class="dot" style="background:var(--orange)"></span> 0,5% Distribution communaute</div>
+      </div>
+
+      <p>
+        <strong>30 %</strong> des frais de performance sont automatiquement utilises pour du
+        <span class="term">rachat et destruction*</span>, creant une pression acheteuse permanente.
+        Les fournisseurs de liquidite recoivent des recompenses avec un modele
+        <span class="term">deflationniste*</span> (reduction progressive).
+      </p>
+    </section>
+
+    <!-- PARTICIPATION -->
+    <section class="content-section fade-in">
+      <h2>Comment participer</h2>
+      <p>
+        Pour acceder aux strategies, un seul <strong>Passe d'acces</strong> suffit &mdash; un abonnement
+        verifiable directement sur la <span class="term">blockchain*</span> (1 $/jour).
+        Une fois actif, vous choisissez votre strategie, deposez vos fonds, et pouvez les retirer
+        <strong>24h/24 et 7j/7</strong> sans aucun delai de blocage.
+      </p>
+      <p>
+        Nous gagnons uniquement quand vous gagnez : les frais de performance s'appliquent
+        <strong>uniquement sur les nouveaux gains</strong>, avec un mecanisme de
+        <span class="term">seuil de performance*</span> qui empeche de facturer deux fois
+        les memes gains.
+      </p>
+    </section>
+
+    <!-- RISQUES -->
+    <div class="warning-box fade-in">
+      <h3>&#9888;&#65039; Avertissement sur les risques</h3>
+      <p>Nous ne promettons rien de magique. Le trading comporte des risques :</p>
+      <ul>
+        <li>Pertes temporaires pouvant aller jusqu'a <strong>70 %</strong> sur certaines strategies</li>
+        <li>Les performances passees ne garantissent pas les resultats futurs</li>
+        <li>Risques techniques : infrastructure, oracles, reseau</li>
+        <li>Risques de marche : volatilite, liquidite, evenements imprevus</li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Nous les assumons pleinement et nous publions tout : code source, historiques de tests,
+        audits (prevu T2 2026). Consultez notre <a href="https://app.kalmydas.com/legal" style="color: var(--gold);">page de risques detailles</a>.
+      </p>
+    </div>
+
+    <!-- CALENDRIER -->
+    <section class="content-section fade-in">
+      <h2>Ou en sommes-nous</h2>
+      <p>
+        Nous sommes en <strong>phase finale de tests</strong> sur <span class="term">Base Sepolia*</span>
+        (reseau de test). Le lancement officiel sur le reseau principal est prevu pour le
+        <strong>3e trimestre 2026</strong>.
+      </p>
+      <p>
+        Si vous cherchez une vraie innovation &mdash; pas une promesse vide, mais un outil concret
+        pour faire travailler votre capital sur l'or avec des robots professionnels &mdash;
+        vous etes au bon endroit.
+      </p>
+    </section>
+
+    <!-- GLOSSAIRE -->
+    <div class="glossary fade-in">
+      <h2>Glossaire des termes techniques *</h2>
+      <dl>
+        <dt>Fonds institutionnels</dt>
+        <dd>Structures financieres gerant des capitaux importants (banques, fonds de pension, fonds speculatifs). Disposent d'outils de trading avances auxquels les particuliers n'ont traditionnellement pas acces.</dd>
+
+        <dt>Base L2</dt>
+        <dd>Reseau de deuxieme couche construit au-dessus d'Ethereum par Coinbase. Permet des transactions rapides et peu couteuses tout en beneficiant de la securite d'Ethereum.</dd>
+
+        <dt>MetaTrader 4 (MT4)</dt>
+        <dd>Logiciel professionnel de trading utilise par les institutions financieres depuis 2005. Permet de creer, tester et executer des strategies automatisees.</dd>
+
+        <dt>Backtest</dt>
+        <dd>Simulation d'une strategie de trading sur des donnees historiques reelles pour en evaluer les performances passees. Nos strategies ont ete backtestees sur plus de 20 ans de donnees.</dd>
+
+        <dt>Forward-test</dt>
+        <dd>Test d'une strategie en conditions reelles de marche, sans risquer de capital reel. Valide que les resultats du backtest se confirment dans un environnement dynamique.</dd>
+
+        <dt>Stress-test</dt>
+        <dd>Evaluation du comportement d'une strategie lors de periodes de forte volatilite (crises de 2008, 2020). Mesure la resilience et les pertes maximales possibles.</dd>
+
+        <dt>XAUUSD</dt>
+        <dd>Code boursier international representant le prix de l'or (XAU) en dollars americains (USD). L'un des marches les plus liquides au monde.</dd>
+
+        <dt>Contrat intelligent (Smart contract)</dt>
+        <dd>Programme informatique autonome deploye sur la blockchain. Il s'execute automatiquement selon des regles predefinies, sans intermediaire. Le code est public et verifiable par tous.</dd>
+
+        <dt>Blockchain</dt>
+        <dd>Registre numerique distribue et infalsifiable. Chaque transaction est enregistree publiquement et ne peut etre modifiee retroactivement.</dd>
+
+        <dt>BaseScan</dt>
+        <dd>Explorateur qui permet de consulter toutes les transactions et contrats deployes sur le reseau Base. Assure une transparence totale des operations.</dd>
+
+        <dt>ERC-20</dt>
+        <dd>Norme technique standard pour les jetons sur Ethereum et ses reseaux compatibles (comme Base). Garantit l'interoperabilite avec tous les portefeuilles et plateformes.</dd>
+
+        <dt>Courbe de valorisation (Bonding curve)</dt>
+        <dd>Mecanisme mathematique transparent qui determine automatiquement le prix du jeton KAL en fonction de la quantite en circulation. Plus il y a de demande, plus le prix augmente de facon previsible.</dd>
+
+        <dt>Rachat et destruction (Buyback &amp; burn)</dt>
+        <dd>Mecanisme automatique ou une partie des frais est utilisee pour acheter des jetons KAL sur le marche, puis les detruire definitivement. Cela reduit la quantite totale en circulation.</dd>
+
+        <dt>Deflationniste</dt>
+        <dd>Se dit d'un modele ou la quantite de jetons emis diminue progressivement dans le temps (similaire au principe de reduction de recompense du Bitcoin).</dd>
+
+        <dt>Seuil de performance (High-water mark)</dt>
+        <dd>Mecanisme de protection : les frais de performance ne sont factures que sur les nouveaux gains depassant le point le plus haut precedent. Empeche de payer deux fois pour les memes gains.</dd>
+
+        <dt>Base Sepolia</dt>
+        <dd>Version de test du reseau Base. Permet de tester les contrats et l'application sans utiliser de fonds reels avant le lancement officiel.</dd>
+      </dl>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box fade-in">
+      <h2>Bienvenue dans le futur du trading algorithmique.</h2>
+      <p>Democratiser la performance.</p>
+      <a href="https://app.kalmydas.com" class="btn-primary">Lancer l'application &rarr;</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">KalMydas</div>
+    <div class="footer-links">
+      <a href="https://app.kalmydas.com">Application</a>
+      <a href="https://app.kalmydas.com/whitepaper">Livre blanc</a>
+      <a href="/apropos.html">A propos</a>
+      <a href="https://x.com/KalMydas" target="_blank">Twitter</a>
+      <a href="https://t.me/kalmydas" target="_blank">Telegram</a>
+      <a href="mailto:kal@kalmydas.ch">Contact</a>
+    </div>
+    <p class="footer-copy">
+      &copy; 2026 KalMydas. Trading algorithmique decentralise sur l'or.
+      <br />
+      <span style="font-size: 0.75rem;">Les performances passees ne garantissent pas les resultats futurs. Participer comporte des risques.</span>
+    </p>
+  </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
