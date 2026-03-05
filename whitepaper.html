@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KAL Platform — Livre blanc</title>
+  <link rel="stylesheet" href="glossary-tooltip.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -397,6 +398,7 @@
     </p>
   </div>
 
+<script src="glossary-tooltip.js"></script>
 <script>
 const data = {
   fr: {
@@ -621,6 +623,108 @@ function switchLang(lang) {
   render();
 }
 
+// Auto-wrap glossary terms in generated HTML
+var GLOSSARY_TERMS_MAP = {
+  fr: [
+    ['DeFi', 'defi'],
+    ['ERC-20', 'erc20'],
+    ['Base L2', 'base_l2'],
+    ['smart contracts', 'smart_contract'],
+    ['smart contract', 'smart_contract'],
+    ['contrats intelligents', 'smart_contract'],
+    ['NFT', 'nft'],
+    ['bonding curve', 'bonding_curve'],
+    ['courbe de valorisation', 'bonding_curve'],
+    ['rachat et destruction', 'buyback_burn'],
+    ['rachat et détruire', 'buyback_burn'],
+    ['buyback', 'buyback_burn'],
+    ['backtest', 'backtest'],
+    ['backtests', 'backtest'],
+    ['backtestés', 'backtest'],
+    ['backtestée', 'backtest'],
+    ['forward tests', 'forward_test'],
+    ['forward-testés', 'forward_test'],
+    ['stress tests', 'stress_test'],
+    ['stress-testés', 'stress_test'],
+    ['XAUUSD', 'xauusd'],
+    ['MetaTrader 4', 'mt4'],
+    ['BaseScan', 'basescan'],
+    ['blockchain', 'blockchain'],
+    ['high-water mark', 'hwm'],
+    ['High-Water Mark', 'hwm'],
+    ['HWM', 'hwm'],
+    ['drawdown', 'drawdown'],
+    ['profit factor', 'profit_factor'],
+    ['mainnet', 'mainnet'],
+    ['testnet', 'testnet'],
+    ['Solidity', 'solidity'],
+    ['Pool Manager', 'smart_contract'],
+    ['BuybackBurner', 'buyback_burn'],
+    ['KalSwap', 'dex'],
+    ['LiquidityRewards', 'lp'],
+    ['DEX', 'dex'],
+    ['DAO', 'dao'],
+    ['non-custodial', 'non_custodial'],
+    ['Sepolia', 'testnet'],
+    ['frais de performance', 'perf_fee'],
+    ['performance fees', 'perf_fee'],
+    ['déflationniste', 'deflationniste'],
+  ],
+  en: [
+    ['DeFi', 'defi'],
+    ['ERC-20', 'erc20'],
+    ['Base L2', 'base_l2'],
+    ['smart contracts', 'smart_contract'],
+    ['smart contract', 'smart_contract'],
+    ['NFT', 'nft'],
+    ['bonding curve', 'bonding_curve'],
+    ['Bonding Curve', 'bonding_curve'],
+    ['buyback & burn', 'buyback_burn'],
+    ['buyback and burn', 'buyback_burn'],
+    ['buyback and destroy', 'buyback_burn'],
+    ['backtests', 'backtest'],
+    ['backtested', 'backtest'],
+    ['forward tests', 'forward_test'],
+    ['stress tests', 'stress_test'],
+    ['XAUUSD', 'xauusd'],
+    ['MetaTrader 4', 'mt4'],
+    ['BaseScan', 'basescan'],
+    ['blockchain', 'blockchain'],
+    ['high-water mark', 'hwm'],
+    ['High-Water Mark', 'hwm'],
+    ['HWM', 'hwm'],
+    ['drawdown', 'drawdown'],
+    ['profit factor', 'profit_factor'],
+    ['mainnet', 'mainnet'],
+    ['testnet', 'testnet'],
+    ['Solidity', 'solidity'],
+    ['DEX', 'dex'],
+    ['DAO', 'dao'],
+    ['non-custodial', 'non_custodial'],
+    ['Sepolia', 'testnet'],
+    ['performance fees', 'perf_fee'],
+    ['deflationary', 'deflationniste'],
+  ]
+};
+
+function wrapGlossaryInHtml(html, lang) {
+  var terms = GLOSSARY_TERMS_MAP[lang] || GLOSSARY_TERMS_MAP.fr;
+  // Sort by length descending to match longer terms first
+  var sorted = terms.slice().sort(function(a, b) { return b[0].length - a[0].length; });
+  sorted.forEach(function(pair) {
+    var term = pair[0];
+    var key = pair[1];
+    // Only replace first occurrence per section to avoid over-wrapping
+    var escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    var regex = new RegExp('(?<!data-g=")(?<!class="g-term" )\\b(' + escaped + ')\\b(?![^<]*>)', 'i');
+    var match = html.match(regex);
+    if (match) {
+      html = html.replace(regex, '<span class="g-term" data-g="' + key + '">' + match[1] + '</span>');
+    }
+  });
+  return html;
+}
+
 function render() {
   const d = data[currentLang];
 
@@ -647,25 +751,32 @@ function render() {
   d.sections.forEach(s => {
     html += '<section class="section" id="' + s.id + '">';
     html += '<h2>' + s.title + '</h2>';
-    s.paragraphs.forEach(p => { html += '<p>' + p + '</p>'; });
+
+    // Wrap glossary terms in each paragraph
+    s.paragraphs.forEach(p => {
+      html += '<p>' + wrapGlossaryInHtml(p, currentLang) + '</p>';
+    });
 
     if (s.strategies) {
       html += '<div class="strategy-grid">';
       s.strategies.forEach(st => {
-        html += '<div class="strategy-card"><h3>' + st.name + '</h3><p>' + st.text + '</p></div>';
+        html += '<div class="strategy-card"><h3>' + st.name + '</h3><p>' + wrapGlossaryInHtml(st.text, currentLang) + '</p></div>';
       });
       html += '</div>';
     }
 
     if (s.roadmap) {
       s.roadmap.forEach(r => {
-        html += '<div class="roadmap-item"><h3>' + r.quarter + '</h3><p>' + r.text + '</p></div>';
+        html += '<div class="roadmap-item"><h3>' + r.quarter + '</h3><p>' + wrapGlossaryInHtml(r.text, currentLang) + '</p></div>';
       });
     }
 
     html += '</section>';
   });
   document.getElementById('main-content').innerHTML = html;
+
+  // Re-init glossary tooltips for dynamically generated content
+  if (window.glossaryTooltipInit) window.glossaryTooltipInit();
 }
 
 render();

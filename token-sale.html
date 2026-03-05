@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="glossary-tooltip.css" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -748,14 +749,14 @@
         <h1>Achetez <span class="gold">KAL</span> au meilleur prix</h1>
         <p>
           Le token KAL alimente l'écosystème KalMydas.
-          Sa courbe de valorisation mathématique garantit que chaque achat
+          Sa <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> mathématique garantit que chaque achat
           fait monter le prix. Plus vous êtes tôt, plus vous gagnez.
         </p>
         <ul class="hero-features">
           <li><span class="icon">✦</span> Prix qui augmente automatiquement avec la demande</li>
-          <li><span class="icon">✦</span> Mécanisme de rachat et destruction — offre déflationniste</li>
+          <li><span class="icon">✦</span> Mécanisme de <span class="g-term" data-g="buyback_burn">rachat et destruction</span> — offre <span class="g-term" data-g="deflationniste">déflationniste</span></li>
           <li><span class="icon">✦</span> Bonus KAL sur chaque dépôt dans les stratégies</li>
-          <li><span class="icon">✦</span> Récompenses de staking pour les fournisseurs de liquidité</li>
+          <li><span class="icon">✦</span> Récompenses de <span class="g-term" data-g="staking">staking</span> pour les fournisseurs de liquidité</li>
           <li><span class="icon">✦</span> Gouvernance communautaire prévue 2027</li>
         </ul>
         <a href="#how-to-buy" class="btn-primary" style="display: inline-flex;">
@@ -799,15 +800,15 @@
           </div>
           <div class="sale-stat">
             <div class="label">Réseau</div>
-            <div class="value">Base L2</div>
+            <div class="value"><span class="g-term" data-g="base_l2">Base L2</span></div>
           </div>
           <div class="sale-stat">
             <div class="label">Token standard</div>
-            <div class="value">ERC-20</div>
+            <div class="value"><span class="g-term" data-g="erc20">ERC-20</span></div>
           </div>
           <div class="sale-stat">
             <div class="label">Contrat vérifié</div>
-            <div class="value" style="color: var(--green);">✓ BaseScan</div>
+            <div class="value" style="color: var(--green);">✓ <span class="g-term" data-g="basescan">BaseScan</span></div>
           </div>
         </div>
 
@@ -815,7 +816,7 @@
           ⚡ Acheter du KAL
         </a>
         <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem;">
-          Achat via USDC sur Base L2 • Frais de réseau : ~0.01$
+          Achat via <span class="g-term" data-g="usdc">USDC</span> sur <span class="g-term" data-g="base_l2">Base L2</span> • Frais de réseau : ~0.01$
         </p>
       </div>
     </div>
@@ -833,16 +834,16 @@
       <div class="tokenomics-grid">
         <div class="tokenomics-card fade-in">
           <div class="icon">📈</div>
-          <h3>Courbe de valorisation</h3>
+          <h3><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></h3>
           <p>
             Le prix du KAL suit une courbe mathématique ascendante.
             Chaque achat augmente le prix pour le suivant.
-            Pas de manipulation, pas d'orderbook externe — tout est transparent et on-chain.
+            Pas de manipulation, pas d'<span class="g-term" data-g="orderbook">orderbook</span> externe — tout est transparent et <span class="g-term" data-g="on_chain">on-chain</span>.
           </p>
         </div>
         <div class="tokenomics-card fade-in">
           <div class="icon">🔥</div>
-          <h3>Rachat et destruction</h3>
+          <h3><span class="g-term" data-g="buyback_burn">Rachat et destruction</span></h3>
           <p>
             Une partie des frais de performance des 5 stratégies de trading
             est utilisée pour racheter du KAL sur le marché et le détruire définitivement.
@@ -851,11 +852,11 @@
         </div>
         <div class="tokenomics-card fade-in">
           <div class="icon">💎</div>
-          <h3>Récompenses LP</h3>
+          <h3>Récompenses <span class="g-term" data-g="lp">LP</span></h3>
           <p>
-            Les fournisseurs de liquidité USDC/KAL reçoivent des récompenses en KAL
-            via un programme d'epochs décroissant (modèle Bitcoin-like).
-            Staking disponible directement dans l'application.
+            Les fournisseurs de liquidité <span class="g-term" data-g="usdc">USDC</span>/KAL reçoivent des récompenses en KAL
+            via un programme d'<span class="g-term" data-g="epoch">epochs</span> décroissant (modèle Bitcoin-like).
+            <span class="g-term" data-g="staking">Staking</span> disponible directement dans l'application.
           </p>
         </div>
         <div class="tokenomics-card fade-in">
@@ -882,7 +883,7 @@
       <div class="buy-steps">
         <div class="buy-step fade-in">
           <div class="buy-step-num">1</div>
-          <h3>Obtenez du USDC</h3>
+          <h3>Obtenez du <span class="g-term" data-g="usdc">USDC</span></h3>
           <p>Achetez de l'USDC sur un exchange (Coinbase, Binance) et transférez-le sur le réseau Base</p>
         </div>
         <div class="buy-step fade-in">
@@ -893,7 +894,7 @@
         <div class="buy-step fade-in">
           <div class="buy-step-num">3</div>
           <h3>Échangez USDC → KAL</h3>
-          <p>Allez dans l'onglet "Marché" et échangez vos USDC contre du KAL au prix actuel de la courbe de valorisation</p>
+          <p>Allez dans l'onglet "Marché" et échangez vos <span class="g-term" data-g="usdc">USDC</span> contre du KAL au prix actuel de la <span class="g-term" data-g="bonding_curve">courbe de valorisation</span></p>
         </div>
         <div class="buy-step fade-in">
           <div class="buy-step-num">4</div>
@@ -921,7 +922,7 @@
         <div class="advantage-card fade-in">
           <div class="advantage-icon">🚀</div>
           <h3>Potentiel de croissance</h3>
-          <p>Avec le rachat et destruction des frais de performance, la pression acheteuse augmente naturellement avec le TVL</p>
+          <p>Avec le <span class="g-term" data-g="buyback_burn">rachat et destruction</span> des frais de performance, la pression acheteuse augmente naturellement avec le <span class="g-term" data-g="tvl">TVL</span></p>
         </div>
         <div class="advantage-card fade-in">
           <div class="advantage-icon">🎯</div>
@@ -947,7 +948,7 @@
             <span class="arrow">▼</span>
           </div>
           <div class="faq-a">
-            <p>Une courbe de valorisation est un smart contract qui fixe automatiquement le prix d'un token en fonction de l'offre en circulation. Plus il y a de tokens achetés, plus le prix augmente selon une formule mathématique. C'est transparent, prévisible, et impossible à manipuler.</p>
+            <p>Une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> est un <span class="g-term" data-g="smart_contract">smart contract</span> qui fixe automatiquement le prix d'un token en fonction de l'offre en circulation. Plus il y a de tokens achetés, plus le prix augmente selon une formule mathématique. C'est transparent, prévisible, et impossible à manipuler.</p>
           </div>
         </div>
         <div class="faq-item fade-in">
@@ -956,7 +957,7 @@
             <span class="arrow">▼</span>
           </div>
           <div class="faq-a">
-            <p>Trois mécanismes : (1) La courbe de valorisation fait monter le prix à chaque achat. (2) Le rachat et destruction utilise les frais de performance des stratégies pour racheter et détruire du KAL, réduisant l'offre. (3) Les bonus de dépôt et récompenses LP créent une demande continue.</p>
+            <p>Trois mécanismes : (1) La <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> fait monter le prix à chaque achat. (2) Le <span class="g-term" data-g="buyback_burn">rachat et destruction</span> utilise les <span class="g-term" data-g="perf_fee">frais de performance</span> des stratégies pour racheter et détruire du KAL, réduisant l'offre. (3) Les bonus de dépôt et récompenses <span class="g-term" data-g="lp">LP</span> créent une demande continue.</p>
           </div>
         </div>
         <div class="faq-item fade-in">
@@ -983,7 +984,7 @@
             <span class="arrow">▼</span>
           </div>
           <div class="faq-a">
-            <p>Les 15 smart contracts sont actuellement déployés sur le testnet Base Sepolia avec 177 tests unitaires. Un audit de sécurité indépendant est prévu au Q2 2026, avant le lancement mainnet. Le code source sera public et vérifiable sur BaseScan.</p>
+            <p>Les 15 <span class="g-term" data-g="smart_contract">smart contracts</span> sont actuellement déployés sur le <span class="g-term" data-g="testnet">testnet</span> Base Sepolia avec 177 tests unitaires. Un audit de sécurité indépendant est prévu au Q2 2026, avant le lancement <span class="g-term" data-g="mainnet">mainnet</span>. Le code source sera public et vérifiable sur <span class="g-term" data-g="basescan">BaseScan</span>.</p>
           </div>
         </div>
         <div class="faq-item fade-in">
@@ -992,7 +993,7 @@
             <span class="arrow">▼</span>
           </div>
           <div class="faq-a">
-            <p>Le KAL est déployé sur Base, le réseau layer 2 d'Ethereum développé par Coinbase. Base offre des transactions rapides et peu coûteuses (~0.01$ par transaction) tout en bénéficiant de la sécurité d'Ethereum.</p>
+            <p>Le KAL est déployé sur Base, le réseau <span class="g-term" data-g="layer2">layer 2</span> d'Ethereum développé par Coinbase. Base offre des transactions rapides et peu coûteuses (~0.01$ par transaction) tout en bénéficiant de la sécurité d'Ethereum.</p>
           </div>
         </div>
       </div>
@@ -1040,6 +1041,7 @@
     document.getElementById('currentPrice').textContent = '0.0012 USDC';
     document.getElementById('totalMinted').textContent = '—';
   </script>
+  <script src="glossary-tooltip.js"></script>
 
 </body>
 </html>

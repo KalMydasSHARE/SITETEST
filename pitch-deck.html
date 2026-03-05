@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="glossary-tooltip.css" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -484,13 +485,13 @@
       <div class="logo-big">KalMydas</div>
       <div class="tagline">L'or, algorithmiquement</div>
       <p class="subtitle" style="text-align:center; margin: 0 auto 2rem;">
-        Trading algorithmique sur l'or (XAUUSD), décentralisé et accessible à tous.
-        <br />5 robots backtestés sur 20 ans. Dès 10$.
+        Trading algorithmique sur l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>), décentralisé et accessible à tous.
+        <br />5 robots <span class="g-term" data-g="backtest">backtestés</span> sur 20 ans. Dès 10$.
       </p>
       <div class="title-badges">
-        <span class="title-badge">🔗 Base L2</span>
+        <span class="title-badge">🔗 <span class="g-term" data-g="base_l2">Base L2</span></span>
         <span class="title-badge">📊 5 Stratégies</span>
-        <span class="title-badge">🏗️ 15 Smart Contracts</span>
+        <span class="title-badge">🏗️ 15 <span class="g-term" data-g="smart_contract">Smart Contracts</span></span>
         <span class="title-badge">✅ 177 Tests</span>
       </div>
     </div>
@@ -517,10 +518,10 @@
           <h3 style="color: var(--green); margin-bottom: 1rem;">Avec KalMydas</h3>
           <ul class="problem-list">
             <li><span class="check">✓</span> Accessible dès 10$ — pas de minimum élitiste</li>
-            <li><span class="check">✓</span> 0% frais de gestion, performance fees avec HWM</li>
-            <li><span class="check">✓</span> Stratégies vérifiables on-chain + backtests publics</li>
+            <li><span class="check">✓</span> 0% frais de gestion, <span class="g-term" data-g="perf_fee">performance fees</span> avec <span class="g-term" data-g="hwm">HWM</span></li>
+            <li><span class="check">✓</span> Stratégies vérifiables <span class="g-term" data-g="on_chain">on-chain</span> + <span class="g-term" data-g="backtest">backtests</span> publics</li>
             <li><span class="check">✓</span> Retrait 24/7 — aucun lock-up</li>
-            <li><span class="check">✓</span> Smart contracts non-custodial — vos clés, vos fonds</li>
+            <li><span class="check">✓</span> <span class="g-term" data-g="smart_contract">Smart contracts</span> <span class="g-term" data-g="non_custodial">non-custodial</span> — vos clés, vos fonds</li>
           </ul>
         </div>
       </div>
@@ -534,24 +535,24 @@
       <div class="slide-label">Notre solution</div>
       <h2>5 robots de trading sur l'or, accessibles via la blockchain</h2>
       <p class="subtitle" style="margin-bottom: 2rem;">
-        KalMydas transforme des stratégies de trading algorithmique professionnelles (MT4)
-        en pools de trading décentralisés sur Base L2. Transparent, automatique, sans intermédiaire.
+        KalMydas transforme des stratégies de trading algorithmique professionnelles (<span class="g-term" data-g="mt4">MT4</span>)
+        en pools de trading décentralisés sur <span class="g-term" data-g="base_l2">Base L2</span>. Transparent, automatique, sans intermédiaire.
       </p>
       <div class="grid-3">
         <div class="card">
           <div class="icon">🤖</div>
           <h3>Robots MT4 éprouvés</h3>
-          <p>5 Expert Advisors sur l'or, backtestés sur des données tick-by-tick jusqu'à 21 ans</p>
+          <p>5 Expert Advisors sur l'or, <span class="g-term" data-g="backtest">backtestés</span> sur des données tick-by-tick jusqu'à 21 ans</p>
         </div>
         <div class="card">
           <div class="icon">⛓️</div>
           <h3>Exécution on-chain</h3>
-          <p>Les gains des robots sont reportés sur la blockchain via un oracle sécurisé. Vérifiable par tous</p>
+          <p>Les gains des robots sont reportés sur la <span class="g-term" data-g="blockchain">blockchain</span> via un <span class="g-term" data-g="oracle">oracle</span> sécurisé. Vérifiable par tous</p>
         </div>
         <div class="card">
           <div class="icon">🔐</div>
-          <h3>Non-custodial</h3>
-          <p>Vos fonds restent dans les smart contracts. Pas de clé privée centralisée. Retirez quand vous voulez</p>
+          <h3><span class="g-term" data-g="non_custodial">Non-custodial</span></h3>
+          <p>Vos fonds restent dans les <span class="g-term" data-g="smart_contract">smart contracts</span>. Pas de clé privée centralisée. Retirez quand vous voulez</p>
         </div>
       </div>
     </div>
@@ -567,41 +568,41 @@
         <div class="strat-row">
           <span class="strat-icon">🌅</span>
           <div class="strat-name">Horizon <span>Tendance prudente — EMA/RSI/ATR/Donchian</span></div>
-          <div class="strat-pf">PF <strong>1.31</strong></div>
+          <div class="strat-pf"><span class="g-term" data-g="profit_factor">PF</span> <strong>1.31</strong></div>
           <div class="strat-period"><strong>11</strong> ans</div>
           <div class="strat-apy" style="color: var(--green);">4%/an</div>
         </div>
         <div class="strat-row">
           <span class="strat-icon">⚔️</span>
           <div class="strat-name">Valkyrie <span>Breakout + pyramide bidirectionnelle</span></div>
-          <div class="strat-pf">PF <strong>2.30</strong></div>
+          <div class="strat-pf"><span class="g-term" data-g="profit_factor">PF</span> <strong>2.30</strong></div>
           <div class="strat-period"><strong>16</strong> ans</div>
           <div class="strat-apy" style="color: var(--blue);">12.8%/an</div>
         </div>
         <div class="strat-row">
           <span class="strat-icon">🔥</span>
           <div class="strat-name">Revolution <span>Triple filtre + cooldown 24h</span></div>
-          <div class="strat-pf">PF <strong>1.11</strong></div>
+          <div class="strat-pf"><span class="g-term" data-g="profit_factor">PF</span> <strong>1.11</strong></div>
           <div class="strat-period"><strong>21</strong> ans</div>
           <div class="strat-apy" style="color: var(--orange);">24.6%/an</div>
         </div>
         <div class="strat-row">
           <span class="strat-icon">🏦</span>
           <div class="strat-name">Treasury <span>Phoenix Engine — trailing adaptatif</span></div>
-          <div class="strat-pf">PF <strong>1.35</strong></div>
+          <div class="strat-pf"><span class="g-term" data-g="profit_factor">PF</span> <strong>1.35</strong></div>
           <div class="strat-period"><strong>21</strong> ans</div>
           <div class="strat-apy" style="color: #eab308;">33.2%/an</div>
         </div>
         <div class="strat-row">
           <span class="strat-icon">⭐</span>
           <div class="strat-name">Orion <span>Mission x10 — objectif atteint en 4 ans (historique)</span></div>
-          <div class="strat-pf">PF <strong>1.65</strong></div>
+          <div class="strat-pf"><span class="g-term" data-g="profit_factor">PF</span> <strong>1.65</strong></div>
           <div class="strat-period"><strong>20</strong> ans</div>
           <div class="strat-apy" style="color: var(--red);">+913%</div>
         </div>
       </div>
       <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem; text-align: center;">
-        PF = Profit Factor. Performances issues des backtests MT4 sur données tick-by-tick réelles.
+        <span class="g-term" data-g="profit_factor">PF</span> = Profit Factor. Performances issues des <span class="g-term" data-g="backtest">backtests</span> <span class="g-term" data-g="mt4">MT4</span> sur données tick-by-tick réelles.
       </p>
     </div>
     <div class="slide-number">04 / 10</div>
@@ -623,7 +624,7 @@
         </div>
         <div class="metric">
           <div class="value">15</div>
-          <div class="label">Smart contracts déployés</div>
+          <div class="label"><span class="g-term" data-g="smart_contract">Smart contracts</span> déployés</div>
         </div>
         <div class="metric">
           <div class="value">177</div>
@@ -631,7 +632,7 @@
         </div>
         <div class="metric">
           <div class="value">~0.01$</div>
-          <div class="label">Coût par transaction (Base L2)</div>
+          <div class="label">Coût par transaction (<span class="g-term" data-g="base_l2">Base L2</span>)</div>
         </div>
         <div class="metric">
           <div class="value">10$</div>
@@ -650,12 +651,12 @@
       <div class="grid-2" style="margin-top: 2rem;">
         <div>
           <p class="subtitle" style="margin-bottom: 1.5rem;">
-            Le KAL est un token ERC-20 sur Base L2, au cœur de la mécanique économique de KalMydas.
+            Le KAL est un token <span class="g-term" data-g="erc20">ERC-20</span> sur <span class="g-term" data-g="base_l2">Base L2</span>, au cœur de la mécanique économique de KalMydas.
           </p>
           <ul class="problem-list">
-            <li><span class="check" style="color: var(--gold);">✦</span> <strong>Courbe de valorisation</strong> — prix mathématique ascendant</li>
-            <li><span class="check" style="color: var(--gold);">✦</span> <strong>Rachat et destruction</strong> — frais de perf. → rachat + destruction</li>
-            <li><span class="check" style="color: var(--gold);">✦</span> <strong>LP Rewards</strong> — staking liquidité avec rewards décroissants</li>
+            <li><span class="check" style="color: var(--gold);">✦</span> <strong><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></strong> — prix mathématique ascendant</li>
+            <li><span class="check" style="color: var(--gold);">✦</span> <strong><span class="g-term" data-g="buyback_burn">Rachat et destruction</span></strong> — frais de perf. → rachat + destruction</li>
+            <li><span class="check" style="color: var(--gold);">✦</span> <strong><span class="g-term" data-g="lp">LP</span> Rewards</strong> — <span class="g-term" data-g="staking">staking</span> liquidité avec rewards décroissants</li>
             <li><span class="check" style="color: var(--gold);">✦</span> <strong>Bonus dépôt</strong> — +1% à +5% KAL sur dépôts</li>
             <li><span class="check" style="color: var(--gold);">✦</span> <strong>Gouvernance</strong> — votes communautaires (2027)</li>
           </ul>
@@ -667,14 +668,14 @@
             <div class="flywheel-arrow">→</div>
             <div class="flywheel-step">💰 Frais de performance</div>
             <div class="flywheel-arrow">→</div>
-            <div class="flywheel-step">🔥 Rachat et destruction KAL</div>
+            <div class="flywheel-step">🔥 <span class="g-term" data-g="buyback_burn">Rachat et destruction</span> KAL</div>
           </div>
           <div class="flywheel" style="margin-top: 0.5rem;">
             <div class="flywheel-step">📈 Prix KAL monte</div>
             <div class="flywheel-arrow">→</div>
             <div class="flywheel-step">🧲 Plus de participants</div>
             <div class="flywheel-arrow">→</div>
-            <div class="flywheel-step">📊 Plus de TVL</div>
+            <div class="flywheel-step">📊 Plus de <span class="g-term" data-g="tvl">TVL</span></div>
           </div>
         </div>
       </div>
@@ -709,7 +710,7 @@
           <tr>
             <td>Frais de performance</td>
             <td class="trad">20% (sans HWM parfois)</td>
-            <td class="kal">10-20% (avec HWM)</td>
+            <td class="kal">10-20% (avec <span class="g-term" data-g="hwm">HWM</span>)</td>
           </tr>
           <tr>
             <td>Lock-up</td>
@@ -724,7 +725,7 @@
           <tr>
             <td>Custody des fonds</td>
             <td class="trad">Le fonds contrôle vos actifs</td>
-            <td class="kal">Smart contract non-custodial</td>
+            <td class="kal"><span class="g-term" data-g="smart_contract">Smart contract</span> <span class="g-term" data-g="non_custodial">non-custodial</span></td>
           </tr>
           <tr>
             <td>Accessibilité</td>
@@ -745,13 +746,13 @@
       <div class="grid-3" style="margin-top: 2rem;">
         <div class="card">
           <div class="icon">⛓️</div>
-          <h3>Base L2 (Coinbase)</h3>
-          <p>Layer 2 Ethereum soutenu par Coinbase. Transactions rapides, frais ~0.01$, sécurité Ethereum</p>
+          <h3><span class="g-term" data-g="base_l2">Base L2</span> (Coinbase)</h3>
+          <p><span class="g-term" data-g="layer2">Layer 2</span> Ethereum soutenu par Coinbase. Transactions rapides, frais ~0.01$, sécurité Ethereum</p>
         </div>
         <div class="card">
           <div class="icon">📝</div>
-          <h3>Solidity 0.8.24</h3>
-          <p>15 contrats vérifiés, code source public sur BaseScan. OpenZeppelin pour les composants standards</p>
+          <h3><span class="g-term" data-g="solidity">Solidity</span> 0.8.24</h3>
+          <p>15 contrats vérifiés, code source public sur <span class="g-term" data-g="basescan">BaseScan</span>. OpenZeppelin pour les composants standards</p>
         </div>
         <div class="card">
           <div class="icon">🧪</div>
@@ -770,8 +771,8 @@
         </div>
         <div class="card">
           <div class="icon">📊</div>
-          <h3>High-Water Mark</h3>
-          <p>Frais de performance uniquement sur les nouveaux profits. Pas de double facturation après un drawdown</p>
+          <h3><span class="g-term" data-g="hwm">High-Water Mark</span></h3>
+          <p><span class="g-term" data-g="perf_fee">Frais de performance</span> uniquement sur les nouveaux profits. Pas de double facturation après un <span class="g-term" data-g="drawdown">drawdown</span></p>
         </div>
       </div>
     </div>
@@ -797,17 +798,17 @@
         <div class="timeline-item future">
           <div class="timeline-phase">Q3 2026</div>
           <h4>Lancement</h4>
-          <p>Mainnet Base L2 • 5 stratégies live • Pass d'accès NFT • Partenariats liquidité</p>
+          <p><span class="g-term" data-g="mainnet">Mainnet</span> <span class="g-term" data-g="base_l2">Base L2</span> • 5 stratégies live • Pass d'accès <span class="g-term" data-g="nft">NFT</span> • Partenariats liquidité</p>
         </div>
         <div class="timeline-item future">
           <div class="timeline-phase">Q4 2026</div>
           <h4>Croissance</h4>
-          <p>Rewards communauté • Listing DEX • Analytics avancé • Nouveaux actifs</p>
+          <p>Rewards communauté • Listing <span class="g-term" data-g="dex">DEX</span> • Analytics avancé • Nouveaux actifs</p>
         </div>
         <div class="timeline-item future">
           <div class="timeline-phase">2027+</div>
           <h4>Expansion</h4>
-          <p>App mobile • DAO • Multi-chain • Nouvelles stratégies</p>
+          <p>App mobile • <span class="g-term" data-g="dao">DAO</span> • Multi-chain • Nouvelles stratégies</p>
         </div>
       </div>
     </div>
@@ -873,6 +874,15 @@
 
     slides.forEach(s => slideObserver.observe(s));
   </script>
+  <script src="glossary-tooltip.js"></script>
+
+  <!-- Disclaimer -->
+  <div style="padding: 1.5rem 2rem; text-align: center; border-top: 1px solid var(--border); background: rgba(10, 10, 15, 0.95);">
+    <p style="color: var(--text-muted); font-size: 0.75rem; line-height: 1.6;">
+      &#9888;&#65039; Les performances affichées sont issues de backtests sur données historiques et ne garantissent pas les résultats futurs.
+      Le trading comporte des risques de perte en capital. Ne participez qu'avec des fonds que vous pouvez vous permettre de perdre.
+    </p>
+  </div>
 
 </body>
 </html>

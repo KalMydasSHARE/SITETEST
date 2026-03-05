@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="glossary-tooltip.css" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -878,9 +879,9 @@
         L'or, <span class="gold">algorithmiquement</span>
       </h1>
       <p>
-        5 robots de trading sur l'or (XAUUSD), backtestés sur 20 ans.
+        5 robots de trading sur l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>), <span class="g-term" data-g="backtest">backtestés</span> sur 20 ans.
         Des rendements de 4% à 33% par an. Accessible dès 10$.
-        Transparent, décentralisé, sur Base L2.
+        Transparent, décentralisé, sur <span class="g-term" data-g="base_l2">Base L2</span>.
       </p>
       <div class="hero-buttons">
         <a href="https://app.kalmydas.com" class="btn-primary">
@@ -901,11 +902,11 @@
     </div>
     <div class="stat-item fade-in">
       <div class="stat-value">20+ ans</div>
-      <div class="stat-label">De backtests</div>
+      <div class="stat-label">De <span class="g-term" data-g="backtest">backtests</span></div>
     </div>
     <div class="stat-item fade-in">
       <div class="stat-value">17</div>
-      <div class="stat-label">Contrats intelligents</div>
+      <div class="stat-label"><span class="g-term" data-g="smart_contract">Contrats intelligents</span></div>
     </div>
     <div class="stat-item fade-in">
       <div class="stat-value">171</div>
@@ -947,7 +948,7 @@
       <div class="section-header fade-in">
         <p class="section-label">5 approches, 5 profils</p>
         <h2 class="section-title">Nos stratégies de trading</h2>
-        <p class="section-desc">Chaque robot exploite l'or (XAUUSD) avec une approche unique, backtestée sur des données réelles</p>
+        <p class="section-desc">Chaque robot exploite l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>) avec une approche unique, <span class="g-term" data-g="backtest">backtestée</span> sur des données réelles</p>
       </div>
       <div class="strategies-grid">
 
@@ -960,7 +961,7 @@
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(34,197,94,0.15); color: #22c55e;">Prudent</span>
               <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">11 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">PF 1.31</span>
+              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.31</span>
             </div>
           </div>
           <div class="strategy-stats">
@@ -978,7 +979,7 @@
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(59,130,246,0.15); color: #3b82f6;">Équilibré</span>
               <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">16 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">PF 2.30</span>
+              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 2.30</span>
             </div>
           </div>
           <div class="strategy-stats">
@@ -996,7 +997,7 @@
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(249,115,22,0.15); color: #f97316;">Dynamique</span>
               <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">21 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">PF 1.11</span>
+              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.11</span>
             </div>
           </div>
           <div class="strategy-stats">
@@ -1014,7 +1015,7 @@
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(234,179,8,0.15); color: #eab308;">Dynamique</span>
               <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">21 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">PF 1.35</span>
+              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.35</span>
             </div>
           </div>
           <div class="strategy-stats">
@@ -1032,7 +1033,7 @@
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(239,68,68,0.15); color: #ef4444;">Offensif</span>
               <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">20 ans de données</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">PF 1.65</span>
+              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.65</span>
             </div>
           </div>
           <div class="strategy-stats">
@@ -1049,10 +1050,10 @@
             <tr>
               <th>Stratégie</th>
               <th>Rendement</th>
-              <th>Win Rate</th>
-              <th>DD Max</th>
-              <th>Backtest</th>
-              <th>Fee perf.</th>
+              <th><span class="g-term" data-g="win_rate">Win Rate</span></th>
+              <th><span class="g-term" data-g="drawdown">DD Max</span></th>
+              <th><span class="g-term" data-g="backtest">Backtest</span></th>
+              <th><span class="g-term" data-g="perf_fee">Fee perf.</span></th>
             </tr>
           </thead>
           <tbody>
@@ -1112,7 +1113,7 @@
       <div class="section-header fade-in">
         <p class="section-label">Utility Token</p>
         <h2 class="section-title">Le token KAL</h2>
-        <p class="section-desc">Un token ERC-20 au cœur de l'écosystème KalMydas</p>
+        <p class="section-desc">Un token <span class="g-term" data-g="erc20">ERC-20</span> au cœur de l'écosystème KalMydas</p>
       </div>
       <div class="token-grid">
         <div class="token-visual fade-in">
@@ -1123,17 +1124,17 @@
         <div class="token-info fade-in">
           <h3>Conçu pour créer de la valeur</h3>
           <p>
-            Le token KAL utilise une courbe de valorisation mathématique :
+            Le token KAL utilise une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> mathématique :
             plus la demande augmente, plus le prix monte automatiquement.
             Les premiers participants bénéficient du meilleur prix.
           </p>
           <ul class="token-features">
-            <li><span class="check">✦</span> <strong>Courbe de valorisation</strong> — Prix qui augmente avec l'adoption</li>
-            <li><span class="check">✦</span> <strong>Rachat et destruction</strong> — Les frais de performance rachètent et détruisent du KAL</li>
-            <li><span class="check">✦</span> <strong>Récompenses LP</strong> — Staking de liquidité avec rewards en KAL</li>
+            <li><span class="check">✦</span> <strong><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></strong> — Prix qui augmente avec l'adoption</li>
+            <li><span class="check">✦</span> <strong><span class="g-term" data-g="buyback_burn">Rachat et destruction</span></strong> — Les frais de performance rachètent et détruisent du KAL</li>
+            <li><span class="check">✦</span> <strong>Récompenses <span class="g-term" data-g="lp">LP</span></strong> — <span class="g-term" data-g="staking">Staking</span> de liquidité avec rewards en KAL</li>
             <li><span class="check">✦</span> <strong>Bonus dépôt</strong> — Jusqu'à +5% en KAL sur vos dépôts</li>
             <li><span class="check">✦</span> <strong>Gouvernance</strong> — Votes communautaires (prévu 2027)</li>
-            <li><span class="check">✦</span> <strong>Déflationniste</strong> — Offre qui diminue avec le temps</li>
+            <li><span class="check">✦</span> <strong><span class="g-term" data-g="deflationniste">Déflationniste</span></strong> — Offre qui diminue avec le temps</li>
           </ul>
         </div>
       </div>
@@ -1146,13 +1147,13 @@
       <div class="section-header fade-in">
         <p class="section-label">Confiance & Transparence</p>
         <h2 class="section-title">Sécurité de vos fonds</h2>
-        <p class="section-desc">Vos actifs sont protégés par des smart contracts auditables, déployés sur la blockchain</p>
+        <p class="section-desc">Vos actifs sont protégés par des <span class="g-term" data-g="smart_contract">smart contracts</span> auditables, déployés sur la <span class="g-term" data-g="blockchain">blockchain</span></p>
       </div>
       <div class="security-grid">
         <div class="security-card fade-in">
           <div class="security-icon">🔒</div>
-          <h3>Contrats intelligents vérifiables</h3>
-          <p>17 contrats Solidity, code source public, vérifiable sur BaseScan à tout moment</p>
+          <h3><span class="g-term" data-g="smart_contract">Contrats intelligents</span> vérifiables</h3>
+          <p>17 contrats <span class="g-term" data-g="solidity">Solidity</span>, code source public, vérifiable sur <span class="g-term" data-g="basescan">BaseScan</span> à tout moment</p>
         </div>
         <div class="security-card fade-in">
           <div class="security-icon">🛡️</div>
@@ -1161,18 +1162,18 @@
         </div>
         <div class="security-card fade-in">
           <div class="security-icon">⛓️</div>
-          <h3>Base L2 par Coinbase</h3>
-          <p>Déployé sur Base, le layer 2 d'Ethereum soutenu par Coinbase. Frais minimes, sécurité maximale</p>
+          <h3><span class="g-term" data-g="base_l2">Base L2</span> par Coinbase</h3>
+          <p>Déployé sur Base, le <span class="g-term" data-g="layer2">layer 2</span> d'Ethereum soutenu par Coinbase. Frais minimes, sécurité maximale</p>
         </div>
         <div class="security-card fade-in">
           <div class="security-icon">🔑</div>
           <h3>Contrôle total</h3>
-          <p>Vos fonds restent dans les smart contracts. Pas de clé privée centralisée. Retirez quand vous voulez</p>
+          <p>Vos fonds restent dans les <span class="g-term" data-g="smart_contract">smart contracts</span>. Pas de clé privée centralisée. Retirez quand vous voulez</p>
         </div>
         <div class="security-card fade-in">
           <div class="security-icon">📊</div>
-          <h3>High-Water Mark</h3>
-          <p>Les frais de performance ne s'appliquent que sur les nouveaux gains. Jamais de double facturation</p>
+          <h3><span class="g-term" data-g="hwm">High-Water Mark</span></h3>
+          <p>Les <span class="g-term" data-g="perf_fee">frais de performance</span> ne s'appliquent que sur les nouveaux gains. Jamais de double facturation</p>
         </div>
         <div class="security-card fade-in">
           <div class="security-icon">🔍</div>
@@ -1196,7 +1197,7 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase">Phase 1 — Q1 2026 <span class="tag-progress">En cours</span></div>
           <h3>Fondations</h3>
-          <p>17 contrats intelligents déployés sur Base Sepolia. 171 tests. MVP frontend connecté on-chain. Livre blanc publié. 5 backtests vérifiés.</p>
+          <p>17 <span class="g-term" data-g="smart_contract">contrats intelligents</span> déployés sur <span class="g-term" data-g="testnet">Base Sepolia</span>. 171 tests. MVP frontend connecté <span class="g-term" data-g="on_chain">on-chain</span>. Livre blanc publié. 5 <span class="g-term" data-g="backtest">backtests</span> vérifiés.</p>
         </div>
 
         <div class="roadmap-item fade-in">
@@ -1210,21 +1211,21 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase">Phase 3 — Q3 2026</div>
           <h3>Lancement public</h3>
-          <p>Déploiement mainnet Base L2. Lancement officiel des 5 stratégies. Activation du Pass d'accès NFT. Partenariats liquidité.</p>
+          <p>Déploiement <span class="g-term" data-g="mainnet">mainnet</span> <span class="g-term" data-g="base_l2">Base L2</span>. Lancement officiel des 5 stratégies. Activation du Pass d'accès <span class="g-term" data-g="nft">NFT</span>. Partenariats liquidité.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase">Phase 4 — Q4 2026</div>
           <h3>Croissance</h3>
-          <p>Programme de récompenses communautaires. Listing KAL sur DEX. Dashboard analytics avancé. Exploration de nouveaux actifs.</p>
+          <p>Programme de récompenses communautaires. Listing KAL sur <span class="g-term" data-g="dex">DEX</span>. Dashboard analytics avancé. Exploration de nouveaux actifs.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase">2027 et au-delà</div>
           <h3>Expansion</h3>
-          <p>Application mobile native. Nouvelles stratégies et marchés. Gouvernance DAO. Expansion multi-chain (Arbitrum, Polygon).</p>
+          <p>Application mobile native. Nouvelles stratégies et marchés. Gouvernance <span class="g-term" data-g="dao">DAO</span>. Expansion multi-chain (Arbitrum, Polygon).</p>
         </div>
 
       </div>
@@ -1254,7 +1255,7 @@
       <a href="https://app.kalmydas.com">Application</a>
       <a href="https://app.kalmydas.com/whitepaper">Livre blanc</a>
       <a href="/about">À propos</a>
-      <a href="https://sepolia.basescan.org/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank">BaseScan</a>
+      <a href="https://sepolia.basescan.org/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank"><span class="g-term" data-g="basescan">BaseScan</span></a>
       <a href="https://x.com/KalMydas" target="_blank">Twitter</a>
       <a href="https://t.me/kalmydas" target="_blank">Telegram</a>
       <a href="mailto:kal@kalmydas.ch">Contact</a>
@@ -1291,6 +1292,7 @@
       });
     });
   </script>
+  <script src="glossary-tooltip.js"></script>
 
 </body>
 </html>
