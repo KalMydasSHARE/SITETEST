@@ -1,0 +1,23 @@
+# robots.txt — kalmydas.com
+# Permettre l'indexation complete par les moteurs de recherche
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Crawlers IA (LLMs) : autorises pour citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://kalmydas.com/sitemap.xml
