@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KalMydas — Trading algorithmique sur l'or, accessible à tous</title>
+  <title>KalMydas — Trading algorithmique sur l'or, Accessible à tous</title>
   <meta name="description" content="Participez à des stratégies de trading algorithmique sur l'or (XAUUSD) backtestées sur 20 ans. Dès 10$. Transparent, décentralisé, sur Arbitrum." />
   <meta property="og:title" content="KalMydas — L'or, algorithmiquement" />
-  <meta property="og:description" content="5 stratégies de trading sur l'or backtestées jusqu'à 21 ans. Rendements de 4% à 33% par an. Dès 10$." />
+  <meta property="og:description" content="5 stratégies de trading sur l'or backtestées jusqu'à 21 ans. Rendements de 4% à 78% par an. Dès 10$." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kalmydas.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,35 +17,48 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0a0a0f;
-      --bg-card: #12121a;
-      --bg-card-hover: #1a1a28;
-      --border: #1e1e2e;
-      --border-gold: #c9a84c33;
+      --bg: #060610;
+      --bg-elevated: #0c0c1a;
+      --bg-card: #0f0f1e;
+      --bg-card-hover: #141428;
+      --border: #1a1a30;
+      --border-subtle: #14142a;
+      --border-gold: rgba(201, 168, 76, 0.2);
       --gold: #c9a84c;
       --gold-light: #e8d48b;
       --gold-dark: #9a7a2e;
-      --text: #e8e8ed;
-      --text-dim: #8888a0;
-      --text-muted: #55556a;
+      --gold-glow: rgba(201, 168, 76, 0.15);
+      --text: #eaeaf2;
+      --text-secondary: #9d9db8;
+      --text-muted: #5a5a78;
       --green: #22c55e;
       --blue: #3b82f6;
       --orange: #f97316;
       --yellow: #eab308;
       --red: #ef4444;
       --purple: #8b5cf6;
-      --gradient-gold: linear-gradient(135deg, #c9a84c, #e8d48b, #c9a84c);
-      --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #10101a 100%);
+      --gradient-gold: linear-gradient(135deg, #b8952f 0%, #e8d48b 50%, #c9a84c 100%);
+      --gradient-gold-text: linear-gradient(135deg, #c9a84c, #f0e2a0, #c9a84c);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
     /* ===== NAVIGATION ===== */
@@ -59,26 +72,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(10, 10, 15, 0.85);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      transition: all 0.3s;
+      background: rgba(6, 6, 16, 0.7);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     nav.scrolled {
       padding: 0.6rem 2rem;
-      background: rgba(10, 10, 15, 0.95);
+      background: rgba(6, 6, 16, 0.92);
+      border-bottom-color: var(--border-subtle);
     }
 
     .nav-logo {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      background: var(--gradient-gold);
+      background: var(--gradient-gold-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-decoration: none;
+      letter-spacing: -0.02em;
     }
 
     .nav-links {
@@ -89,27 +105,58 @@
     }
 
     .nav-links a {
-      color: var(--text-dim);
+      color: var(--text-secondary);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       transition: color 0.3s;
+      letter-spacing: -0.01em;
     }
 
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    /* ===== LANGUAGE TOGGLE ===== */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2px;
+      cursor: pointer;
+      user-select: none;
+      gap: 0;
+    }
+
+    .lang-option {
+      padding: 3px 10px;
+      border-radius: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: all 0.3s;
+      letter-spacing: 0.02em;
+    }
+
+    .lang-option.active {
+      background: var(--gradient-gold);
+      color: #0a0a0f;
+    }
 
     .nav-cta {
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 1.4rem;
       background: var(--gradient-gold);
       color: #0a0a0f !important;
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       font-weight: 700 !important;
+      font-size: 0.85rem !important;
       transition: transform 0.3s, box-shadow 0.3s !important;
+      letter-spacing: 0 !important;
     }
 
     .nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.35);
     }
 
     .nav-hamburger {
@@ -124,7 +171,7 @@
 
     .nav-hamburger span {
       display: block;
-      width: 24px;
+      width: 22px;
       height: 2px;
       background: var(--text);
       border-radius: 2px;
@@ -138,44 +185,74 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 6rem 2rem 4rem;
+      padding: 7rem 2rem 4rem;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
+    .hero-bg {
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 50% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 50%);
-      animation: pulse 8s ease-in-out infinite;
+      inset: 0;
+      overflow: hidden;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.1); opacity: 1; }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, rgba(201, 168, 76, 0.03) 40%, transparent 70%);
+      animation: hero-pulse 10s ease-in-out infinite;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to top, var(--bg), transparent);
+    }
+
+    /* Grid pattern */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201, 168, 76, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 168, 76, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 80%);
+    }
+
+    @keyframes hero-pulse {
+      0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+      50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 900px;
+      max-width: 820px;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.4rem 1rem;
+      padding: 0.35rem 1rem;
       border: 1px solid var(--border-gold);
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--gold);
-      margin-bottom: 2rem;
-      background: rgba(201, 168, 76, 0.05);
+      margin-bottom: 2.5rem;
+      background: rgba(201, 168, 76, 0.04);
+      letter-spacing: 0.01em;
     }
 
     .hero-badge .dot {
@@ -184,6 +261,7 @@
       border-radius: 50%;
       background: var(--green);
       animation: blink 2s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes blink {
@@ -193,23 +271,24 @@
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-size: clamp(2.8rem, 7vw, 5rem);
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.05;
       margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
     }
 
     .hero h1 .gold {
-      background: var(--gradient-gold);
+      background: var(--gradient-gold-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-dim);
-      max-width: 650px;
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 600px;
       margin: 0 auto 2.5rem;
       line-height: 1.8;
     }
@@ -225,84 +304,123 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.9rem 2rem;
+      padding: 0.85rem 2rem;
       background: var(--gradient-gold);
       color: #0a0a0f;
       border: none;
-      border-radius: 12px;
-      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
       font-weight: 700;
       cursor: pointer;
       text-decoration: none;
       transition: transform 0.3s, box-shadow 0.3s;
+      letter-spacing: -0.01em;
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+      box-shadow: 0 8px 32px rgba(201, 168, 76, 0.35);
     }
 
     .btn-secondary {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.9rem 2rem;
-      background: transparent;
+      padding: 0.85rem 2rem;
+      background: rgba(255,255,255,0.03);
       color: var(--text);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
       text-decoration: none;
       transition: all 0.3s;
+      letter-spacing: -0.01em;
     }
 
     .btn-secondary:hover {
       border-color: var(--gold);
-      color: var(--gold);
-      background: rgba(201, 168, 76, 0.05);
+      color: var(--gold-light);
+      background: rgba(201, 168, 76, 0.06);
     }
 
     /* ===== STATS BAR ===== */
     .stats-bar {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      max-width: 1000px;
+      margin: -3rem auto 0;
+      position: relative;
+      z-index: 3;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
     }
 
     .stat-item {
-      padding: 2rem;
+      padding: 1.8rem 1.5rem;
       text-align: center;
-      background: var(--bg);
+      position: relative;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20%;
+      height: 60%;
+      width: 1px;
+      background: var(--border);
     }
 
     .stat-value {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: var(--gold);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
     }
 
     .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-dim);
+      font-size: 0.78rem;
+      color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
+      font-weight: 500;
     }
 
     /* ===== SECTIONS ===== */
     section {
-      padding: 6rem 2rem;
+      padding: 7rem 0;
     }
 
-    .container {
-      max-width: 1200px;
+    .section-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 600px;
       margin: 0 auto;
+      line-height: 1.7;
     }
 
     .section-header {
@@ -310,137 +428,97 @@
       margin-bottom: 4rem;
     }
 
-    .section-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .section-desc {
-      font-size: 1.1rem;
-      color: var(--text-dim);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
     /* ===== HOW IT WORKS ===== */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      position: relative;
-    }
-
-    .steps-grid::before {
-      content: '';
-      position: absolute;
-      top: 3rem;
-      left: 15%;
-      right: 15%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: 0.3;
+      gap: 1.5rem;
     }
 
     .step-card {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      border-radius: 20px;
-      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
       background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
-      transition: all 0.3s;
     }
 
     .step-card:hover {
       border-color: var(--border-gold);
-      background: var(--bg-card-hover);
       transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
     }
 
     .step-number {
-      width: 56px;
-      height: 56px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      background: var(--gradient-gold);
       color: #0a0a0f;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
     }
 
     .step-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 1.2rem;
       font-weight: 700;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
     }
 
     .step-card p {
-      color: var(--text-dim);
-      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.7;
     }
 
-    /* ===== STRATEGIES ===== */
-    .strategies-grid {
-      display: grid;
-      gap: 1.5rem;
+    /* ===== stratégies ===== */
+    .strategies-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .strategy-card {
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: 1fr auto;
       align-items: center;
-      gap: 2rem;
-      padding: 2rem;
-      border-radius: 16px;
-      border: 1px solid var(--border);
+      gap: 1.5rem;
+      padding: 1.8rem 2rem;
       background: var(--bg-card);
-      transition: all 0.4s;
-      cursor: default;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .strategy-card:hover {
       border-color: var(--border-gold);
       background: var(--bg-card-hover);
-      transform: translateX(4px);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     }
 
-    .strategy-icon {
-      font-size: 2.5rem;
-      width: 70px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 16px;
-      background: rgba(201, 168, 76, 0.08);
-    }
+    
 
     .strategy-info h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.01em;
     }
 
     .strategy-info .desc {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.6rem;
     }
 
     .strategy-tags {
@@ -450,44 +528,99 @@
     }
 
     .tag {
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
+      padding: 0.2rem 0.65rem;
+      border-radius: var(--radius-xs);
       font-size: 0.75rem;
       font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .tag-muted {
+      background: rgba(255,255,255,0.04);
+      color: var(--text-muted);
     }
 
     .strategy-stats {
       text-align: right;
-      min-width: 140px;
+      flex-shrink: 0;
+      min-width: 120px;
     }
 
     .strategy-apy {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.3rem;
     }
 
     .strategy-meta {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      margin-top: 0.3rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
     }
 
-    /* ===== TOKEN ===== */
-    .token-section {
-      background: linear-gradient(180deg, var(--bg) 0%, #0d0d15 50%, var(--bg) 100%);
+    /* ===== COMPARISON TABLE ===== */
+    .table-wrap {
+      margin-top: 3rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
     }
 
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .comparison-table th {
+      padding: 1rem 1.2rem;
+      text-align: left;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table tr:hover td {
+      background: rgba(201, 168, 76, 0.02);
+    }
+
+    .comparison-table .highlight {
+      color: var(--gold);
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .comparison-table .strat-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ===== TOKEN SECTION ===== */
     .token-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 4rem;
       align-items: center;
     }
 
     .token-visual {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -497,47 +630,54 @@
       width: 280px;
       height: 280px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle at 30% 30%, var(--bg-card-hover), var(--bg-card));
+      border: 2px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      box-shadow: 0 0 80px rgba(201, 168, 76, 0.06), inset 0 0 40px rgba(201, 168, 76, 0.03);
     }
 
     .token-circle::before {
       content: '';
       position: absolute;
-      inset: -2px;
+      inset: -1px;
       border-radius: 50%;
-      border: 2px solid;
-      border-image: var(--gradient-gold) 1;
-      border-radius: 50%;
-      border: 2px solid rgba(201, 168, 76, 0.3);
-      animation: spin 20s linear infinite;
+      background: conic-gradient(from 0deg, transparent 0%, var(--gold) 15%, transparent 30%);
+      opacity: 0.2;
+      animation: token-spin 12s linear infinite;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes token-spin {
+      to { transform: rotate(360deg); }
+    }
 
     .token-symbol {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 800;
-      background: var(--gradient-gold);
+      background: var(--gradient-gold-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
     }
 
     .token-info h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 1.8rem;
+      font-weight: 800;
       margin-bottom: 1rem;
+      letter-spacing: -0.03em;
     }
 
-    .token-info p {
-      color: var(--text-dim);
-      margin-bottom: 1.5rem;
+    .token-info > p {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-size: 1rem;
       line-height: 1.8;
     }
 
@@ -545,19 +685,28 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.9rem;
     }
 
     .token-features li {
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.95rem;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
 
-    .token-features .check {
+    .token-features li strong {
+      color: var(--text);
+    }
+
+    .feature-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
       color: var(--gold);
-      font-size: 1.1rem;
+      margin-top: 2px;
     }
 
     /* ===== SECURITY ===== */
@@ -569,127 +718,268 @@
 
     .security-card {
       padding: 2rem;
-      border-radius: 16px;
-      border: 1px solid var(--border);
       background: var(--bg-card);
-      text-align: center;
-      transition: all 0.3s;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .security-card:hover {
       border-color: var(--border-gold);
-      transform: translateY(-4px);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
     }
 
-    .security-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    .security-card .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      color: var(--gold);
+    }
+
+    .security-card .card-icon svg {
+      width: 20px;
+      height: 20px;
     }
 
     .security-card h3 {
-      font-size: 1.1rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
     }
 
     .security-card p {
-      color: var(--text-dim);
-      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.7;
     }
 
     /* ===== ROADMAP ===== */
     .roadmap-timeline {
-      position: relative;
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
+      position: relative;
+      padding-left: 2.5rem;
     }
 
     .roadmap-timeline::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 24px;
-      bottom: 0;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
       width: 2px;
-      background: linear-gradient(180deg, var(--gold), var(--gold-dark), var(--text-muted));
+      background: var(--border);
     }
 
     .roadmap-item {
       position: relative;
-      padding-left: 64px;
-      margin-bottom: 3rem;
+      padding-bottom: 3rem;
     }
 
-    .roadmap-item:last-child { margin-bottom: 0; }
+    .roadmap-item:last-child {
+      padding-bottom: 0;
+    }
 
     .roadmap-dot {
       position: absolute;
-      left: 15px;
-      top: 0.25rem;
-      width: 20px;
-      height: 20px;
+      left: -2.5rem;
+      top: 6px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
-      border: 3px solid var(--gold);
       background: var(--bg);
+      border: 2px solid var(--border);
+      z-index: 1;
     }
 
     .roadmap-item.active .roadmap-dot {
       background: var(--gold);
+      border-color: var(--gold);
       box-shadow: 0 0 12px rgba(201, 168, 76, 0.4);
     }
 
-    .roadmap-item.future .roadmap-dot {
-      border-color: var(--text-muted);
+    .roadmap-item.completed .roadmap-dot {
+      background: var(--green);
+      border-color: var(--green);
     }
 
     .roadmap-phase {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--gold);
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
       margin-bottom: 0.3rem;
+      font-weight: 600;
     }
 
-    .roadmap-item.future .roadmap-phase { color: var(--text-muted); }
+    .tag-progress {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      background: rgba(201, 168, 76, 0.12);
+      color: var(--gold);
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .tag-done {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--green);
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
 
     .roadmap-item h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
     }
 
     .roadmap-item p {
-      color: var(--text-dim);
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .roadmap-item.future {
+      opacity: 0.5;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-gold);
+    }
+
+    .faq-question {
+      padding: 1.3rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
       font-size: 0.95rem;
+      gap: 1rem;
+      user-select: none;
+      transition: color 0.3s;
     }
 
-    .roadmap-item .tag-done {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      background: rgba(34, 197, 94, 0.15);
-      color: var(--green);
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 4px;
-      margin-left: 0.5rem;
+    .faq-question:hover {
+      color: var(--gold-light);
     }
 
-    .roadmap-item .tag-progress {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
-      background: rgba(201, 168, 76, 0.15);
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
       color: var(--gold);
-      font-size: 0.75rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.3rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* ===== BUILT WITH ===== */
+    .tech-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.5rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      min-width: 140px;
+      transition: all 0.3s;
+    }
+
+    .tech-item:hover {
+      border-color: var(--border-gold);
+      transform: translateY(-2px);
+    }
+
+    .tech-item .tech-name {
       font-weight: 600;
-      border-radius: 4px;
-      margin-left: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .tech-item .tech-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .tech-item svg, .tech-item img {
+      width: 40px;
+      height: 40px;
     }
 
     /* ===== CTA ===== */
     .cta-section {
-      padding: 8rem 2rem;
+      padding: 6rem 0;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -703,111 +993,96 @@
       transform: translate(-50%, -50%);
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 60%);
-      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
     }
 
     .cta-content {
       position: relative;
-      z-index: 2;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
 
     .cta-content h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 800;
       margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
     }
 
     .cta-content p {
-      color: var(--text-dim);
-      font-size: 1.15rem;
-      margin-bottom: 2.5rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      line-height: 1.7;
     }
 
     /* ===== FOOTER ===== */
     footer {
       padding: 3rem 2rem;
-      border-top: 1px solid var(--border);
       text-align: center;
+      border-top: 1px solid var(--border);
     }
 
     .footer-logo {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      background: var(--gradient-gold);
+      background: var(--gradient-gold-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.2rem;
     }
 
     .footer-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       justify-content: center;
-      margin-bottom: 1.5rem;
       flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
 
     .footer-links a {
-      color: var(--text-dim);
+      color: var(--text-secondary);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       transition: color 0.3s;
     }
 
-    .footer-links a:hover { color: var(--gold); }
+    .footer-links a:hover { color: var(--gold-light); }
 
     .footer-copy {
       color: var(--text-muted);
       font-size: 0.8rem;
+      line-height: 1.7;
     }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(10, 10, 15, 0.98);
-        padding: 1.5rem 2rem;
-        border-bottom: 1px solid var(--border);
-        gap: 1rem;
-      }
-
-      .stats-bar { grid-template-columns: repeat(2, 1fr); }
-      .steps-grid { grid-template-columns: 1fr; }
-      .steps-grid::before { display: none; }
-      .strategy-card { grid-template-columns: auto 1fr; }
-      .strategy-stats { grid-column: span 2; text-align: left; }
-      .token-grid { grid-template-columns: 1fr; }
-      .token-visual { order: -1; }
-      .security-grid { grid-template-columns: 1fr; }
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    @media (max-width: 480px) {
-      .stats-bar { grid-template-columns: 1fr; }
-      .stat-item { padding: 1.2rem; }
-      .stat-value { font-size: 1.5rem; }
-      .hero-buttons { flex-direction: column; align-items: center; }
+    /* ===== DISCLAIMER ===== */
+    .disclaimer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin-top: 1.5rem;
+      line-height: 1.6;
     }
 
     /* ===== ANIMATIONS ===== */
     .fade-in {
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(24px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .fade-in.visible {
@@ -815,37 +1090,85 @@
       transform: translateY(0);
     }
 
-    /* ===== COMPARISON TABLE ===== */
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .token-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+      .token-info { text-align: left; }
+      .security-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    .comparison-table th {
-      padding: 1rem;
-      text-align: left;
-      color: var(--text-dim);
-      font-weight: 600;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-bottom: 1px solid var(--border);
+    @media (max-width: 768px) {
+      nav { padding: 0.8rem 1.2rem; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(6, 6, 16, 0.97);
+        backdrop-filter: blur(24px);
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-hamburger { display: flex; }
+
+      .hero { padding: 6rem 1.2rem 3rem; min-height: auto; }
+      .hero h1 { font-size: 2.2rem; }
+
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        margin: -2rem 1rem 0;
+      }
+
+      .stat-item:nth-child(2)::after { display: none; }
+      .stat-item:nth-child(1)::after,
+      .stat-item:nth-child(3)::after { display: block; }
+
+      .steps-grid { grid-template-columns: 1fr; }
+      .security-grid { grid-template-columns: 1fr; }
+
+      .strategy-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .strategy-stats {
+        text-align: left;
+        display: flex;
+        align-items: baseline;
+        gap: 0.8rem;
+      }
+
+      section { padding: 4rem 0; }
+      .container { padding: 0 1.2rem; }
+      .hero-buttons { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-secondary { justify-content: center; }
+      .comparison-table { font-size: 0.8rem; }
+      .comparison-table th, .comparison-table td { padding: 0.7rem 0.8rem; }
+      .tech-grid { gap: 1rem; }
+      .tech-item { min-width: 120px; padding: 1.2rem 1.5rem; }
     }
 
-    .comparison-table td {
-      padding: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .comparison-table tr:hover td {
-      background: rgba(201, 168, 76, 0.03);
-    }
-
-    .comparison-table .highlight {
-      color: var(--gold);
-      font-weight: 600;
+    @media (max-width: 480px) {
+      .stats-bar { grid-template-columns: 1fr; margin: -1.5rem 0.8rem 0; }
+      .stat-item::after { display: none !important; }
+      .stat-item { padding: 1rem; }
+      .stat-item:not(:last-child) { border-bottom: 1px solid var(--border); }
+      .stat-value { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -855,13 +1178,13 @@
   <nav id="navbar">
     <a href="#" class="nav-logo">KalMydas</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#how">Comment ça marche</a></li>
-      <li><a href="#strategies">Stratégies</a></li>
-      <li><a href="#token">Token KAL</a></li>
-      <li><a href="#security">Sécurité</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="/about">À propos</a></li>
-      <li><a href="https://app.kalmydas.com" class="nav-cta">Lancer l'app →</a></li>
+      <li><a href="#how" data-i18n="nav_how">Comment ça marche</a></li>
+      <li><a href="#strategies" data-i18n="nav_strategies">Stratégies</a></li>
+      <li><a href="#token" data-i18n="nav_token">Token KAL</a></li>
+      <li><a href="#security" data-i18n="nav_security">Sécurité</a></li>
+      <li><a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
+      <li><a href="/about" data-i18n="nav_about">À propos</a></li>
+      <li><a href="https://app.kalmydas.com" class="nav-cta" data-i18n="nav_cta">Lancer l'app</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -870,47 +1193,51 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+    </div>
     <div class="hero-content">
-      <div class="hero-badge">
+      <div class="hero-badge fade-in" data-i18n="hero_badge">
         <span class="dot"></span>
         Testnet en ligne — Arbitrum Sepolia
       </div>
-      <h1>
+      <h1 class="fade-in fade-in-delay-1" data-i18n="hero_h1">
         L'or, <span class="gold">algorithmiquement</span>
       </h1>
-      <p>
+      <p class="hero-sub fade-in fade-in-delay-2" data-i18n="hero_sub">
         5 robots de trading sur l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>), <span class="g-term" data-g="backtest">backtestés</span> sur 20 ans.
-        Des rendements de 4% à 33% par an. Accessible dès 10$.
+        Des rendements de 4% à 78% par an. Accessible dès 10$.
         Transparent, décentralisé, sur <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>.
       </p>
-      <div class="hero-buttons">
-        <a href="https://app.kalmydas.com" class="btn-primary">
-          ⚡ Lancer l'app
+      <div class="hero-buttons fade-in fade-in-delay-3">
+        <a href="https://app.kalmydas.com" class="btn-primary" data-i18n="hero_btn_primary">
+          Lancer l'app
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#strategies" class="btn-secondary">
-          📊 Voir les stratégies
+        <a href="#strategies" class="btn-secondary" data-i18n="hero_btn_secondary">
+          Voir les stratégies
         </a>
       </div>
     </div>
   </section>
 
   <!-- ===== STATS BAR ===== -->
-  <div class="stats-bar">
-    <div class="stat-item fade-in">
+  <div class="stats-bar fade-in">
+    <div class="stat-item">
       <div class="stat-value">5</div>
-      <div class="stat-label">Stratégies de trading</div>
+      <div class="stat-label" data-i18n="stat_1_label">Stratégies de trading</div>
     </div>
-    <div class="stat-item fade-in">
+    <div class="stat-item">
       <div class="stat-value">20+ ans</div>
-      <div class="stat-label">De <span class="g-term" data-g="backtest">backtests</span></div>
+      <div class="stat-label" data-i18n="stat_2_label">De <span class="g-term" data-g="backtest">backtests</span></div>
     </div>
-    <div class="stat-item fade-in">
-      <div class="stat-value">17</div>
-      <div class="stat-label"><span class="g-term" data-g="smart_contract">Contrats intelligents</span></div>
+    <div class="stat-item">
+      <div class="stat-value">20+</div>
+      <div class="stat-label" data-i18n="stat_3_label"><span class="g-term" data-g="smart_contract">Contrats intelligents</span></div>
     </div>
-    <div class="stat-item fade-in">
-      <div class="stat-value">171</div>
-      <div class="stat-label">Tests unitaires</div>
+    <div class="stat-item">
+      <div class="stat-value">500+</div>
+      <div class="stat-label" data-i18n="stat_4_label">Tests unitaires</div>
     </div>
   </div>
 
@@ -918,147 +1245,137 @@
   <section id="how">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label">Simple et rapide</p>
-        <h2 class="section-title">Comment ça marche ?</h2>
-        <p class="section-desc">3 étapes pour accéder au trading algorithmique professionnel sur l'or</p>
+        <p class="section-label" data-i18n="how_label">Simple et rapide</p>
+        <h2 class="section-title" data-i18n="how_title">Comment ça marche ?</h2>
+        <p class="section-desc" data-i18n="how_desc">3 étapes pour accéder au trading algorithmique professionnel sur l'or</p>
       </div>
       <div class="steps-grid">
         <div class="step-card fade-in">
           <div class="step-number">1</div>
-          <h3>Connectez-vous</h3>
-          <p>Email ou wallet — créez votre compte en 30 secondes grâce à l'authentification simplifiée</p>
+          <h3 data-i18n="step_1_h">Connectez-vous</h3>
+          <p data-i18n="step_1_p">Email ou wallet — créez votre compte en 30 secondes grâce à l'authentification simplifiée</p>
         </div>
-        <div class="step-card fade-in">
+        <div class="step-card fade-in fade-in-delay-1">
           <div class="step-number">2</div>
-          <h3>Choisissez votre stratégie</h3>
-          <p>Du prudent à l'offensif — 5 profils de risque adaptés à vos objectifs. Dès 10$</p>
+          <h3 data-i18n="step_2_h">Choisissez votre stratégie</h3>
+          <p data-i18n="step_2_p">Du prudent à l'offensif — 5 profils de risque adaptés à vos objectifs. Dès 10$</p>
         </div>
-        <div class="step-card fade-in">
+        <div class="step-card fade-in fade-in-delay-2">
           <div class="step-number">3</div>
-          <h3>Récoltez vos gains</h3>
-          <p>Les robots tradent pour vous 24h/24. Retirez quand vous voulez, sans blocage</p>
+          <h3 data-i18n="step_3_h">Récoltez vos gains</h3>
+          <p data-i18n="step_3_p">Les robots tradent pour vous 24h/24. Retirez quand vous voulez, sans blocage</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== STRATEGIES ===== -->
-  <section id="strategies" style="background: linear-gradient(180deg, var(--bg) 0%, #0d0d15 50%, var(--bg) 100%);">
+  <section id="strategies">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label">5 approches, 5 profils</p>
-        <h2 class="section-title">Nos stratégies de trading</h2>
-        <p class="section-desc">Chaque robot exploite l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>) avec une approche unique, <span class="g-term" data-g="backtest">backtestée</span> sur des données réelles</p>
+        <p class="section-label" data-i18n="strat_label">5 approches, 5 profils</p>
+        <h2 class="section-title" data-i18n="strat_title">Nos stratégies de trading</h2>
+        <p class="section-desc" data-i18n="strat_desc">Chaque robot exploite l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>) avec une approche unique, <span class="g-term" data-g="backtest">backtestée</span> sur des données réelles</p>
       </div>
-      <div class="strategies-grid">
+      <div class="strategies-list">
 
         <!-- HORIZON -->
-        <div class="strategy-card fade-in">
-          <div class="strategy-icon">🌅</div>
-          <div class="strategy-info">
+        <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Horizon</h3>
-            <p class="desc">Suivi de tendance sur l'or — prudent et régulier</p>
+            <p class="desc" data-i18n="strat_horizon_desc">Suivi de tendance sur l'or — prudent et régulier</p>
             <div class="strategy-tags">
-              <span class="tag" style="background: rgba(34,197,94,0.15); color: #22c55e;">Prudent</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">11 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.31</span>
+              <span class="tag" style="background: rgba(34,197,94,0.12); color: #22c55e;" data-i18n="strat_horizon_tag">Prudent</span>
+              <span class="tag tag-muted" data-i18n="strat_horizon_bt">11 ans de backtest</span>
+              <span class="tag tag-muted"><span class="g-term" data-g="profit_factor">PF</span> 1.31</span>
             </div>
           </div>
           <div class="strategy-stats">
             <div class="strategy-apy" style="color: #22c55e;">4%</div>
-            <div class="strategy-meta">par an • 1 098 trades</div>
+            <div class="strategy-meta" data-i18n="strat_horizon_meta">par an · 1 098 trades</div>
           </div>
         </div>
 
         <!-- VALKYRIE -->
-        <div class="strategy-card fade-in">
-          <div class="strategy-icon">⚔️</div>
-          <div class="strategy-info">
+        <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Valkyrie</h3>
-            <p class="desc">Breakout + pyramide sur l'or — équilibre risque/rendement</p>
+            <p class="desc" data-i18n="strat_valkyrie_desc">Breakout + pyramide sur l'or — équilibre risque/rendement</p>
             <div class="strategy-tags">
-              <span class="tag" style="background: rgba(59,130,246,0.15); color: #3b82f6;">Équilibré</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">16 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 2.30</span>
+              <span class="tag" style="background: rgba(59,130,246,0.12); color: #3b82f6;" data-i18n="strat_valkyrie_tag">Équilibré</span>
+              <span class="tag tag-muted" data-i18n="strat_valkyrie_bt">16 ans de backtest</span>
+              <span class="tag tag-muted"><span class="g-term" data-g="profit_factor">PF</span> 2.30</span>
             </div>
           </div>
           <div class="strategy-stats">
             <div class="strategy-apy" style="color: #3b82f6;">12.8%</div>
-            <div class="strategy-meta">par an • 329 trades</div>
+            <div class="strategy-meta" data-i18n="strat_valkyrie_meta">par an · 329 trades</div>
           </div>
         </div>
 
         <!-- REVOLUTION -->
-        <div class="strategy-card fade-in">
-          <div class="strategy-icon">🔥</div>
-          <div class="strategy-info">
+        <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Revolution</h3>
-            <p class="desc">Breakout tendanciel + triple filtre — rendements dynamiques</p>
+            <p class="desc" data-i18n="strat_revolution_desc">Breakout tendanciel + triple filtre — rendements dynamiques</p>
             <div class="strategy-tags">
-              <span class="tag" style="background: rgba(249,115,22,0.15); color: #f97316;">Dynamique</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">21 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.11</span>
+              <span class="tag" style="background: rgba(249,115,22,0.12); color: #f97316;" data-i18n="strat_revolution_tag">Dynamique</span>
+              <span class="tag tag-muted" data-i18n="strat_revolution_bt">21 ans de backtest</span>
+              <span class="tag tag-muted"><span class="g-term" data-g="profit_factor">PF</span> 1.11</span>
             </div>
           </div>
           <div class="strategy-stats">
             <div class="strategy-apy" style="color: #f97316;">24.6%</div>
-            <div class="strategy-meta">par an • 2 166 trades</div>
+            <div class="strategy-meta" data-i18n="strat_revolution_meta">par an · 2 166 trades</div>
           </div>
         </div>
 
         <!-- TREASURY -->
-        <div class="strategy-card fade-in">
-          <div class="strategy-icon">🏦</div>
-          <div class="strategy-info">
+        <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Treasury</h3>
-            <p class="desc">Phoenix Engine — trailing adaptatif + protection du capital</p>
+            <p class="desc" data-i18n="strat_treasury_desc">Phoenix Engine — trailing adaptatif + protection du capital</p>
             <div class="strategy-tags">
-              <span class="tag" style="background: rgba(234,179,8,0.15); color: #eab308;">Dynamique</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">21 ans de backtest</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.35</span>
+              <span class="tag" style="background: rgba(234,179,8,0.12); color: #eab308;" data-i18n="strat_treasury_tag">Dynamique</span>
+              <span class="tag tag-muted" data-i18n="strat_treasury_bt">21 ans de backtest</span>
+              <span class="tag tag-muted"><span class="g-term" data-g="profit_factor">PF</span> 1.35</span>
             </div>
           </div>
           <div class="strategy-stats">
             <div class="strategy-apy" style="color: #eab308;">33.2%</div>
-            <div class="strategy-meta">par an • 1 815 trades</div>
+            <div class="strategy-meta" data-i18n="strat_treasury_meta">par an · 1 815 trades</div>
           </div>
         </div>
 
         <!-- ORION -->
-        <div class="strategy-card fade-in">
-          <div class="strategy-icon">⭐</div>
-          <div class="strategy-info">
+        <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Orion</h3>
-            <p class="desc">Mission x10 sur l'or — objectif atteint en 4 ans historiquement</p>
+            <p class="desc" data-i18n="strat_orion_desc">Mission x10 sur l'or — Objectif atteint en 4 ans historiquement</p>
             <div class="strategy-tags">
-              <span class="tag" style="background: rgba(239,68,68,0.15); color: #ef4444;">Offensif</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);">20 ans de données</span>
-              <span class="tag" style="background: rgba(255,255,255,0.05); color: var(--text-dim);"><span class="g-term" data-g="profit_factor">PF</span> 1.65</span>
+              <span class="tag" style="background: rgba(239,68,68,0.12); color: #ef4444;" data-i18n="strat_orion_tag">Offensif</span>
+              <span class="tag tag-muted" data-i18n="strat_orion_bt">20 ans de données</span>
+              <span class="tag tag-muted"><span class="g-term" data-g="profit_factor">PF</span> 1.65</span>
             </div>
           </div>
           <div class="strategy-stats">
-            <div class="strategy-apy" style="color: #ef4444;">+913%</div>
-            <div class="strategy-meta">en 4 ans • 800 trades</div>
+            <div class="strategy-apy" style="color: #ef4444;">~78%</div>
+            <div class="strategy-meta" data-i18n="strat_orion_meta">en 4 ans · 800 trades</div>
           </div>
         </div>
       </div>
 
-      <!-- Comparison mini-table -->
-      <div class="fade-in" style="margin-top: 3rem; overflow-x: auto;">
+      <!-- Comparison table -->
+      <div class="table-wrap fade-in">
         <table class="comparison-table">
           <thead>
             <tr>
-              <th>Stratégie</th>
-              <th>Rendement</th>
+              <th data-i18n="th_strategy">Stratégie</th>
+              <th data-i18n="th_return">Rendement</th>
               <th><span class="g-term" data-g="win_rate">Win Rate</span></th>
               <th><span class="g-term" data-g="drawdown">DD Max</span></th>
-              <th><span class="g-term" data-g="backtest">Backtest</span></th>
-              <th><span class="g-term" data-g="perf_fee">Fee perf.</span></th>
+              <th data-i18n="th_backtest"><span class="g-term" data-g="backtest">Backtest</span></th>
+              <th data-i18n="th_perf_fee"><span class="g-term" data-g="perf_fee">Fee perf.</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>🌅 Horizon</td>
+              <td class="strat-name">Horizon</td>
               <td class="highlight">4% / an</td>
               <td>21.49%</td>
               <td>46.01%</td>
@@ -1066,7 +1383,7 @@
               <td>10%</td>
             </tr>
             <tr>
-              <td>⚔️ Valkyrie</td>
+              <td class="strat-name">Valkyrie</td>
               <td class="highlight">12.8% / an</td>
               <td>46.5%</td>
               <td>59.14%</td>
@@ -1074,7 +1391,7 @@
               <td>20%</td>
             </tr>
             <tr>
-              <td>🔥 Revolution</td>
+              <td class="strat-name">Revolution</td>
               <td class="highlight">24.6% / an</td>
               <td>35%</td>
               <td>63.66%</td>
@@ -1082,7 +1399,7 @@
               <td>20%</td>
             </tr>
             <tr>
-              <td>🏦 Treasury</td>
+              <td class="strat-name">Treasury</td>
               <td class="highlight">33.2% / an</td>
               <td>38.18%</td>
               <td>70.26%</td>
@@ -1090,8 +1407,8 @@
               <td>20%</td>
             </tr>
             <tr>
-              <td>⭐ Orion</td>
-              <td class="highlight">+913% (4 ans)</td>
+              <td class="strat-name">Orion</td>
+              <td class="highlight">~78% / an</td>
               <td>64.88%</td>
               <td>9.11%</td>
               <td>20 ans</td>
@@ -1101,19 +1418,19 @@
         </table>
       </div>
 
-      <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">
-        ⚠️ Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital.
-      </p>
+      <p class="disclaimer" data-i18n="disclaimer">Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital.</p>
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <!-- ===== TOKEN KAL ===== -->
-  <section id="token" class="token-section">
+  <section id="token">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label">Utility Token</p>
-        <h2 class="section-title">Le token KAL</h2>
-        <p class="section-desc">Un token <span class="g-term" data-g="erc20">ERC-20</span> au cœur de l'écosystème KalMydas</p>
+        <p class="section-label" data-i18n="token_label">Utility Token</p>
+        <h2 class="section-title" data-i18n="token_title">Le token KAL</h2>
+        <p class="section-desc" data-i18n="token_desc">Un token <span class="g-term" data-g="erc20">ERC-20</span> au cœur de l'écosystème KalMydas</p>
       </div>
       <div class="token-grid">
         <div class="token-visual fade-in">
@@ -1122,112 +1439,274 @@
           </div>
         </div>
         <div class="token-info fade-in">
-          <h3>Conçu pour créer de la valeur</h3>
-          <p>
+          <h3 data-i18n="token_h3">Conçu pour créer de la valeur</h3>
+          <p data-i18n="token_p">
             Le token KAL utilise une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> mathématique :
             plus la demande augmente, plus le prix monte automatiquement.
             Les premiers participants bénéficient du meilleur prix.
           </p>
           <ul class="token-features">
-            <li><span class="check">✦</span> <strong><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></strong> — Prix qui augmente avec l'adoption</li>
-            <li><span class="check">✦</span> <strong><span class="g-term" data-g="buyback_burn">Rachat et destruction</span></strong> — Les frais de performance rachètent et détruisent du KAL</li>
-            <li><span class="check">✦</span> <strong>Récompenses <span class="g-term" data-g="lp">LP</span></strong> — <span class="g-term" data-g="staking">Staking</span> de liquidité avec rewards en KAL</li>
-            <li><span class="check">✦</span> <strong>Bonus dépôt</strong> — Jusqu'à +5% en KAL sur vos dépôts</li>
-            <li><span class="check">✦</span> <strong>Gouvernance</strong> — Votes communautaires (prévu 2027)</li>
-            <li><span class="check">✦</span> <strong><span class="g-term" data-g="deflationniste">Déflationniste</span></strong> — Offre qui diminue avec le temps</li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f1"><strong><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></strong> — Prix qui augmente avec l'adoption</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f2"><strong><span class="g-term" data-g="pol">Rachat et Recirculation</span></strong> — Les frais de performance rachètent du KAL et le recirculent en liquidité (philosophie Zéro Destruction)</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f3"><strong>Partage des frais</strong> — Bloquez vos KAL en <span class="g-term" data-g="vekal">veKAL</span> pour recevoir votre part des frais en <span class="g-term" data-g="usdc">USDC</span> chaque semaine</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f4"><strong>Récompenses <span class="g-term" data-g="lp">LP</span></strong> — <span class="g-term" data-g="staking">Staking</span> de liquidité avec rewards en KAL</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f5"><strong>Bonus dépôt</strong> — Jusqu'à +5% en KAL sur vos dépôts</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f6"><strong>Gouvernance</strong> — Votes communautaires (prévu 2027)</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f7"><strong><span class="g-term" data-g="deflationniste">Déflationniste</span></strong> — Offre qui diminue avec le temps</span>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <!-- ===== SECURITY ===== -->
   <section id="security">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label">Confiance & Transparence</p>
-        <h2 class="section-title">Sécurité de vos fonds</h2>
-        <p class="section-desc">Vos actifs sont protégés par des <span class="g-term" data-g="smart_contract">smart contracts</span> auditables, déployés sur la <span class="g-term" data-g="blockchain">blockchain</span></p>
+        <p class="section-label" data-i18n="sec_label">Confiance & Transparence</p>
+        <h2 class="section-title" data-i18n="sec_title">Sécurité de vos fonds</h2>
+        <p class="section-desc" data-i18n="sec_desc">Vos actifs sont protégés par des <span class="g-term" data-g="smart_contract">smart contracts</span> auditables, déployés sur la <span class="g-term" data-g="blockchain">blockchain</span></p>
       </div>
       <div class="security-grid">
         <div class="security-card fade-in">
-          <div class="security-icon">🔒</div>
-          <h3><span class="g-term" data-g="smart_contract">Contrats intelligents</span> vérifiables</h3>
-          <p>17 contrats <span class="g-term" data-g="solidity">Solidity</span>, code source public, vérifiable sur <span class="g-term" data-g="basescan">Arbiscan</span> à tout moment</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 data-i18n="sec_1_h"><span class="g-term" data-g="smart_contract">Contrats intelligents</span> vérifiables</h3>
+          <p data-i18n="sec_1_p">20+ contrats <span class="g-term" data-g="solidity">Solidity</span>, code source public, vérifiable sur <span class="g-term" data-g="arbiscan">Arbiscan</span> à tout moment</p>
+        </div>
+        <div class="security-card fade-in fade-in-delay-1">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="sec_2_h">500+ tests unitaires</h3>
+          <p data-i18n="sec_2_p">Chaque fonction critique est testée automatiquement. Couverture complète des scénarios</p>
+        </div>
+        <div class="security-card fade-in fade-in-delay-2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 data-i18n="sec_3_h"><span class="g-term" data-g="arbitrum_l2">Arbitrum</span> par Offchain Labs</h3>
+          <p data-i18n="sec_3_p">Déployé sur Arbitrum, le <span class="g-term" data-g="layer2">layer 2</span> d'Ethereum soutenu par Offchain Labs. Frais minimes, sécurité maximale</p>
         </div>
         <div class="security-card fade-in">
-          <div class="security-icon">🛡️</div>
-          <h3>171 tests unitaires</h3>
-          <p>Chaque fonction critique est testée automatiquement. Couverture complète des scénarios</p>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.78 7.78 5.5 5.5 0 017.78-7.78zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <h3 data-i18n="sec_4_h">Contrôle total</h3>
+          <p data-i18n="sec_4_p">Vos fonds restent dans les <span class="g-term" data-g="smart_contract">smart contracts</span>. Pas de clé privée centralisée. Retirez quand vous voulez</p>
         </div>
-        <div class="security-card fade-in">
-          <div class="security-icon">⛓️</div>
-          <h3><span class="g-term" data-g="arbitrum_l2">Arbitrum</span> par Offchain Labs</h3>
-          <p>Déployé sur Base, le <span class="g-term" data-g="layer2">layer 2</span> d'Ethereum soutenu par Offchain Labs. Frais minimes, sécurité maximale</p>
+        <div class="security-card fade-in fade-in-delay-1">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 data-i18n="sec_5_h"><span class="g-term" data-g="hwm">High-Water Mark</span></h3>
+          <p data-i18n="sec_5_p">Les <span class="g-term" data-g="perf_fee">frais de performance</span> ne s'appliquent que sur les nouveaux gains. Jamais de double facturation</p>
         </div>
-        <div class="security-card fade-in">
-          <div class="security-icon">🔑</div>
-          <h3>Contrôle total</h3>
-          <p>Vos fonds restent dans les <span class="g-term" data-g="smart_contract">smart contracts</span>. Pas de clé privée centralisée. Retirez quand vous voulez</p>
-        </div>
-        <div class="security-card fade-in">
-          <div class="security-icon">📊</div>
-          <h3><span class="g-term" data-g="hwm">High-Water Mark</span></h3>
-          <p>Les <span class="g-term" data-g="perf_fee">frais de performance</span> ne s'appliquent que sur les nouveaux gains. Jamais de double facturation</p>
-        </div>
-        <div class="security-card fade-in">
-          <div class="security-icon">🔍</div>
-          <h3>Audit indépendant</h3>
-          <p>Audit de sécurité prévu avant le lancement mainnet (Q3 2026). Résultats publics</p>
+        <div class="security-card fade-in fade-in-delay-2">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 data-i18n="sec_6_h">Audit indépendant</h3>
+          <p data-i18n="sec_6_p">Audit de sécurité prévu avant le lancement mainnet (Q3 2026). Résultats publics</p>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="section-divider"></div>
+
   <!-- ===== ROADMAP ===== -->
-  <section id="roadmap" style="background: linear-gradient(180deg, var(--bg) 0%, #0d0d15 50%, var(--bg) 100%);">
+  <section id="roadmap">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label">Vision long terme</p>
-        <h2 class="section-title">Feuille de route</h2>
+        <p class="section-label" data-i18n="road_label">Vision long terme</p>
+        <h2 class="section-title" data-i18n="road_title">Feuille de route</h2>
       </div>
       <div class="roadmap-timeline">
 
+        <div class="roadmap-item completed fade-in">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-phase" data-i18n="road_1_phase">Phase 1 — Q1 2026 <span class="tag-done">Terminé</span></div>
+          <h3 data-i18n="road_1_h">Fondations</h3>
+          <p data-i18n="road_1_p">Premiers <span class="g-term" data-g="smart_contract">contrats intelligents</span> déployés sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Tests E2E validés. MVP frontend connecté <span class="g-term" data-g="on_chain">on-chain</span>. Livre blanc publié. 5 <span class="g-term" data-g="backtest">backtests</span> vérifiés.</p>
+        </div>
+
         <div class="roadmap-item active fade-in">
           <div class="roadmap-dot"></div>
-          <div class="roadmap-phase">Phase 1 — Q1 2026 <span class="tag-progress">En cours</span></div>
-          <h3>Fondations</h3>
-          <p>17 <span class="g-term" data-g="smart_contract">contrats intelligents</span> déployés sur <span class="g-term" data-g="testnet">Arbitrum Sepolia</span>. 171 tests. MVP frontend connecté <span class="g-term" data-g="on_chain">on-chain</span>. Livre blanc publié. 5 <span class="g-term" data-g="backtest">backtests</span> vérifiés.</p>
-        </div>
-
-        <div class="roadmap-item fade-in">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-phase">Phase 2 — Q2 2026</div>
-          <h3>Audit & Bêta</h3>
-          <p>Programme bêta-testeurs. Intégration temps réel des robots de trading. Audit de sécurité indépendant. Documentation technique complète.</p>
+          <div class="roadmap-phase" data-i18n="road_2_phase">Phase 2 — Q2 2026 <span class="tag-progress">En cours</span></div>
+          <h3 data-i18n="road_2_h">Développement & Beta</h3>
+          <p data-i18n="road_2_p">20+ contrats déployés sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, gouvernance, système de parrainage, auto-compound, yield diversifier, trésorerie RWA — tout codé et testé. Programme bêta-testeurs actif.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
-          <div class="roadmap-phase">Phase 3 — Q3 2026</div>
-          <h3>Lancement public</h3>
-          <p>Déploiement <span class="g-term" data-g="mainnet">mainnet</span> <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>. Lancement officiel des 5 stratégies. Activation du Pass d'accès <span class="g-term" data-g="nft">NFT</span>. Partenariats liquidité.</p>
+          <div class="roadmap-phase" data-i18n="road_3_phase">Phase 3 — Q3 2026</div>
+          <h3 data-i18n="road_3_h">Audit & Lancement</h3>
+          <p data-i18n="road_3_p">Audit de sécurité indépendant. Déploiement <span class="g-term" data-g="mainnet">mainnet</span> <span class="g-term" data-g="arbitrum_l2">Arbitrum One</span>. Lancement officiel des 5 stratégies. Activation du Pass d'accès <span class="g-term" data-g="nft">NFT</span>.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
-          <div class="roadmap-phase">Phase 4 — Q4 2026</div>
-          <h3>Croissance</h3>
-          <p>Programme de récompenses communautaires. Listing KAL sur <span class="g-term" data-g="dex">DEX</span>. Dashboard analytics avancé. Exploration de nouveaux actifs.</p>
+          <div class="roadmap-phase" data-i18n="road_4_phase">Phase 4 — Q4 2026</div>
+          <h3 data-i18n="road_4_h">Croissance</h3>
+          <p data-i18n="road_4_p">Programme de récompenses communautaires. Listing KAL sur <span class="g-term" data-g="dex">DEX</span>. Dashboard analytics avancé. Exploration de nouveaux actifs.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
-          <div class="roadmap-phase">2027 et au-delà</div>
-          <h3>Expansion</h3>
-          <p>Application mobile native. Nouvelles stratégies et marchés. Gouvernance <span class="g-term" data-g="dao">DAO</span>. Expansion multi-chain (Arbitrum, Polygon).</p>
+          <div class="roadmap-phase" data-i18n="road_5_phase">2027 et au-delà</div>
+          <h3 data-i18n="road_5_h">Expansion</h3>
+          <p data-i18n="road_5_p">Application mobile native. Nouvelles stratégies et marchés. Gouvernance <span class="g-term" data-g="dao">DAO</span>. Expansion multi-chain (Arbitrum, Polygon).</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="faq_label">Questions fréquentes</p>
+        <h2 class="section-title" data-i18n="faq_title">FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_1_q">Qu'est-ce que KalMydas exactement ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_1_a">KalMydas est un écosystème DeFi qui propose 5 stratégies de trading algorithmique sur l'or (XAUUSD). Les robots exécutent les trades automatiquement, 24h/24. Tout est transparent et vérifiable sur la blockchain Arbitrum.</span>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_2_q">Quel est le dépôt minimum ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_2_a">Vous pouvez commencer dès 10$ (en USDC sur Arbitrum). Il n'y a pas de montant maximum. Vos fonds restent sous votre contrôle dans les smart contracts.</span>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_3_q">Comment fonctionnent les retraits ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_3_a">Les retraits sont libres et instantanés, 24h/24. Pas de période de blocage, pas de frais de retrait. Vous interagissez directement avec le smart contract.</span>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_4_q">Les rendements sont-ils garantis ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_4_a">Non. Les chiffres affichés sont basés sur des backtests historiques (jusqu'à 21 ans de données). Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital.</span>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_5_q">Quels sont les frais ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_5_a">Pas de frais d'entrée ni de sortie. Les seuls frais sont des frais de performance (10% à 20% selon la stratégie) prélevés uniquement sur les nouveaux gains grâce au système de High-Water Mark. Vous ne payez que si vous gagnez.</span>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_6_q">Faut-il un wallet crypto pour utiliser KalMydas ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_6_a">Non. Vous pouvez vous connecter avec un simple email ou un compte Google. Un wallet est créé automatiquement pour vous grâce à Privy. Les utilisateurs avancés peuvent aussi connecter leur propre wallet (MetaMask, etc.).</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== BUILT WITH ===== -->
+  <section id="tech">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="tech_label">Infrastructure</p>
+        <h2 class="section-title" data-i18n="tech_title">Construit avec</h2>
+      </div>
+      <div class="tech-grid fade-in">
+        <div class="tech-item">
+          <img src="https://cryptologos.cc/logos/arbitrum-arb-logo.svg" alt="Arbitrum" width="40" height="40" style="border-radius: 50%;" loading="lazy">
+          <span class="tech-name">Arbitrum</span>
+          <span class="tech-role">Blockchain L2</span>
+        </div>
+        <div class="tech-item">
+          <!-- Solidity — official logo from soliditylang.org -->
+          <svg width="40" height="40" viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M50 44.3013L25 1L0 44.3013L25 87.6025L50 44.3013Z" fill="#627EEA"/>
+            <path opacity="0.45" d="M50 44.3091L75 1.00781L25 1.00781L0 44.3091H50Z" fill="#627EEA"/>
+            <path opacity="0.6" d="M75 1.00781L25 1.00781L50 44.3091H100L75 1.00781Z" fill="#627EEA"/>
+            <path opacity="0.8" d="M50 115.699L75 159L100 115.699L75 72.3975L50 115.699Z" fill="#627EEA"/>
+            <path opacity="0.45" d="M50 115.691L25 158.993H75L100 115.691L50 115.691Z" fill="#627EEA"/>
+            <path opacity="0.6" d="M25 158.993L75 158.993L50 115.691H0L25 158.993Z" fill="#627EEA"/>
+          </svg>
+          <span class="tech-name">Solidity</span>
+          <span class="tech-role">Smart Contracts</span>
+        </div>
+        <div class="tech-item">
+          <!-- Privy Blobby mark (official shape: circle with upper-left notch) -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="privy-mask">
+              <rect width="40" height="40" fill="white"/>
+              <circle cx="12" cy="10" r="7.5" fill="black"/>
+            </mask>
+            <circle cx="20" cy="22" r="16" fill="#eaeaf2" mask="url(#privy-mask)"/>
+          </svg>
+          <span class="tech-name">Privy</span>
+          <span class="tech-role">Auth & Wallets</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1235,14 +1714,15 @@
   <!-- ===== CTA ===== -->
   <section id="start" class="cta-section">
     <div class="cta-content fade-in">
-      <h2>Prêt à participer à <span style="background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">l'or algorithmique</span> ?</h2>
-      <p>Rejoignez les premiers participants de KalMydas. Le meilleur prix du token KAL est maintenant.</p>
+      <h2 data-i18n="cta_h2">Prêt à participer à <span style="background: var(--gradient-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">l'or algorithmique</span> ?</h2>
+      <p data-i18n="cta_p">Rejoignez les premiers participants de KalMydas. Le meilleur prix du token KAL est maintenant.</p>
       <div class="hero-buttons">
-        <a href="https://app.kalmydas.com" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
-          ⚡ Lancer l'app
+        <a href="https://app.kalmydas.com" class="btn-primary" style="font-size: 1.05rem; padding: 1rem 2.5rem;" data-i18n="cta_btn_primary">
+          Lancer l'app
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="https://app.kalmydas.com/whitepaper" class="btn-secondary">
-          📄 Lire le Livre blanc
+        <a href="/whitepaper" class="btn-secondary" data-i18n="cta_btn_secondary">
+          Lire le Livre blanc
         </a>
       </div>
     </div>
@@ -1252,37 +1732,39 @@
   <footer>
     <div class="footer-logo">KalMydas</div>
     <div class="footer-links">
-      <a href="https://app.kalmydas.com">Application</a>
-      <a href="https://app.kalmydas.com/whitepaper">Livre blanc</a>
-      <a href="/about">À propos</a>
-      <a href="https://sepolia.sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank"><span class="g-term" data-g="basescan">Arbiscan</span></a>
+      <a href="https://app.kalmydas.com" data-i18n="footer_app">Application</a>
+      <a href="/whitepaper" data-i18n="footer_wp">Livre blanc</a>
+      <a href="/about" data-i18n="footer_about">À propos</a>
+      <a href="https://sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank"><span class="g-term" data-g="arbiscan">Arbiscan</span></a>
       <a href="https://x.com/KalMydas" target="_blank">Twitter</a>
       <a href="https://t.me/kalmydas" target="_blank">Telegram</a>
-      <a href="mailto:kal@kalmydas.ch">Contact</a>
+      <a href="mailto:kal@kalmydas.ch" data-i18n="footer_contact">Contact</a>
     </div>
-    <p class="footer-copy">
-      © 2026 KalMydas. Trading algorithmique décentralisé sur l'or.
-      <br />
-      <span style="font-size: 0.75rem;">Les performances passées ne garantissent pas les résultats futurs. Participer comporte des risques.</span>
+    <p class="footer-copy" data-i18n="footer_copy">
+      &copy; 2026 KalMydas. Trading algorithmique décentralisé sur l'or.
+      <br>
+      <span style="font-size: 0.72rem;">Les performances passées ne garantissent pas les résultats futurs. Participer comporte des risques.</span>
     </p>
   </footer>
 
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // Scroll animations
+    // Scroll animations with IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
     // Navbar scroll effect
+    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // Close mobile menu on link click
@@ -1292,6 +1774,7 @@
       });
     });
   </script>
+  <script src="i18n.js"></script>
   <script src="glossary-tooltip.js"></script>
 
 </body>
