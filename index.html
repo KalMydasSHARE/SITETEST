@@ -1869,6 +1869,7 @@
     window.addEventListener('load', function () {
       if (typeof CookieConsent === 'undefined') return;
       CookieConsent.run({
+        cookie: { domain: '.kalmydas.com', name: 'cc_cookie', expiresAfterDays: 182, sameSite: 'Lax' },
         guiOptions: {
           consentModal: { layout: 'box', position: 'bottom right', equalWeightButtons: true, flipButtons: false },
           preferencesModal: { layout: 'box', position: 'right', equalWeightButtons: true, flipButtons: false }
