@@ -8,9 +8,9 @@
 const I18N_EN = {
   /* ===== META (handled separately) ===== */
   _title: "KalMydas — Algorithmic gold trading, Accessible to all",
-  _description: "Participate in algorithmic gold (XAUUSD) trading strategies backtested over 20 years. From $10. Transparent, decentralized, on Arbitrum.",
+  _description: "Participate in algorithmic gold (XAUUSD) trading strategies backtested over 4 to 21 years. From $10. Transparent, decentralized, on Arbitrum. Past results do not guarantee future performance.",
   _og_title: "KalMydas — Gold, algorithmically",
-  _og_description: "5 gold trading strategies backtested up to 21 years. Returns from 4% to 78% per year. From $10.",
+  _og_description: "5 gold trading strategies backtested over 4 to 21 years. Historical annualized returns from ~4% to ~79% per year. From $10. Past results do not guarantee future performance.",
 
   /* ===== NAV ===== */
   nav_how: "How it works",
@@ -24,7 +24,7 @@ const I18N_EN = {
   /* ===== HERO ===== */
   hero_badge: `<span class="dot"></span> Testnet live — Arbitrum Sepolia`,
   hero_h1: `Gold, <span class="gold">algorithmically</span>`,
-  hero_sub: `5 gold trading bots (<span class="g-term" data-g="xauusd">XAUUSD</span>), <span class="g-term" data-g="backtest">backtested</span> over 20 years. Returns from 4% to 78% per year. Starting at $10. Transparent, decentralized, on <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>.`,
+  hero_sub: `5 gold trading bots (<span class="g-term" data-g="xauusd">XAUUSD</span>), <span class="g-term" data-g="backtest">backtested</span> over 4 to 21 years. Historical annualized returns from ~4% to ~79% per year depending on the strategy. Starting at $10. Transparent, decentralized, on <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>.<br><span style="font-size:0.78rem; opacity:0.7;">Past results do not guarantee future performance.</span>`,
   hero_btn_primary: `Launch app <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   hero_btn_secondary: "View strategies",
 
