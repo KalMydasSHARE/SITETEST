@@ -29,6 +29,15 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://kalmydas.com/about/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kalmydas.com/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kalmydas.com/about/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kalmydas.com/about/" />
+  </url>
+  <url>
     <loc>https://app.kalmydas.com/</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>weekly</changefreq>
