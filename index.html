@@ -1258,7 +1258,7 @@
       <li><a href="#token" data-i18n="nav_token">Token KAL</a></li>
       <li><a href="#security" data-i18n="nav_security">Sécurité</a></li>
       <li><a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
-      <li><a href="/about" data-i18n="nav_about">À propos</a></li>
+      <li><a href="#about" data-i18n="nav_about">À propos</a></li>
       <li><a href="https://app.kalmydas.com" class="nav-cta" data-i18n="nav_cta">Lancer l'app</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
@@ -1745,6 +1745,48 @@
 
   <div class="section-divider"></div>
 
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="about_label">Origines</p>
+        <h2 class="section-title" data-i18n="about_title">À propos de KalMydas</h2>
+        <p class="section-desc" data-i18n="about_desc">Pourquoi ce projet existe et comment il fonctionne</p>
+      </div>
+
+      <div class="about-blocks fade-in" style="display: grid; gap: 2rem; max-width: 900px; margin: 0 auto;">
+
+        <!-- Why -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_why_h3">Pourquoi KalMydas existe</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_why_p">KalMydas est né d'une frustration simple : pourquoi le trading algorithmique professionnel, qui génère des performances régulières depuis des décennies, reste-t-il réservé aux banques et aux fonds institutionnels ? Notre plateforme, construite sur <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>, donne à tout le monde — dès 10 $ — accès aux mêmes stratégies algorithmiques que les professionnels.</p>
+        </div>
+
+        <!-- Approach -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_approach_h3">Notre approche</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_approach_p">Nos 5 robots de trading sont développés et optimisés sur <span class="g-term" data-g="mt4">MetaTrader 4</span>. Ils ont été rigoureusement simulés sur les données historiques réelles du courtier (de 4 à 21 ans selon la stratégie), forward-testés et stress-testés sur les crises de 2008 et 2020. Chaque stratégie opère exclusivement sur le marché de l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>).</p>
+        </div>
+
+        <!-- Participate -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_part_h3">Comment participer</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_part_p">Un seul Pass d'accès suffit — un abonnement vérifiable sur la <span class="g-term" data-g="blockchain">blockchain</span> (1 $/jour). Choisissez votre stratégie, déposez vos fonds, et retirez-les 24h/24 sans délai. Nous gagnons uniquement quand vous gagnez : les frais de performance s'appliquent uniquement sur les nouveaux gains grâce au <span class="g-term" data-g="hwm">High-Water Mark</span>.</p>
+        </div>
+
+        <!-- Risk -->
+        <div style="background: var(--bg-card); border: 1px solid rgba(201, 168, 76, 0.15); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_risk_h3">Avertissement sur les risques</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;" data-i18n="about_risk_p">Nous ne promettons rien de magique. Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital, y compris des pertes temporaires pouvant aller jusqu'à 70% sur certaines stratégies. Nous les assumons pleinement et nous publions tout : code source, historiques de tests, audits.</p>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.9rem; opacity: 0.8;" data-i18n="about_status_p">Nous sommes en phase de tests sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Le lancement officiel sur le réseau principal est prévu pour septembre 2026.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- ===== BUILT WITH ===== -->
   <section id="tech">
     <div class="container">
@@ -1810,7 +1852,7 @@
     <div class="footer-links">
       <a href="https://app.kalmydas.com" data-i18n="footer_app">Application</a>
       <a href="/whitepaper" data-i18n="footer_wp">Livre blanc</a>
-      <a href="/about" data-i18n="footer_about">À propos</a>
+      <a href="#about" data-i18n="footer_about">À propos</a>
       <a href="https://sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan</span></a>
       <a href="https://x.com/KalMydas" target="_blank" rel="noopener">Twitter</a>
       <a href="https://t.me/kal_mydas" target="_blank" rel="noopener">Telegram</a>

@@ -159,6 +159,20 @@ const I18N_EN = {
   cta_btn_primary: `Launch app <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   cta_btn_secondary: "Read the Whitepaper",
 
+  /* ===== ABOUT ===== */
+  about_label: "Genesis",
+  about_title: "About KalMydas",
+  about_desc: "Why this project exists and how it works",
+  about_why_h3: "Why KalMydas exists",
+  about_why_p: `KalMydas was born from a simple frustration: why does professional algorithmic trading, which has generated consistent returns for decades, remain reserved for banks and institutional funds? Our platform, built on <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>, gives everyone — starting from $10 — access to the same algorithmic strategies as the professionals.`,
+  about_approach_h3: "Our approach",
+  about_approach_p: `Our 5 trading robots are developed and optimized on <span class="g-term" data-g="mt4">MetaTrader 4</span>. They have been rigorously backtested on real historical broker data (4 to 21 years depending on the strategy), forward-tested, and stress-tested on the 2008 and 2020 crises. Each strategy operates exclusively on the gold market (<span class="g-term" data-g="xauusd">XAUUSD</span>).`,
+  about_part_h3: "How to participate",
+  about_part_p: `A single Access Pass is enough — a subscription verifiable on the <span class="g-term" data-g="blockchain">blockchain</span> ($1/day). Choose your strategy, deposit your funds, and withdraw 24/7 with no delays. We earn only when you earn: performance fees apply only on new gains thanks to the <span class="g-term" data-g="hwm">High-Water Mark</span>.`,
+  about_risk_h3: "Risk disclaimer",
+  about_risk_p: "We promise nothing magical. Past performance does not guarantee future results. Trading carries risk of capital loss, including temporary drawdowns of up to 70% on some strategies. We fully own that and publish everything: source code, test histories, audits.",
+  about_status_p: `We are in testing phase on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Official launch on the main network is planned for September 2026.`,
+
   /* ===== FOOTER ===== */
   footer_app: "Application",
   footer_wp: "Whitepaper",
