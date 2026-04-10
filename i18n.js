@@ -41,7 +41,7 @@ const I18N_EN = {
   step_1_h: "Sign in",
   step_1_p: "Email or wallet — create your account in 30 seconds with simplified authentication",
   step_2_h: "Choose your strategy",
-  step_2_p: "From conservative to aggressive — 5 risk profiles tailored to your goals. From $10",
+  step_2_p: "From conservative to high-risk — 5 risk profiles tailored to your goals. From $10",
   step_3_h: "Collect your earnings",
   step_3_p: "Bots trade for you 24/7. Withdraw whenever you want, no lock-up",
 
@@ -66,12 +66,12 @@ const I18N_EN = {
   strat_revolution_bt: "21 years of backtest",
 
   strat_treasury_desc: "Phoenix Engine — adaptive trailing + capital protection",
-  strat_treasury_tag: "Dynamic",
+  strat_treasury_tag: "Aggressive",
   strat_treasury_meta: "per year · 1,815 trades",
   strat_treasury_bt: "21 years of backtest",
 
   strat_orion_desc: "x10 mission on gold — target reached in 4 years historically",
-  strat_orion_tag: "Aggressive",
+  strat_orion_tag: "High-Risk",
   strat_orion_meta: "per year · 800 trades",
   strat_orion_bt: "20 years of data",
 
@@ -177,10 +177,11 @@ const I18N_EN = {
   about_arch_desc: `A secure bridge connects the <span class="g-term" data-g="mt4">MT4</span> robots to the blockchain. No private key is centralized — your funds remain under your control. Everything is verifiable in real-time on <span class="g-term" data-g="arbiscan">Arbiscan</span>.`,
   about_token_h3: "The KAL token",
   about_token_desc2: `The KAL token (<span class="g-term" data-g="erc20">ERC-20</span>, 10M max supply) uses a transparent <span class="g-term" data-g="bonding_curve">bonding curve</span>: the price rises with adoption. 30% of performance fees are used for buyback and recirculation (Zero Destruction philosophy). Lock your KAL as <span class="g-term" data-g="vekal">veKAL</span> to receive your share of fees in <span class="g-term" data-g="usdc">USDC</span> every week.`,
-  about_token_curve: "74.5% Curve",
-  about_token_lp: "20% LP",
+  about_token_lp_mining: "60% LP Mining",
+  about_token_staking: "30% Staking",
   about_token_presale: "5% Presale",
-  about_token_community: "0.5% Community",
+  about_token_curve: "4.5% Curve",
+  about_token_community: "0.5% Airdrop",
   about_risk_h3: "Risk disclaimer",
   about_risk_p: "We promise nothing magical. Past performance does not guarantee future results. Trading carries risk of capital loss, including temporary drawdowns of up to 70% on some strategies. We fully own that and publish everything: source code, test histories, audits.",
   about_status_p: `We are in testing phase on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Official launch on the main network is planned for September 2026.`,
