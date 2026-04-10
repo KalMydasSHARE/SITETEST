@@ -46,7 +46,7 @@ const GLOSSARY_DEFS = {
   fonds_institutionnels: "Structures financières gérant des capitaux importants (banques, fonds de pension, hedge funds). Disposent d'outils de trading avancés auxquels les particuliers n'ont traditionnellement pas accès.",
   arbitrum_sepolia: "Version de test du réseau Arbitrum. Permet de tester les contrats et l'application sans utiliser de fonds réels avant le lancement officiel.",
   orderbook: "Carnet d'ordres — système qui met en relation acheteurs et vendeurs sur un marché. Chez KalMydas, le prix est déterminé par la courbe de valorisation, sans orderbook.",
-  vekal: "Vote-escrowed KAL — mécanisme inspiré de Curve Finance. En bloquant des KAL, vous recevez des veKAL qui donnent droit au partage des frais en USDC et au vote sur les paramètres du protocole.",
+  vekal: "KAL verrouillé pour la gouvernance (vote-escrowed) — mécanisme inspiré de Curve Finance. En bloquant des KAL, vous recevez des veKAL qui donnent droit au partage des frais en USDC et au vote sur les paramètres du protocole.",
   erc4626: "Norme technique pour les coffres-forts tokenisés sur Ethereum. Permet la composition automatique des gains (auto-compound) de manière standardisée.",
   pol: "Protocol-Owned Liquidity — liquidité détenue directement par le protocole (pas par des utilisateurs). Garantit une liquidité permanente même si les fournisseurs se retirent.",
   rwa: "Real World Assets — actifs du monde réel (bons du Trésor, immobilier) tokenisés sur la blockchain. Offrent un rendement décorrélé du marché crypto.",
