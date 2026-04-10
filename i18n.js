@@ -94,7 +94,7 @@ const I18N_EN = {
   token_f3: `<strong>Fee sharing</strong> — Lock your KAL as <span class="g-term" data-g="vekal">veKAL</span> to receive your share of fees in <span class="g-term" data-g="usdc">USDC</span> every week`,
   token_f4: `<strong><span class="g-term" data-g="lp">LP</span> rewards</strong> — Liquidity <span class="g-term" data-g="staking">staking</span> with KAL rewards`,
   token_f5: `<strong>Deposit bonus</strong> — Up to +5% in KAL on your deposits`,
-  token_f6: `<strong>Governance</strong> — On-chain community votes (active on testnet)`,
+  token_f6: `<strong>Governance</strong> — On-chain community votes + dedicated interface`,
   token_f7: `<strong><span class="g-term" data-g="deflationniste">Deflationary</span></strong> — Supply decreases over time`,
 
   /* ===== SECURITY ===== */
@@ -102,8 +102,8 @@ const I18N_EN = {
   sec_title: "Security of your funds",
   sec_desc: `Your assets are protected by auditable <span class="g-term" data-g="smart_contract">smart contracts</span>, deployed on the <span class="g-term" data-g="blockchain">blockchain</span>`,
   sec_1_h: `Verifiable <span class="g-term" data-g="smart_contract">smart contracts</span>`,
-  sec_1_p: `35+ <span class="g-term" data-g="solidity">Solidity</span> contracts, public source code, verifiable on <span class="g-term" data-g="arbiscan">Arbiscan</span> at any time`,
-  sec_2_h: "173+ unit tests",
+  sec_1_p: `37 <span class="g-term" data-g="solidity">Solidity</span> contracts, public source code, verifiable on <span class="g-term" data-g="arbiscan">Arbiscan</span> at any time`,
+  sec_2_h: "1,100+ unit tests",
   sec_2_p: "Every critical function is automatically tested. Complete scenario coverage",
   sec_3_h: `<span class="g-term" data-g="arbitrum_l2">Arbitrum</span> by Offchain Labs`,
   sec_3_p: `Deployed on Arbitrum, Ethereum's <span class="g-term" data-g="layer2">layer 2</span> backed by Offchain Labs. Minimal fees, maximum security`,
@@ -122,7 +122,7 @@ const I18N_EN = {
   road_1_p: `First <span class="g-term" data-g="smart_contract">smart contracts</span> deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. E2E tests validated. MVP frontend connected <span class="g-term" data-g="on_chain">on-chain</span>. Whitepaper published. 5 verified <span class="g-term" data-g="backtest">backtests</span>.`,
   road_2_phase: `Phase 2 — Q2 2026 <span class="tag-progress">In progress</span>`,
   road_2_h: "Development & Beta",
-  road_2_p: `35+ contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, governance, referral system, auto-compound, yield diversifier, RWA treasury — all coded and tested. Beta testing program active.`,
+  road_2_p: `37 contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, governance, referral system, auto-compound, yield diversifier, RWA treasury — all coded and tested. Beta testing program active.`,
   road_3_phase: "Phase 3 — Q3 2026",
   road_3_h: "Audit & Launch",
   road_3_p: `Independent security audit. <span class="g-term" data-g="mainnet">Mainnet</span> deployment on <span class="g-term" data-g="arbitrum_l2">Arbitrum One</span>. Official launch of all 5 strategies. <span class="g-term" data-g="nft">NFT</span> access pass activation.`,
