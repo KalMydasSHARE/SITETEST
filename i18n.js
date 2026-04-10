@@ -29,8 +29,8 @@ const I18N_EN = {
   hero_btn_secondary: "View strategies",
 
   /* ===== STATS ===== */
-  stat_1_label: "Trading strategies",
-  stat_2_label: `Of <span class="g-term" data-g="backtest">backtesting</span>`,
+  stat_1_label: "Trading robots",
+  stat_2_label: `Of <span class="g-term" data-g="backtest">backtested</span> data`,
   stat_3_label: `<span class="g-term" data-g="smart_contract">Smart contracts</span>`,
   stat_4_label: "Unit tests",
 
