@@ -1098,7 +1098,6 @@
     /* ===== FOOTER ===== */
     footer {
       padding: 3rem 2rem;
-      text-align: center;
       border-top: 1px solid var(--border);
     }
 
@@ -1110,25 +1109,16 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 1.2rem;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-links a {
+    .footer-grid a {
       color: var(--text-secondary);
       text-decoration: none;
       font-size: 0.85rem;
       transition: color 0.3s;
     }
 
-    .footer-links a:hover { color: var(--gold-light); }
+    .footer-grid a:hover { color: var(--gold-light); }
 
     .footer-copy {
       color: var(--text-muted);
@@ -1236,6 +1226,7 @@
       .comparison-table th, .comparison-table td { padding: 0.7rem 0.8rem; }
       .tech-grid { gap: 1rem; }
       .tech-item { min-width: 120px; padding: 1.2rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr !important; }
     }
 
     @media (max-width: 480px) {
@@ -1244,6 +1235,8 @@
       .stat-item { padding: 1rem; }
       .stat-item:not(:last-child) { border-bottom: 1px solid var(--border); }
       .stat-value { font-size: 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr !important; text-align: center !important; }
+      .footer-grid p { max-width: none !important; margin: 0 auto; }
     }
   </style>
 </head>
@@ -1774,11 +1767,70 @@
           <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_part_p">Un seul Pass d'accès suffit — un abonnement vérifiable sur la <span class="g-term" data-g="blockchain">blockchain</span> (1 $/jour). Choisissez votre stratégie, déposez vos fonds, et retirez-les 24h/24 sans délai. Nous gagnons uniquement quand vous gagnez : les frais de performance s'appliquent uniquement sur les nouveaux gains grâce au <span class="g-term" data-g="hwm">High-Water Mark</span>.</p>
         </div>
 
+        <!-- Architecture -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_arch_h3">Architecture technique</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+            <div style="text-align: center;">
+              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">37</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_contracts">contrats Solidity</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">1 109+</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_tests">tests unitaires</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">100%</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_control">fonds sous votre contrôle</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">24/7</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_withdrawals">retraits libres</div>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_arch_desc">Un pont sécurisé relie les robots <span class="g-term" data-g="mt4">MT4</span> à la blockchain. Aucune clé privée n'est centralisée — vos fonds restent sous votre contrôle. Tout est vérifiable en temps réel sur <span class="g-term" data-g="arbiscan">Arbiscan</span>.</p>
+        </div>
+
+        <!-- Token KAL -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_token_h3">Le jeton KAL</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;" data-i18n="about_token_desc2">Le jeton KAL (<span class="g-term" data-g="erc20">ERC-20</span>, 10 millions max) fonctionne avec une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> transparente : le prix monte avec l'adoption. 30% des frais de performance sont utilisés pour le rachat et la recirculation (philosophie Zéro Destruction). Verrouillez vos KAL en <span class="g-term" data-g="vekal">veKAL</span> pour recevoir votre part des frais en <span class="g-term" data-g="usdc">USDC</span> chaque semaine.</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_curve">74.5% Courbe</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_lp">20% LP</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_presale">5% Prévente</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_community">0.5% Communauté</span>
+          </div>
+        </div>
+
         <!-- Risk -->
         <div style="background: var(--bg-card); border: 1px solid rgba(201, 168, 76, 0.15); border-radius: 16px; padding: 2rem;">
           <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_risk_h3">Avertissement sur les risques</h3>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;" data-i18n="about_risk_p">Nous ne promettons rien de magique. Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital, y compris des pertes temporaires pouvant aller jusqu'à 70% sur certaines stratégies. Nous les assumons pleinement et nous publions tout : code source, historiques de tests, audits.</p>
-          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.9rem; opacity: 0.8;" data-i18n="about_status_p">Nous sommes en phase de tests sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Le lancement officiel sur le réseau principal est prévu pour septembre 2026.</p>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_risk_p">Nous ne promettons rien de magique. Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital, y compris des pertes temporaires pouvant aller jusqu'à 70% sur certaines stratégies. Nous les assumons pleinement et nous publions tout : code source, historiques de tests, audits.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_timeline_h3">Où en sommes-nous</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold-light); flex-shrink: 0;"></span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_1"><strong>Q1 2026</strong> — Fondations posées, premiers contrats, MVP connecté</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold-light); flex-shrink: 0; box-shadow: 0 0 8px rgba(201,168,76,0.5);"></span>
+              <span style="color: var(--text); font-size: 0.9rem;" data-i18n="about_tl_2"><strong>Q2 2026</strong> — 37 contrats déployés, bêta-test actif, veKAL + gouvernance</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>Q3 2026</strong> — Audit de sécurité + lancement mainnet Arbitrum One</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_4"><strong>Q4 2026+</strong> — Croissance, listing DEX, app mobile, DAO</span>
+            </div>
+          </div>
+          <a href="#roadmap" style="color: var(--gold-light); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem;" data-i18n="about_tl_link">Voir la feuille de route complète →</a>
         </div>
 
       </div>
@@ -1848,30 +1900,63 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-logo">KalMydas</div>
-    <div class="footer-links">
-      <a href="https://app.kalmydas.com" data-i18n="footer_app">Application</a>
-      <a href="/whitepaper" data-i18n="footer_wp">Livre blanc</a>
-      <a href="#about" data-i18n="footer_about">À propos</a>
-      <a href="https://sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan</span></a>
-      <a href="https://x.com/KalMydas" target="_blank" rel="noopener">Twitter</a>
-      <a href="https://t.me/kal_mydas" target="_blank" rel="noopener">Telegram</a>
-      <a href="https://discord.gg/wUcyV2Ae" target="_blank" rel="noopener">Discord</a>
-      <a href="mailto:kal@kalmydas.ch" data-i18n="footer_contact">Contact</a>
+    <div class="footer-grid" style="display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; text-align: left;">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer-logo" style="margin-bottom: 0.8rem;">KalMydas</div>
+        <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; max-width: 260px;" data-i18n="footer_tagline">Trading algorithmique sur l'or, accessible à tous. Non-custodial, vos clés, vos fonds.</p>
+      </div>
+
+      <!-- Plateforme -->
+      <div>
+        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_platform">Plateforme</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://app.kalmydas.com" data-i18n="footer_app">Application</a>
+          <a href="/whitepaper" data-i18n="footer_wp">Livre blanc</a>
+          <a href="#strategies" data-i18n="footer_strategies">Stratégies</a>
+          <a href="#token" data-i18n="footer_token">Token KAL</a>
+          <a href="#security" data-i18n="footer_security">Sécurité</a>
+          <a href="#roadmap" data-i18n="footer_roadmap">Feuille de route</a>
+        </div>
+      </div>
+
+      <!-- Communauté -->
+      <div>
+        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_community">Communauté</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://discord.gg/wUcyV2Ae" target="_blank" rel="noopener">Discord</a>
+          <a href="https://t.me/kal_mydas" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://x.com/KalMydas" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan</span></a>
+          <a href="mailto:kal@kalmydas.ch" data-i18n="footer_contact">Contact</a>
+        </div>
+      </div>
+
+      <!-- Légal -->
+      <div>
+        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_legal">Légal</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="#about" data-i18n="footer_about">À propos</a>
+          <a href="#faq" data-i18n="footer_faq">FAQ</a>
+          <a href="/privacy.html" data-i18n="footer_privacy">Confidentialité</a>
+          <a href="/cookies.html" data-i18n="footer_cookies">Cookies</a>
+          <a href="/terms.html" data-i18n="footer_terms">Conditions d'utilisation</a>
+          <a href="#" onclick="if(window.CookieConsent){CookieConsent.showPreferences();}return false;" data-i18n="footer_manage_cookies">Gérer les cookies</a>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-links" style="margin-top: 0.5rem;">
-      <a href="/privacy.html">Confidentialité</a>
-      <a href="/cookies.html">Cookies</a>
-      <a href="/terms.html">Conditions d'utilisation</a>
-      <a href="#" onclick="if(window.CookieConsent){CookieConsent.showPreferences();}return false;">Gérer les cookies</a>
+
+    <div style="border-top: 1px solid var(--border); max-width: 1100px; margin: 2rem auto 0; padding: 1.5rem 1.5rem 0;">
+      <p class="footer-copy" data-i18n="footer_copy">
+        &copy; 2026 KalMydas — Trading algorithmique décentralisé sur l'or. Non-custodial, vos clés, vos fonds.
+        <br>
+        <span style="font-size: 0.72rem; display: block; max-width: 820px; margin: 0.6rem auto 0;">
+          <strong data-i18n="footer_risk_title">Avertissement risques :</strong> <span data-i18n="footer_risk_text">KalMydas est une plateforme DeFi expérimentale. Le trading algorithmique et les crypto-actifs comportent un risque élevé de perte totale du capital. Les performances passées ne préjugent pas des performances futures. Ce site ne constitue ni un conseil en investissement, ni une sollicitation, ni une offre d'achat ou de vente d'instruments financiers. Vous êtes seul responsable de vos décisions. Renseignez-vous sur la législation applicable dans votre juridiction avant toute participation.</span>
+        </span>
+      </p>
     </div>
-    <p class="footer-copy" data-i18n="footer_copy">
-      &copy; 2026 KalMydas — Trading algorithmique décentralisé sur l'or. Non-custodial, vos clés, vos fonds.
-      <br>
-      <span style="font-size: 0.72rem; display: block; max-width: 820px; margin: 0.6rem auto 0;">
-        <strong>Avertissement risques :</strong> KalMydas est une plateforme DeFi expérimentale. Le trading algorithmique et les crypto-actifs comportent un risque élevé de perte totale du capital. Les performances passées ne préjugent pas des performances futures. Ce site ne constitue ni un conseil en investissement, ni une sollicitation, ni une offre d'achat ou de vente d'instruments financiers. Vous êtes seul responsable de vos décisions. Renseignez-vous sur la législation applicable dans votre juridiction avant toute participation.
-      </span>
-    </p>
   </footer>
 
   <!-- ===== SCRIPTS ===== -->
