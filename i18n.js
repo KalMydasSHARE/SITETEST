@@ -272,6 +272,11 @@ const GLOSSARY_DEFS_EN = {
   }
 
   function init() {
+    // Merge page-specific EN translations (e.g. about page)
+    if (window.PAGE_I18N_EN) {
+      Object.assign(I18N_EN, window.PAGE_I18N_EN);
+    }
+
     // Cache all French content
     cacheFR();
     FR_CACHE._title = document.title;
