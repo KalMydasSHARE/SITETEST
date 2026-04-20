@@ -271,6 +271,10 @@ const GLOSSARY_DEFS_EN = {
    * Stored in a cookie scoped to .kalmydas.com (root domain) so all subdomains read the same value.
    * In local dev (localhost), falls back to localStorage only.
    * A language preference cookie is exempt from GDPR consent (functional cookie, ePrivacy art. 5.3).
+   *
+   * NOTE: Safari ITP 2.1+ caps client-set cookies (document.cookie) to 7 days regardless of
+   * max-age. To survive that cap across cross-subdomain navigation, we also accept
+   * ?lang=fr|en as a query param (decorated on outgoing links by installCrossSubdomainClickShim).
    */
   function readSharedCookie() {
     const m = document.cookie.match(/(?:^|; )km_lang=([^;]+)/);
@@ -278,16 +282,44 @@ const GLOSSARY_DEFS_EN = {
     return null;
   }
 
+  function readQueryLang() {
+    try {
+      const m = (location.search || '').match(/[?&]lang=(fr|en)\b/);
+      return m ? m[1] : null;
+    } catch (e) { return null; }
+  }
+
+  function isKalmydasHost(host) {
+    // Strict: exactly kalmydas.com OR any proper .kalmydas.com subdomain.
+    // Avoids false positives on e.g. evilkalmydas.com.
+    return host === 'kalmydas.com' || host.endsWith('.kalmydas.com');
+  }
+
   function writeSharedCookie(lang) {
-    const isKalmydas = location.hostname.endsWith('kalmydas.com');
+    const isKalmydas = isKalmydasHost(location.hostname);
     const domainPart = isKalmydas ? '; domain=.kalmydas.com' : '';
-    // 1 year, root path, SameSite=Lax (allows top-level navigation)
-    document.cookie = `km_lang=${lang}; path=/${domainPart}; max-age=31536000; SameSite=Lax`;
+    const securePart = location.protocol === 'https:' ? '; Secure' : '';
+    // 1 year, root path, SameSite=Lax (allows top-level cross-subdomain navigation)
+    document.cookie = `km_lang=${lang}; path=/${domainPart}; max-age=31536000; SameSite=Lax${securePart}`;
+  }
+
+  function cleanLangFromUrl() {
+    try {
+      if (!window.history || typeof history.replaceState !== 'function') return;
+      const url = new URL(location.href);
+      if (url.searchParams.has('lang')) {
+        url.searchParams.delete('lang');
+        const newSearch = url.searchParams.toString();
+        const newUrl = url.pathname + (newSearch ? '?' + newSearch : '') + url.hash;
+        history.replaceState(null, '', newUrl);
+      }
+    } catch (e) {}
   }
 
   /**
    * Detect preferred language.
    * Priority:
+   *   0. URL query (?lang=fr|en) — survives Safari ITP 7-day cookie cap across cross-subdomain nav
    *   1. cross-subdomain cookie (user choice on landing/app/docs)
    *   2. localStorage (legacy fallback for users who chose before cookie was added)
    *   3. browser/system locale (navigator.language follows OS settings: "fr-FR", "en-US", etc.)
@@ -295,12 +327,38 @@ const GLOSSARY_DEFS_EN = {
    * Anything starting with "fr" → French. Everything else → English.
    */
   function detectInitialLang() {
+    const qLang = readQueryLang();
+    if (qLang) return qLang;
     const cookieLang = readSharedCookie();
     if (cookieLang) return cookieLang;
     const stored = localStorage.getItem('km_lang');
     if (stored === 'fr' || stored === 'en') return stored;
     const browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
     return browserLang.startsWith('fr') ? 'fr' : 'en';
+  }
+
+  /**
+   * Intercept clicks on anchors that leave the current host but stay inside kalmydas.com
+   * and append ?lang=XX so the destination page adopts the right language even if its cookie
+   * has been purged (Safari ITP). Does not rewrite modifier-clicks (ctrl/cmd/middle button)
+   * so standard browser behaviors are preserved.
+   */
+  function installCrossSubdomainClickShim() {
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented) return;
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const anchor = e.target && e.target.closest && e.target.closest('a[href]');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+      let url;
+      try { url = new URL(href, location.href); } catch (err) { return; }
+      if (url.hostname === location.hostname) return; // same host, no need
+      if (!isKalmydasHost(url.hostname)) return;      // not our family
+      if (url.searchParams.has('lang')) return;       // already decorated
+      url.searchParams.set('lang', currentLang);
+      anchor.setAttribute('href', url.toString());
+    }, true); // capture: update href before the browser starts navigation
   }
 
   let currentLang = detectInitialLang();
@@ -393,6 +451,14 @@ const GLOSSARY_DEFS_EN = {
     // Ensure the shared cookie reflects the current detected/saved language on every page load,
     // so if the user opened the landing first (auto-detected FR/EN), app.kalmydas.com picks it up.
     writeSharedCookie(currentLang);
+
+    // If we arrived with ?lang=XX (came from another subdomain), promote it to cookie and
+    // strip the query so it does not pollute copy/paste of the URL.
+    cleanLangFromUrl();
+
+    // Decorate outgoing links to sibling subdomains with ?lang=XX so Safari ITP's 7-day cookie
+    // cap cannot desynchronize the user's language choice.
+    installCrossSubdomainClickShim();
 
     // Apply saved language preference
     if (currentLang === 'en') {
