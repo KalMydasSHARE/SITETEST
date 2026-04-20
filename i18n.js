@@ -267,17 +267,43 @@ const GLOSSARY_DEFS_EN = {
   const FR_CACHE = {};
 
   /**
+   * Cross-subdomain language preference, shared between kalmydas.com, app.kalmydas.com, docs.kalmydas.com.
+   * Stored in a cookie scoped to .kalmydas.com (root domain) so all subdomains read the same value.
+   * In local dev (localhost), falls back to localStorage only.
+   * A language preference cookie is exempt from GDPR consent (functional cookie, ePrivacy art. 5.3).
+   */
+  function readSharedCookie() {
+    const m = document.cookie.match(/(?:^|; )km_lang=([^;]+)/);
+    if (m && (m[1] === 'fr' || m[1] === 'en')) return m[1];
+    return null;
+  }
+
+  function writeSharedCookie(lang) {
+    const isKalmydas = location.hostname.endsWith('kalmydas.com');
+    const domainPart = isKalmydas ? '; domain=.kalmydas.com' : '';
+    // 1 year, root path, SameSite=Lax (allows top-level navigation)
+    document.cookie = `km_lang=${lang}; path=/${domainPart}; max-age=31536000; SameSite=Lax`;
+  }
+
+  /**
    * Detect preferred language.
-   * Priority: 1. user manual choice (localStorage), 2. browser/system locale, 3. fallback FR.
-   * navigator.language follows OS settings (e.g. "fr-FR", "en-US", "de-DE", "es-ES").
+   * Priority:
+   *   1. cross-subdomain cookie (user choice on landing/app/docs)
+   *   2. localStorage (legacy fallback for users who chose before cookie was added)
+   *   3. browser/system locale (navigator.language follows OS settings: "fr-FR", "en-US", etc.)
+   *   4. fallback FR
    * Anything starting with "fr" → French. Everything else → English.
    */
-  function detectBrowserLang() {
+  function detectInitialLang() {
+    const cookieLang = readSharedCookie();
+    if (cookieLang) return cookieLang;
+    const stored = localStorage.getItem('km_lang');
+    if (stored === 'fr' || stored === 'en') return stored;
     const browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
     return browserLang.startsWith('fr') ? 'fr' : 'en';
   }
 
-  let currentLang = localStorage.getItem('km_lang') || detectBrowserLang();
+  let currentLang = detectInitialLang();
 
   function cacheFR() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -287,7 +313,9 @@ const GLOSSARY_DEFS_EN = {
 
   function applyLang(lang) {
     currentLang = lang;
-    localStorage.setItem('km_lang', lang);
+    // Persist to both: cookie (shared across *.kalmydas.com) + localStorage (legacy/local-dev).
+    writeSharedCookie(lang);
+    try { localStorage.setItem('km_lang', lang); } catch {}
     document.documentElement.lang = lang;
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -361,6 +389,10 @@ const GLOSSARY_DEFS_EN = {
         applyLang(currentLang === 'fr' ? 'en' : 'fr');
       });
     }
+
+    // Ensure the shared cookie reflects the current detected/saved language on every page load,
+    // so if the user opened the landing first (auto-detected FR/EN), app.kalmydas.com picks it up.
+    writeSharedCookie(currentLang);
 
     // Apply saved language preference
     if (currentLang === 'en') {
