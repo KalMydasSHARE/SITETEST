@@ -7,10 +7,10 @@
 
 const I18N_EN = {
   /* ===== META (handled separately) ===== */
-  _title: "KalMydas — Algorithmic gold trading, Accessible to all",
-  _description: "Participate in algorithmic gold (XAUUSD) trading strategies backtested over 4 to 21 years. From $10. Transparent, decentralized, on Arbitrum. Past results do not guarantee future performance.",
+  _title: "KalMydas — Gold, algorithmically",
+  _description: "Five algorithms trade gold (XAUUSD) 24/7 on gTrade. No broker, no third-party custody — your funds stay under your key. Historical annualized returns of ~4% to ~79% per year over 4 to 21 years of backtesting. What quant funds reserve for six-figure deposits, accessible from $10. Past performance not indicative.",
   _og_title: "KalMydas — Gold, algorithmically",
-  _og_description: "5 gold trading strategies backtested over 4 to 21 years. Historical annualized returns from ~4% to ~79% per year. From $10. Past results do not guarantee future performance.",
+  _og_description: "Five algorithms trade gold 24/7 on gTrade. No broker, no third-party custody. ~4% to ~79% annualized over 4 to 21 years of backtesting. From $10. Past performance not indicative.",
 
   /* ===== NAV ===== */
   nav_how: "How it works",
@@ -24,7 +24,7 @@ const I18N_EN = {
   /* ===== HERO ===== */
   hero_badge: `<span class="dot"></span> Testnet live — Arbitrum Sepolia`,
   hero_h1: `Gold, <span class="gold">algorithmically</span>`,
-  hero_sub: `5 gold trading bots (<span class="g-term" data-g="xauusd">XAUUSD</span>), <span class="g-term" data-g="backtest">backtested</span> over 4 to 21 years. Historical annualized returns from ~4% to ~79% per year depending on the strategy. Starting at $10. Transparent, decentralized, on <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>.<br><span style="font-size:0.78rem; opacity:0.7;">Past results do not guarantee future performance.</span>`,
+  hero_sub: `Five algorithms trade gold (<span class="g-term" data-g="xauusd">XAUUSD</span>) 24/7 on gTrade. No broker, no third-party custody — your funds stay under your key. Historical annualized returns of ~4% to ~79% per year over 4 to 21 years of <span class="g-term" data-g="backtest">backtesting</span>. What quant funds reserve for six-figure deposits, accessible from $10. Testnet <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span> · mainnet Base L2.<br><span style="font-size:0.78rem; opacity:0.7;">Backtests from XAUUSD broker data. Live execution via gTrade: fees, funding and slippage may differ. Past performance not indicative.</span>`,
   hero_btn_primary: `Launch app <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   hero_btn_secondary: "View strategies",
 
@@ -265,7 +265,19 @@ const GLOSSARY_DEFS_EN = {
 /* ===== i18n ENGINE ===== */
 (function () {
   const FR_CACHE = {};
-  let currentLang = localStorage.getItem('km_lang') || 'fr';
+
+  /**
+   * Detect preferred language.
+   * Priority: 1. user manual choice (localStorage), 2. browser/system locale, 3. fallback FR.
+   * navigator.language follows OS settings (e.g. "fr-FR", "en-US", "de-DE", "es-ES").
+   * Anything starting with "fr" → French. Everything else → English.
+   */
+  function detectBrowserLang() {
+    const browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+    return browserLang.startsWith('fr') ? 'fr' : 'en';
+  }
+
+  let currentLang = localStorage.getItem('km_lang') || detectBrowserLang();
 
   function cacheFR() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
