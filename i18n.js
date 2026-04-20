@@ -8,9 +8,9 @@
 const I18N_EN = {
   /* ===== META (handled separately) ===== */
   _title: "KalMydas — Gold, algorithmically",
-  _description: "Five algorithms trade gold (XAUUSD) 24/7 on gTrade. No broker, no third-party custody — your funds stay under your key. Historical annualized returns of ~4% to ~79% per year over 4 to 21 years of backtesting. What quant funds reserve for six-figure deposits, accessible from $10. Past performance not indicative.",
+  _description: "No broker, no third-party custody: your funds stay in public smart contracts under your own key. Five algorithms take positions on gold (XAUUSD) 24 hours a day, directly on-chain via gTrade. Over 4 to 21 years of historical simulation, annual performance ranges from roughly 4% to 79% depending on the strategy — usually reserved for six-figure deposits, here from $10. Past performance does not guarantee future results.",
   _og_title: "KalMydas — Gold, algorithmically",
-  _og_description: "Five algorithms trade gold 24/7 on gTrade. No broker, no third-party custody. ~4% to ~79% annualized over 4 to 21 years of backtesting. From $10. Past performance not indicative.",
+  _og_description: "No broker, no third-party custody. Five algorithms trade gold 24/7 directly on-chain via gTrade. ~4% to ~79% annualized over 4 to 21 years of historical simulation. From $10. Past performance does not guarantee future results.",
 
   /* ===== NAV ===== */
   nav_how: "How it works",
@@ -24,7 +24,7 @@ const I18N_EN = {
   /* ===== HERO ===== */
   hero_badge: `<span class="dot"></span> Testnet live — Arbitrum Sepolia`,
   hero_h1: `Gold, <span class="gold">algorithmically</span>`,
-  hero_sub: `Five algorithms trade gold (<span class="g-term" data-g="xauusd">XAUUSD</span>) 24/7 on gTrade. No broker, no third-party custody — your funds stay under your key. Historical annualized returns of ~4% to ~79% per year over 4 to 21 years of <span class="g-term" data-g="backtest">backtesting</span>. What quant funds reserve for six-figure deposits, accessible from $10. Testnet <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span> · mainnet Base L2.<br><span style="font-size:0.78rem; opacity:0.7;">Backtests from XAUUSD broker data. Live execution via gTrade: fees, funding and slippage may differ. Past performance not indicative.</span>`,
+  hero_sub: `No broker, no third-party custody: your funds stay in public smart contracts under your own key. Five algorithms take positions on gold (<span class="g-term" data-g="xauusd">XAUUSD</span>) 24 hours a day, directly on-chain via gTrade. Over 4 to 21 years of <span class="g-term" data-g="backtest">historical simulation</span>, annual performance ranges from roughly 4% to 79% depending on the strategy — the kind of management usually reserved for six-figure deposits, here accessible from $10. Test network on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>, mainnet planned on Base.<br><span style="font-size:0.78rem; opacity:0.7;">Historical simulations over 4 to 21 years of XAUUSD data. Live execution via gTrade may produce different results. Risk of partial or total capital loss. Past performance does not guarantee future performance.</span>`,
   hero_btn_primary: `Launch app <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   hero_btn_secondary: "View strategies",
 
