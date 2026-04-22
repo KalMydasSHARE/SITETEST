@@ -108,10 +108,10 @@
 
   <script>
 (function(){
-  var lang='fr';try{var s=localStorage.getItem('km_lang');if(s==='en')lang='en';}catch(e){}
+  var lang='fr';try{var q=(location.search||'').match(/[?&]lang=(fr|en)\b/);var c=document.cookie.match(/(?:^|; )km_lang=(fr|en)\b/);var s=localStorage.getItem('km_lang');if(q)lang=q[1];else if(c)lang=c[1];else if(s==='fr'||s==='en')lang=s;else{var nb=(navigator.language||'fr').toLowerCase();lang=nb.indexOf('fr')===0?'fr':'en';}}catch(e){}
   var fc=new Map();
   function cache(){document.querySelectorAll('[data-en]').forEach(function(el){fc.set(el,el.innerHTML);});}
-  function apply(l){lang=l;try{localStorage.setItem('km_lang',l);}catch(e){}document.documentElement.lang=l;
+  function apply(l){lang=l;try{localStorage.setItem('km_lang',l);}catch(e){}try{var dom=(location.hostname==='kalmydas.com'||location.hostname.indexOf('.kalmydas.com')>=0)?'; domain=.kalmydas.com':'';var sec=location.protocol==='https:'?'; Secure':'';document.cookie='km_lang='+l+'; path=/'+dom+'; max-age=31536000; SameSite=Lax'+sec;}catch(e){}document.documentElement.lang=l;
     document.querySelectorAll('[data-en]').forEach(function(el){if(l==='en'){if(!fc.has(el))fc.set(el,el.innerHTML);el.innerHTML=el.getAttribute('data-en');}else{if(fc.has(el))el.innerHTML=fc.get(el);}});
     var t=document.getElementById('ltog');if(t)t.querySelectorAll('.lo').forEach(function(o){o.classList.toggle('active',o.getAttribute('data-lang')===l);});
   }
