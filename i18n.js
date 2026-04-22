@@ -55,12 +55,12 @@ const I18N_EN = {
   strat_horizon_meta: "per year · 1,098 trades",
   strat_horizon_bt: "11 years of backtest",
 
-  strat_valkyrie_desc: "Breakout + pyramid on gold — balanced risk/reward",
+  strat_valkyrie_desc: "Breakout + pyramid on gold — balanced risk/performance",
   strat_valkyrie_tag: "Balanced",
   strat_valkyrie_meta: "per year · 329 trades",
   strat_valkyrie_bt: "16 years of backtest",
 
-  strat_revolution_desc: "Trend breakout + triple filter — dynamic returns",
+  strat_revolution_desc: "Trend breakout + triple filter — dynamic performance",
   strat_revolution_tag: "Dynamic",
   strat_revolution_meta: "per year · 2,166 trades",
   strat_revolution_bt: "21 years of backtest",
@@ -77,7 +77,7 @@ const I18N_EN = {
 
   /* ===== COMPARISON TABLE ===== */
   th_strategy: "Strategy",
-  th_return: "Return",
+  th_return: "Performance",
   th_backtest: "Backtest",
   th_perf_fee: "Perf. fee",
 
@@ -122,10 +122,10 @@ const I18N_EN = {
   road_1_p: `First <span class="g-term" data-g="smart_contract">smart contracts</span> deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. E2E tests validated. MVP frontend connected <span class="g-term" data-g="on_chain">on-chain</span>. Whitepaper published. 5 verified <span class="g-term" data-g="backtest">backtests</span>.`,
   road_2_phase: `Phase 2 — Q2 2026 <span class="tag-progress">In progress</span>`,
   road_2_h: "Development & Beta",
-  road_2_p: `37 contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, governance, referral system, auto-compound, yield diversifier, RWA treasury — all coded and tested. Beta testing program active.`,
+  road_2_p: `37 contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, governance, referral system, auto-compound, performance diversifier, RWA treasury — all coded and tested. Beta testing program active.`,
   road_3_phase: "Phase 3 — Q3 2026",
   road_3_h: "Audit & Launch",
-  road_3_p: `Independent security audit. <span class="g-term" data-g="mainnet">Mainnet</span> deployment on <span class="g-term" data-g="arbitrum_l2">Arbitrum One</span>. Official launch of all 5 strategies. <span class="g-term" data-g="nft">NFT</span> access pass activation.`,
+  road_3_p: `Independent security audit. <span class="g-term" data-g="mainnet">Mainnet</span> deployment on <span class="g-term" data-g="base_l2">Base</span>. Official launch of all 5 strategies. <span class="g-term" data-g="nft">NFT</span> access pass activation.`,
   road_4_phase: "Phase 4 — Q4 2026",
   road_4_h: "Growth",
   road_4_p: `Community rewards program. KAL listing on <span class="g-term" data-g="dex">DEX</span>. Advanced analytics dashboard. New asset exploration.`,
@@ -142,7 +142,7 @@ const I18N_EN = {
   faq_2_a: "You can start with as little as $10 (in USDC on Arbitrum). There is no maximum amount. Your funds remain under your control in the smart contracts.",
   faq_3_q: "How do withdrawals work?",
   faq_3_a: "Withdrawals are free and instant, 24/7. No lock-up period, no withdrawal fees. You interact directly with the smart contract.",
-  faq_4_q: "Are returns guaranteed?",
+  faq_4_q: "Are future returns guaranteed?",
   faq_4_a: "No. The figures shown are based on historical backtests (up to 21 years of data). Past performance does not guarantee future results. Trading involves risk of capital loss.",
   faq_5_q: "What are the fees?",
   faq_5_a: "No entry or exit fees. The only fees are performance fees (10% to 20% depending on strategy) charged only on new gains thanks to the High-Water Mark system. You only pay when you profit.",
@@ -164,7 +164,7 @@ const I18N_EN = {
   about_title: "About KalMydas",
   about_desc: "Why this project exists and how it works",
   about_why_h3: "Why KalMydas exists",
-  about_why_p: `KalMydas was born from a simple frustration: why does professional algorithmic trading, which has generated consistent returns for decades, remain reserved for banks and institutional funds? Our platform, built on <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>, gives everyone — starting from $10 — access to the same algorithmic strategies as the professionals.`,
+  about_why_p: `KalMydas was born from a simple frustration: why does professional algorithmic trading, which has generated consistent returns for decades, remain reserved for banks and large financial structures? Our platform, built on <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>, gives everyone — starting from $10 — access to the same algorithmic strategies as the professionals.`,
   about_approach_h3: "Our approach",
   about_approach_p: `Our 5 trading robots are developed and optimized on <span class="g-term" data-g="mt4">MetaTrader 4</span>. They have been rigorously backtested on real historical broker data (4 to 21 years depending on the strategy), forward-tested, and stress-tested on the 2008 and 2020 crises. Each strategy operates exclusively on the gold market (<span class="g-term" data-g="xauusd">XAUUSD</span>).`,
   about_part_h3: "How to participate",
@@ -188,7 +188,7 @@ const I18N_EN = {
   about_timeline_h3: "Where we are",
   about_tl_1: "<strong>Q1 2026</strong> — Foundations laid, first contracts, connected MVP",
   about_tl_2: "<strong>Q2 2026</strong> — 37 contracts deployed, active beta testing, veKAL + governance",
-  about_tl_3: "<strong>Q3 2026</strong> — Security audit + mainnet launch on Arbitrum One",
+  about_tl_3: "<strong>Q3 2026</strong> — Security audit + mainnet launch on Base",
   about_tl_4: "<strong>Q4 2026+</strong> — Growth, DEX listing, mobile app, DAO",
   about_tl_link: "View full roadmap →",
 
@@ -253,13 +253,14 @@ const GLOSSARY_DEFS_EN = {
   oracle: "A service that transmits real-world data (prices, results) to the blockchain. Enables smart contracts to interact with external information.",
   epoch: "A defined time period in a protocol. At KalMydas, LP rewards are distributed per epoch with decreasing amounts.",
   flywheel: "Self-reinforcing value loop: gains generate fees, which buy back KAL, increasing the price, attracting more participants.",
-  fonds_institutionnels: "Financial structures managing significant capital (banks, pension funds, hedge funds). They have access to advanced trading tools traditionally unavailable to retail investors.",
+  fonds_institutionnels: "Financial structures managing significant capital (banks, pension funds, hedge funds). They have access to advanced trading tools traditionally unavailable to retail participants.",
   arbitrum_sepolia: "Test version of the Arbitrum network. Allows testing contracts and the app without using real funds before official launch.",
   orderbook: "Order book — a system matching buyers and sellers in a market. At KalMydas, the price is determined by the bonding curve, with no orderbook.",
   vekal: "Vote-escrowed KAL — mechanism inspired by Curve Finance. By locking KAL, you receive veKAL which grants rights to weekly USDC fee sharing and protocol parameter voting.",
   erc4626: "Technical standard for tokenized vaults on Ethereum. Enables standardized auto-compounding of gains.",
   pol: "Protocol-Owned Liquidity — liquidity owned directly by the protocol (not by users). Guarantees permanent liquidity even if providers withdraw.",
-  rwa: "Real World Assets — real-world assets (Treasury bonds, real estate) tokenized on the blockchain. Offer returns uncorrelated to the crypto market.",
+  rwa: "Real World Assets — real-world assets (Treasury bonds, real estate) tokenized on the blockchain. Offer performance uncorrelated to the crypto market.",
+  base_l2: "Layer 2 network on Ethereum, optimized for consumer-facing applications. KalMydas mainnet planned on Base.",
 };
 
 /* ===== i18n ENGINE ===== */

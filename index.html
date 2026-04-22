@@ -74,11 +74,12 @@
         "inLanguage": "fr-FR"
       },
       {
-        "@type": "FinancialProduct",
+        "@type": "SoftwareApplication",
         "name": "KalMydas — Stratégies de trading algorithmique sur l'or",
         "description": "5 stratégies de trading sur l'or (XAUUSD) simulées sur données réelles jusqu'à 21 ans, accessibles en non-custodial sur Arbitrum.",
         "provider": { "@id": "https://kalmydas.com/#organization" },
-        "category": "Trading algorithmique décentralisé",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
         "areaServed": "Worldwide"
       }
     ]
@@ -1371,7 +1372,7 @@
         <!-- VALKYRIE -->
         <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Valkyrie</h3>
-            <p class="desc" data-i18n="strat_valkyrie_desc">Cassure + pyramide sur l'or — équilibre risque/rendement</p>
+            <p class="desc" data-i18n="strat_valkyrie_desc">Cassure + pyramide sur l'or — équilibre risque/performance</p>
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(59,130,246,0.12); color: #3b82f6;" data-i18n="strat_valkyrie_tag">Équilibré</span>
               <span class="tag tag-muted" data-i18n="strat_valkyrie_bt">16 ans de simulation</span>
@@ -1387,7 +1388,7 @@
         <!-- REVOLUTION -->
         <div class="strategy-card fade-in"><div class="strategy-info">
             <h3>Revolution</h3>
-            <p class="desc" data-i18n="strat_revolution_desc">Cassure tendancielle + triple filtre — rendements dynamiques</p>
+            <p class="desc" data-i18n="strat_revolution_desc">Cassure tendancielle + triple filtre — performances dynamiques</p>
             <div class="strategy-tags">
               <span class="tag" style="background: rgba(249,115,22,0.12); color: #f97316;" data-i18n="strat_revolution_tag">Dynamique</span>
               <span class="tag tag-muted" data-i18n="strat_revolution_bt">21 ans de simulation</span>
@@ -1439,7 +1440,7 @@
           <thead>
             <tr>
               <th data-i18n="th_strategy">Stratégie</th>
-              <th data-i18n="th_return">Rendement</th>
+              <th data-i18n="th_return">Performance</th>
               <th><span class="g-term" data-g="win_rate">Taux de réussite</span></th>
               <th><span class="g-term" data-g="drawdown">DD Max</span></th>
               <th data-i18n="th_backtest"><span class="g-term" data-g="backtest">Simulation</span></th>
@@ -1632,14 +1633,14 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase" data-i18n="road_2_phase">Phase 2 — Q2 2026 <span class="tag-progress">En cours</span></div>
           <h3 data-i18n="road_2_h">Développement & Beta</h3>
-          <p data-i18n="road_2_p">37 contrats déployés sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, gouvernance, système de parrainage, auto-compound, diversificateur de rendement, trésorerie RWA — tout codé et testé. Programme bêta-testeurs actif.</p>
+          <p data-i18n="road_2_p">37 contrats déployés sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, gouvernance, système de parrainage, auto-compound, diversificateur de performance, trésorerie RWA — tout codé et testé. Programme bêta-testeurs actif.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase" data-i18n="road_3_phase">Phase 3 — Q3 2026</div>
           <h3 data-i18n="road_3_h">Audit & Lancement</h3>
-          <p data-i18n="road_3_p">Audit de sécurité indépendant. Déploiement <span class="g-term" data-g="mainnet">mainnet</span> <span class="g-term" data-g="arbitrum_l2">Arbitrum One</span>. Lancement officiel des 5 stratégies. Activation du Pass d'accès <span class="g-term" data-g="nft">NFT</span>.</p>
+          <p data-i18n="road_3_p">Audit de sécurité indépendant. Déploiement <span class="g-term" data-g="mainnet">mainnet</span> <span class="g-term" data-g="base_l2">Base</span>. Lancement officiel des 5 stratégies. Activation du Pass d'accès <span class="g-term" data-g="nft">NFT</span>.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
@@ -1705,7 +1706,7 @@
         </div>
         <div class="faq-item fade-in">
           <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            <span data-i18n="faq_4_q">Les rendements sont-ils garantis ?</span>
+            <span data-i18n="faq_4_q">Les performances futures sont-elles garanties ?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </div>
           <div class="faq-answer">
@@ -1756,7 +1757,7 @@
         <!-- Why -->
         <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
           <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_why_h3">Pourquoi KalMydas existe</h3>
-          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_why_p">KalMydas est né d'une frustration simple : pourquoi le trading algorithmique professionnel, qui génère des performances régulières depuis des décennies, reste-t-il réservé aux banques et aux fonds institutionnels ? Notre plateforme, construite sur <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>, donne à tout le monde — dès 10 $ — accès aux mêmes stratégies algorithmiques que les professionnels.</p>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_why_p">KalMydas est né d'une frustration simple : pourquoi le trading algorithmique professionnel, qui génère des performances régulières depuis des décennies, reste-t-il réservé aux banques et aux grandes structures financières ? Notre plateforme, construite sur <span class="g-term" data-g="arbitrum_l2">Arbitrum</span>, donne à tout le monde — dès 10 $ — accès aux mêmes stratégies algorithmiques que les professionnels.</p>
         </div>
 
         <!-- Approach -->
@@ -1828,7 +1829,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 0.8rem;">
               <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
-              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>Q3 2026</strong> — Audit de sécurité + lancement mainnet Arbitrum One</span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>Q3 2026</strong> — Audit de sécurité + lancement mainnet Base</span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.8rem;">
               <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
@@ -1932,7 +1933,7 @@
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <a href="https://discord.gg/gCD2zunaBy" target="_blank" rel="noopener">Discord</a>
           <a href="https://t.me/kal_mydas" target="_blank" rel="noopener">Telegram</a>
-          <a href="https://x.com/KalMydas" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://x.com/KalMydas" target="_blank" rel="noopener">X</a>
           <a href="https://www.tiktok.com/@kalmydas" target="_blank" rel="noopener">TikTok</a>
           <a href="https://www.instagram.com/kalmydas" target="_blank" rel="noopener">Instagram</a>
           <a href="https://sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan</span></a>

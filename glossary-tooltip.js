@@ -49,7 +49,8 @@ const GLOSSARY_DEFS = {
   vekal: "KAL verrouillé pour la gouvernance (vote-escrowed) — mécanisme inspiré de Curve Finance. En bloquant des KAL, vous recevez des veKAL qui donnent droit au partage des frais en USDC et au vote sur les paramètres du protocole.",
   erc4626: "Norme technique pour les coffres-forts tokenisés sur Ethereum. Permet la composition automatique des gains (auto-compound) de manière standardisée.",
   pol: "Protocol-Owned Liquidity — liquidité détenue directement par le protocole (pas par des utilisateurs). Garantit une liquidité permanente même si les fournisseurs se retirent.",
-  rwa: "Real World Assets — actifs du monde réel (bons du Trésor, immobilier) tokenisés sur la blockchain. Offrent un rendement décorrélé du marché crypto.",
+  rwa: "Real World Assets — actifs du monde réel (bons du Trésor, immobilier) tokenisés sur la blockchain. Offrent une performance décorrélée du marché crypto.",
+  base_l2: "Réseau Layer 2 sur Ethereum, optimisé pour les applications grand public. Mainnet KalMydas prévu sur Base.",
 };
 
 // Current glossary language (default FR, switched by i18n.js)
