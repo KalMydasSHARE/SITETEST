@@ -122,7 +122,7 @@ const I18N_EN = {
   road_1_p: `First <span class="g-term" data-g="smart_contract">smart contracts</span> deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. E2E tests validated. MVP frontend connected <span class="g-term" data-g="on_chain">on-chain</span>. Whitepaper published. 5 verified <span class="g-term" data-g="backtest">backtests</span>.`,
   road_2_phase: `Phase 2 — Q2 2026 <span class="tag-progress">In progress</span>`,
   road_2_h: "Development & Beta",
-  road_2_p: `37 contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. veKAL, governance, referral system, auto-compound, performance diversifier, RWA treasury — all coded and tested. Beta testing program active.`,
+  road_2_p: `42 contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span> (37 core + 5 KalSoloPool since April 25, 2026). veKAL, governance, referral system, auto-compound, performance diversifier, RWA treasury, individual solo mode per strategy — all coded and tested. 3rd consecutive Omniscient PASS (final retest on April 22, 300,000-transition KalSoloPool fuzz, KalPool individual pause on April 25 — GO Sepolia redeployment on May 3). Beta testing program active.`,
   road_3_phase: "Phase 3 — Q3 2026",
   road_3_h: "Audit & Launch",
   road_3_p: `Independent security audit. <span class="g-term" data-g="mainnet">Mainnet</span> deployment on <span class="g-term" data-g="base_l2">Base</span>. Official launch of all 5 strategies. <span class="g-term" data-g="nft">NFT</span> access pass activation.`,
