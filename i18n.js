@@ -90,7 +90,7 @@ const I18N_EN = {
   token_h3: "Designed to create value",
   token_p: `The KAL token uses a mathematical <span class="g-term" data-g="bonding_curve">bonding curve</span>: the more demand increases, the more the price rises automatically. Early participants get the best price.`,
   token_f1: `<strong><span class="g-term" data-g="bonding_curve">Bonding curve</span></strong> — Price increases with adoption`,
-  token_f2: `<strong><span class="g-term" data-g="pol">Buyback & Recirculation</span></strong> — Performance fees buy back KAL and recirculate it as liquidity (Zero Destruction philosophy)`,
+  token_f2: `<strong><span class="g-term" data-g="pol">Buyback &amp; Recirculation</span></strong> — A portion of performance fees buys back KAL on the market and reinjects it as protocol liquidity (permanent buying pressure, no destruction)`,
   token_f3: `<strong>Fee sharing</strong> — Lock your KAL as <span class="g-term" data-g="vekal">veKAL</span> to receive your share of fees in <span class="g-term" data-g="usdc">USDC</span> every week`,
   token_f4: `<strong><span class="g-term" data-g="lp">LP</span> rewards</strong> — Liquidity <span class="g-term" data-g="staking">staking</span> with KAL rewards`,
   token_f5: `<strong>Deposit bonus</strong> — Up to +5% in KAL on your deposits`,
