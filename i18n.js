@@ -154,6 +154,10 @@ const I18N_EN = {
   public_meta_l2: "Cap:",
   public_meta_v2: "332,500 KAL = $1.435M",
   presale_footnote: "Total presale cap: 500,000 KAL (5% of total supply) = ~$1.51M maximum. If the $75k viability gate is not reached by August 31, the September 14 public opening may be postponed or opened in tranches.",
+  og_form_label: "Join the OG list",
+  og_form_title: "Priority access to the Alpha phase",
+  og_form_desc: "10 to 20 spots are open for the Alpha phase on May 8, 2026 (SEED tier at $0.30). OG codes are distributed via Telegram DM to accepted candidates. Sign up to be considered.",
+  og_form_disclaimer: "No obligation. Access not guaranteed — discretionary decision based on profiles. The Beta phase (June) and Public phase (September 14) do not require prior registration.",
 
   /* ===== TRACK RECORD LIVE (added session 298, % version) ===== */
   track_label: "Real on-chain performance",
