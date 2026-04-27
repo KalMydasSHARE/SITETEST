@@ -190,7 +190,7 @@ const I18N_EN = {
   faq_6_q: "Do I need a crypto wallet to use KalMydas?",
   faq_6_a: "No. You can sign in with a simple email or Google account. A wallet is created automatically for you through Privy. Advanced users can also connect their own wallet (MetaMask, etc.).",
   faq_7_q: "Are the contracts audited?",
-  faq_7_a: "Yes. Three Omniscient Lab audits PASS (4.22, 4.23, 4.24) on the 42 protocol contracts. KAL-001 through KAL-008 Codex findings are all resolved. Audit reports are public and accessible from the official documentation.",
+  faq_7_a: "Yes. Three Omniscient Lab audits PASS (4.22, 4.23, 4.24) on the 22 core protocol contracts. KAL-001 through KAL-008 Codex findings are all resolved. Audit reports are public and accessible from the official documentation.",
   faq_8_q: "Which strategy should I choose as a beginner?",
   faq_8_a: "HORIZON is the most conservative profile, designed for discovery (modest yield, controlled drawdown on backtest). VALKYRIE offers a balanced profile. The more aggressive strategies (REVOLUTION, TREASURY, ORION) require a clear understanding of volatility. You can pick several and split your capital as you wish.",
 
