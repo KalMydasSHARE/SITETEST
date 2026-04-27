@@ -1306,7 +1306,7 @@
       <div class="stat-label" data-i18n="stat_2_label">De données réelles <span class="g-term" data-g="backtest">simulées</span></div>
     </div>
     <div class="stat-item">
-      <div class="stat-value">37</div>
+      <div class="stat-value">42</div>
       <div class="stat-label" data-i18n="stat_3_label"><span class="g-term" data-g="smart_contract">Contrats intelligents</span></div>
     </div>
     <div class="stat-item">
@@ -1605,7 +1605,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
           <h3 data-i18n="sec_6_h">Audit indépendant</h3>
-          <p data-i18n="sec_6_p">Audit de sécurité prévu avant le lancement mainnet (Q3 2026). Résultats publics</p>
+          <p data-i18n="sec_6_p">3 audits Omniscient Lab PASS (4.22 / 4.23 / 4.24) — KAL-001 à KAL-008 Codex résolus. Rapports publics.</p>
         </div>
       </div>
     </div>
@@ -1638,7 +1638,7 @@
 
         <div class="roadmap-item future fade-in">
           <div class="roadmap-dot"></div>
-          <div class="roadmap-phase" data-i18n="road_3_phase">Phase 3 — Q3 2026</div>
+          <div class="roadmap-phase" data-i18n="road_3_phase">Phase 3 — 14 septembre 2026</div>
           <h3 data-i18n="road_3_h">Audit & Lancement</h3>
           <p data-i18n="road_3_p">Audit de sécurité indépendant. Déploiement <span class="g-term" data-g="mainnet">mainnet</span> <span class="g-term" data-g="base_l2">Base</span>. Lancement officiel des 5 stratégies. Activation du Pass d'accès <span class="g-term" data-g="nft">NFT</span>.</p>
         </div>
@@ -1737,6 +1737,28 @@
             </div>
           </div>
         </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_7_q">Les contrats sont-ils audités ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_7_a">Oui. Trois passes Omniscient Lab PASS (4.22, 4.23, 4.24) sur les 42 contrats du protocole. Les findings KAL-001 à KAL-008 du Codex sont tous résolus. Les rapports d'audit sont publics et consultables sur la documentation officielle.</span>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item fade-in">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span data-i18n="faq_8_q">Quelle stratégie choisir si je débute ?</span>
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <span data-i18n="faq_8_a">HORIZON est la plus prudente, conçue pour un profil découverte (rendement modeste, drawdown maîtrisé sur backtest). VALKYRIE offre un profil équilibré. Les stratégies plus agressives (REVOLUTION, TREASURY, ORION) supposent une compréhension claire de la volatilité. Vous pouvez en sélectionner plusieurs et répartir votre capital comme vous le souhaitez.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1831,7 +1853,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 0.8rem;">
               <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
-              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>Q3 2026</strong> — Audit de sécurité + lancement mainnet Base</span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>14 septembre 2026</strong> — Lancement mainnet Base (audits Omniscient déjà PASS, sous condition gate 75 000 USDC presale)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.8rem;">
               <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
@@ -1890,6 +1912,24 @@
           <span class="tech-name">Privy</span>
           <span class="tech-role">Auth & Wallets</span>
         </div>
+        <div class="tech-item">
+          <!-- MetaTrader 4 — moteur où les algos prennent leurs décisions -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" fill="#0e8be4"/>
+            <text x="20" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">MT4</text>
+          </svg>
+          <span class="tech-name">MetaTrader 4</span>
+          <span class="tech-role">Moteur algorithmique XAUUSD</span>
+        </div>
+        <div class="tech-item">
+          <!-- gTrade by Gains Network — exécution on-chain -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" fill="#1a1f3d"/>
+            <path d="M14 12 L26 12 L26 16 L18 16 L18 20 L24 20 L24 24 L18 24 L18 32 L14 32 Z" fill="#5d95ff"/>
+          </svg>
+          <span class="tech-name">gTrade</span>
+          <span class="tech-role">Exécution on-chain XAUUSD</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1913,7 +1953,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-grid" style="display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; text-align: left;">
+    <div class="footer-grid" style="display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; text-align: left;">
 
       <!-- Brand -->
       <div>
@@ -1943,8 +1983,21 @@
           <a href="https://x.com/KalMydas" target="_blank" rel="noopener">X</a>
           <a href="https://www.tiktok.com/@kalmydas" target="_blank" rel="noopener">TikTok</a>
           <a href="https://www.instagram.com/kalmydas" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://sepolia.arbiscan.io/address/0x3d93048a49f68Bf1AC1987b2d6490614E84CEbfc" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan</span></a>
+          <a href="https://sepolia.arbiscan.io/address/0x821708EB22b9A2c4ea54c35B539bed9a8250227d" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan (KalToken)</span></a>
           <a href="mailto:kal@kalmydas.ch" data-i18n="footer_contact">Contact</a>
+        </div>
+      </div>
+
+      <!-- Ressources -->
+      <div>
+        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_resources">Ressources</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://docs.kalmydas.com" target="_blank" rel="noopener" data-i18n="footer_docs">Documentation</a>
+          <a href="https://docs.kalmydas.com/architecture" target="_blank" rel="noopener" data-i18n="footer_architecture">Architecture</a>
+          <a href="https://docs.kalmydas.com/tokenomics" target="_blank" rel="noopener" data-i18n="footer_tokenomics">Tokenomics</a>
+          <a href="https://docs.kalmydas.com/gouvernance" target="_blank" rel="noopener" data-i18n="footer_governance">Gouvernance</a>
+          <a href="https://docs.kalmydas.com/ressources" target="_blank" rel="noopener" data-i18n="footer_addresses">Adresses on-chain</a>
+          <a href="https://docs.kalmydas.com/security" target="_blank" rel="noopener" data-i18n="footer_audits">Audits</a>
         </div>
       </div>
 

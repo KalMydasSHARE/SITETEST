@@ -112,7 +112,7 @@ const I18N_EN = {
   sec_5_h: `<span class="g-term" data-g="hwm">High-Water Mark</span>`,
   sec_5_p: `<span class="g-term" data-g="perf_fee">Performance fees</span> only apply on new gains. Never double-charged`,
   sec_6_h: "Independent audit",
-  sec_6_p: "Security audit planned before mainnet launch (Q3 2026). Public results",
+  sec_6_p: "Three Omniscient Lab audits PASS (4.22 / 4.23 / 4.24) — KAL-001 through KAL-008 Codex resolved. Public reports.",
 
   /* ===== ROADMAP ===== */
   road_label: "Long-term vision",
@@ -123,7 +123,7 @@ const I18N_EN = {
   road_2_phase: `Phase 2 — Q2 2026 <span class="tag-progress">In progress</span>`,
   road_2_h: "Development & Beta",
   road_2_p: `42 contracts deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span> (37 core + 5 KalSoloPool since April 25, 2026). veKAL, governance, referral system, auto-compound, performance diversifier, RWA treasury, individual solo mode per strategy — all coded and tested. 3rd consecutive Omniscient PASS (final retest on April 22, 300,000-transition KalSoloPool fuzz, KalPool individual pause on April 25 — GO Sepolia redeployment on May 3). Beta testing program active.`,
-  road_3_phase: "Phase 3 — Q3 2026",
+  road_3_phase: "Phase 3 — September 14, 2026",
   road_3_h: "Audit & Launch",
   road_3_p: `Independent security audit. <span class="g-term" data-g="mainnet">Mainnet</span> deployment on <span class="g-term" data-g="base_l2">Base</span>. Official launch of all 5 strategies. <span class="g-term" data-g="nft">NFT</span> access pass activation.`,
   road_4_phase: "Phase 4 — Q4 2026",
@@ -148,6 +148,10 @@ const I18N_EN = {
   faq_5_a: "No entry or exit fees. The only fees are performance fees (10% to 20% depending on strategy) charged only on new gains thanks to the High-Water Mark system. You only pay when you profit.",
   faq_6_q: "Do I need a crypto wallet to use KalMydas?",
   faq_6_a: "No. You can sign in with a simple email or Google account. A wallet is created automatically for you through Privy. Advanced users can also connect their own wallet (MetaMask, etc.).",
+  faq_7_q: "Are the contracts audited?",
+  faq_7_a: "Yes. Three Omniscient Lab audits PASS (4.22, 4.23, 4.24) on the 42 protocol contracts. KAL-001 through KAL-008 Codex findings are all resolved. Audit reports are public and accessible from the official documentation.",
+  faq_8_q: "Which strategy should I choose as a beginner?",
+  faq_8_a: "HORIZON is the most conservative profile, designed for discovery (modest yield, controlled drawdown on backtest). VALKYRIE offers a balanced profile. The more aggressive strategies (REVOLUTION, TREASURY, ORION) require a clear understanding of volatility. You can pick several and split your capital as you wish.",
 
   /* ===== BUILT WITH ===== */
   tech_label: "Infrastructure",
@@ -189,8 +193,8 @@ const I18N_EN = {
   about_status_p: `We are in testing phase on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Official launch on the main network is planned for September 2026.`,
   about_timeline_h3: "Where we are",
   about_tl_1: "<strong>Q1 2026</strong> — Foundations laid, first contracts, connected MVP",
-  about_tl_2: "<strong>Q2 2026</strong> — 37 contracts deployed, active beta testing, veKAL + governance",
-  about_tl_3: "<strong>Q3 2026</strong> — Security audit + mainnet launch on Base",
+  about_tl_2: "<strong>Q2 2026</strong> — 42 contracts deployed (core + 5 KalSoloPool), active beta testing, veKAL + governance",
+  about_tl_3: "<strong>September 14, 2026</strong> — Mainnet launch on Base (Omniscient audits already PASS, conditional on 75,000 USDC presale viability gate)",
   about_tl_4: "<strong>Q4 2026+</strong> — Growth, DEX listing, mobile app, DAO",
   about_tl_link: "View full roadmap →",
 
@@ -205,6 +209,13 @@ const I18N_EN = {
   footer_roadmap: "Roadmap",
   footer_col_community: "Community",
   footer_contact: "Contact",
+  footer_col_resources: "Resources",
+  footer_docs: "Documentation",
+  footer_architecture: "Architecture",
+  footer_tokenomics: "Tokenomics",
+  footer_governance: "Governance",
+  footer_addresses: "On-chain addresses",
+  footer_audits: "Audits",
   footer_col_legal: "Legal",
   footer_about: "About",
   footer_faq: "FAQ",
