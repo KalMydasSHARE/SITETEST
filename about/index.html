@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KalMydas — À propos</title>
-  <meta name="description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Arbitrum. Accessible dès 10$." />
+  <meta name="description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base (mainnet). Accessible dès 10 $." />
   <meta name="keywords" content="trading algorithmique or, XAUUSD, DeFi or, Arbitrum, trading décentralisé, non-custodial, KalMydas, KAL token, robots trading" />
   <meta name="author" content="Kal Mydas" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -13,7 +13,7 @@
 
   <!-- Open Graph / Facebook / LinkedIn / Telegram / Discord -->
   <meta property="og:title" content="KalMydas — À propos" />
-  <meta property="og:description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Arbitrum. Accessible dès 10$." />
+  <meta property="og:description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base (mainnet). Accessible dès 10 $." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kalmydas.com/about/" />
   <meta property="og:image" content="https://kalmydas.com/og-image.jpg" />
@@ -29,7 +29,7 @@
   <meta name="twitter:site" content="@kalmydas" />
   <meta name="twitter:creator" content="@kalmydas" />
   <meta name="twitter:title" content="KalMydas — À propos" />
-  <meta name="twitter:description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Arbitrum. Accessible dès 10$." />
+  <meta name="twitter:description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base (mainnet). Accessible dès 10 $." />
   <meta name="twitter:image" content="https://kalmydas.com/og-image.jpg" />
   <meta name="twitter:image:alt" content="KalMydas — À propos" />
 
@@ -43,7 +43,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "KalMydas — À propos",
-    "description": "Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Arbitrum.",
+    "description": "Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base mainnet (testnet sur Arbitrum Sepolia).",
     "url": "https://kalmydas.com/about/",
     "publisher": {
       "@type": "Organization",
@@ -783,8 +783,8 @@
     </div>
 
     <div class="section-content">
-      <p data-i18n="about_arch_p" data-en="A secure bridge connects the MT4 robots to the blockchain. No private key is centralized — your funds remain under your control. Everything is verifiable in real-time on Arbiscan.">
-        Un pont sécurisé relie les robots MT4 à la blockchain. Aucune clé privée n'est centralisée — vos fonds restent sous votre contrôle. Tout est vérifiable en temps réel sur Arbiscan.
+      <p data-i18n="about_arch_p" data-en="A secure bridge connects the MT4 robots to the blockchain. No private key is centralized — your funds remain under your control. Everything is verifiable in real-time on Basescan (mainnet) and Arbiscan (testnet).">
+        Un pont sécurisé relie les robots MT4 à la blockchain. Aucune clé privée n'est centralisée — vos fonds restent sous votre contrôle. Tout est vérifiable en temps réel sur Basescan (mainnet) et Arbiscan (testnet).
       </p>
     </div>
   </div>
@@ -803,50 +803,40 @@
 
       <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--gold-light);" data-i18n="about_token_dist_label" data-en="Distribution">Distribution</h3>
 
+      <!-- Distribution alignée KalToken.sol NatSpec + docs/tokenomics — corrigée session 299 (28/04/2026) — total 100 %. Aucune allocation équipe / fondateur. -->
       <div class="distribution-chart">
         <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_1" data-en="Ecosystem Reserve">Réserve écosystème</div>
+          <div class="dist-label" data-i18n="about_token_dist_1" data-en="Liquidity provider rewards">Récompenses fournisseurs de liquidité</div>
           <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 50.5%;"><span class="dist-percent">50,5%</span></div>
+            <div class="dist-bar" style="width: 60%;"><span class="dist-percent">60 %</span></div>
           </div>
         </div>
         <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_2" data-en="LP Mining">LP Mining</div>
+          <div class="dist-label" data-i18n="about_token_dist_2" data-en="KAL lockers rewards (veKAL)">Récompenses verrouilleurs de KAL (veKAL)</div>
           <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 15%;"><span class="dist-percent">15%</span></div>
+            <div class="dist-bar" style="width: 30%;"><span class="dist-percent">30 %</span></div>
           </div>
         </div>
         <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_3" data-en="Pool Rewards">Pool Rewards</div>
+          <div class="dist-label" data-i18n="about_token_dist_3" data-en="Presale (500,000 KAL hard cap)">Prévente (500 000 KAL plafond)</div>
           <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 10%;"><span class="dist-percent">10%</span></div>
+            <div class="dist-bar" style="width: 5%;"><span class="dist-percent">5 %</span></div>
           </div>
         </div>
         <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_4" data-en="Treasury / Founder">Trésorerie / Fondateur</div>
+          <div class="dist-label" data-i18n="about_token_dist_4" data-en="Initial valuation curve">Courbe de valorisation initiale</div>
           <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 10%;"><span class="dist-percent">10%</span></div>
+            <div class="dist-bar" style="width: 4.5%;"><span class="dist-percent">4,5 %</span></div>
           </div>
         </div>
         <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_5" data-en="Presale">Prévente</div>
+          <div class="dist-label" data-i18n="about_token_dist_5" data-en="Beta tester recognition program">Programme de reconnaissance testeurs</div>
           <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 7.5%;"><span class="dist-percent">7,5%</span></div>
-          </div>
-        </div>
-        <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_6" data-en="Bonding Curve">Courbe</div>
-          <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 4.5%;"><span class="dist-percent">4,5%</span></div>
-          </div>
-        </div>
-        <div class="dist-item">
-          <div class="dist-label" data-i18n="about_token_dist_7" data-en="Airdrop (testers)">Airdrop (testeurs)</div>
-          <div class="dist-bar-container">
-            <div class="dist-bar" style="width: 0.5%;"><span class="dist-percent">0,5%</span></div>
+            <div class="dist-bar" style="width: 0.5%; min-width: 32px;"><span class="dist-percent">0,5 %</span></div>
           </div>
         </div>
       </div>
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.82rem; margin-top: 1.4rem; font-style: italic;" data-i18n="about_token_dist_footnote" data-en="Total = 100 %. No team allocation: founder compensation depends solely on actual protocol performance, paid in USDC.">Total = 100 %. Aucune allocation équipe : la rémunération du fondateur dépend uniquement de la performance réelle du protocole, payée en USDC.</p>
 
       <p data-i18n="about_token_p2" data-en="30% of performance fees are automatically used for buyback and recirculation (Zero Destruction philosophy), creating permanent buying pressure.">
         30% des frais de performance sont automatiquement utilisés pour du rachat et recirculation (philosophie Zéro Destruction), créant une pression acheteuse permanente.
@@ -912,8 +902,8 @@
     <h2 class="section-title" data-i18n="about_status_title" data-en="Where we are">Où en sommes-nous</h2>
 
     <div class="section-content">
-      <p data-i18n="about_status_p1" data-en="We are in testing phase on Arbitrum Sepolia (test network). Official launch on the main network is planned for September 2026.">
-        Nous sommes en phase de tests sur Arbitrum Sepolia (réseau de test). Le lancement officiel sur le réseau principal est prévu pour septembre 2026.
+      <p data-i18n="about_status_p1" data-en="The platform deploys on Base mainnet at the end of April 2026 — the protocol opens to invited contributors on May 8 (Alpha phase), then to the Discord and Telegram community in June (Beta phase), and finally to the broader public on September 14, 2026 (Public phase). Arbitrum Sepolia continues to serve as the test network for ongoing development.">
+        La plateforme se déploie sur Base mainnet fin avril 2026 — le protocole s'ouvre aux contributeurs invités le 8 mai (Phase Alpha), puis à la communauté Discord et Telegram en juin (Phase Beta), et enfin au grand public le 14 septembre 2026 (Phase Publique). Arbitrum Sepolia continue de servir de réseau de test pour le développement.
       </p>
     </div>
   </div>
@@ -1034,15 +1024,17 @@
     about_arch_stat3_label: "User-controlled funds",
     about_arch_stat4: "24/7",
     about_arch_stat4_label: "Free withdrawals, anytime",
-    about_arch_p: "A secure bridge connects the MT4 robots to the blockchain. No private key is centralized — your funds remain under your control. Everything is verifiable in real-time on Arbiscan.",
+    about_arch_p: "A secure bridge connects the MT4 robots to the blockchain. No private key is centralized — your funds remain under your control. Everything is verifiable in real-time on Basescan (mainnet) and Arbiscan (testnet).",
     about_token_label: "Utility Token",
     about_token_title: "The KAL token",
     about_token_p1: "The KAL token (ERC-20, maximum supply of 10 million) operates with a transparent valuation curve: the price rises mechanically with adoption.",
     about_token_dist_label: "Distribution",
-    about_token_dist_1: "Bonding Curve",
-    about_token_dist_2: "LP Rewards",
-    about_token_dist_3: "Presale",
-    about_token_dist_4: "Community",
+    about_token_dist_1: "Liquidity provider rewards",
+    about_token_dist_2: "KAL lockers rewards (veKAL)",
+    about_token_dist_3: "Presale (500,000 KAL hard cap)",
+    about_token_dist_4: "Initial valuation curve",
+    about_token_dist_5: "Beta tester recognition program",
+    about_token_dist_footnote: "Total = 100 %. No team allocation: founder compensation depends solely on actual protocol performance, paid in USDC.",
     about_token_p2: "30% of performance fees are automatically used for buyback and recirculation (Zero Destruction philosophy), creating permanent buying pressure.",
     about_part_label: "Getting started",
     about_part_title: "How to participate",
@@ -1058,7 +1050,7 @@
     about_risk_closing: "We fully assume them and publish everything: source code, test histories, audits.",
     about_status_label: "Timeline",
     about_status_title: "Where we are",
-    about_status_p1: "We are in testing phase on Arbitrum Sepolia (test network). Official launch on the main network is planned for September 2026.",
+    about_status_p1: "The platform deploys on Base mainnet at the end of April 2026 — the protocol opens to invited contributors on May 8 (Alpha phase), then to the Discord and Telegram community in June (Beta phase), and finally to the broader public on September 14, 2026 (Public phase). Arbitrum Sepolia continues to serve as the test network for ongoing development.",
     about_cta_h2: "Ready to participate in algorithmic gold?",
     about_cta_p: "Join the early participants of KalMydas. The best KAL token price is now.",
     about_cta_btn: "Launch app →",
