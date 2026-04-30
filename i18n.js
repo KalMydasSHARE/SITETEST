@@ -158,7 +158,7 @@ const I18N_EN = {
   og_form_title: "Reserve a spot for the Alpha Phase",
   og_form_counter: "12 / 20 spots reserved",
   og_form_desc: "20 spots maximum for the Alpha Phase on May 8, 2026 (SEED tier at $0.30). To reserve your spot, contact support directly on Telegram. First come, first served.",
-  og_form_cta: "Reserve my spot, DM @kal_mydas",
+  og_form_cta: "Reserve my spot",
   og_form_disclaimer: "No obligation. The Beta Phase (June) and Public Phase (September 14) do not require prior registration.",
 
   /* ===== TRACK RECORD LIVE (added session 298, % version) ===== */

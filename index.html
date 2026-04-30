@@ -1907,7 +1907,7 @@
         <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;" data-i18n="og_form_desc">20 places maximum pour la Phase Alpha à partir du 8 mai 2026 (palier AMORÇAGE 0,30 $). Pour réserver votre place, contactez directement le support sur Telegram. Premier arrivé, premier servi.</p>
 
         <!-- CTA principal Telegram support -->
-        <a href="https://t.me/kal_mydas" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #b8943a); color: #0A0E12; padding: 1rem 2.4rem; border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(201,168,76,0.25); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(201,168,76,0.35)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(201,168,76,0.25)';" data-i18n="og_form_cta">Réserver ma place, Contacter @kal_mydas</a>
+        <a href="https://t.me/kal_mydas" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #b8943a); color: #0A0E12; padding: 1rem 2.4rem; border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(201,168,76,0.25); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(201,168,76,0.35)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(201,168,76,0.25)';" data-i18n="og_form_cta">Réserver ma place</a>
 
         <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 1.5rem; font-style: italic; line-height: 1.5;" data-i18n="og_form_disclaimer">Aucune obligation. Les phases Beta (juin) et Publique (14 septembre) ne nécessitent pas d'inscription préalable.</p>
       </div>
@@ -2386,7 +2386,7 @@
     });
   </script>
 
-  <!-- ===== TRACK RECORD LIVE, hydration en pourcentages depuis trades.json (session 298) ===== -->
+  <!-- ===== TRACK RECORD LIVE, hydration depuis API live + fallback snapshot statique (session 305) ===== -->
   <script>
     (function () {
       function fmtPct(n, withSign) {
@@ -2396,11 +2396,26 @@
       function isLangEn() {
         return (document.documentElement.lang || 'fr').toLowerCase().indexOf('en') === 0;
       }
-      fetch('/trades.json', { cache: 'no-store' })
-        .then(function (r) { return r.ok ? r.json() : null; })
+      // Tente l'API live d'abord, fallback snapshot statique, fallback final = valeurs DOM hardcodées
+      function fetchTrades() {
+        return fetch('https://api.kalmydas.com/trades', { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .catch(function () { return null; })
+          .then(function (data) {
+            if (data) return data;
+            return fetch('/trades.json', { cache: 'no-store' })
+              .then(function (r) { return r.ok ? r.json() : null; })
+              .catch(function () { return null; });
+          });
+      }
+      fetchTrades()
         .then(function (data) {
-          if (!data || !Array.isArray(data.trades)) return;
-          var trades = data.trades.filter(function (t) { return t && typeof t.pnlPercent === 'number'; });
+          // Normaliser : API peut renvoyer [...] direct, snapshot renvoie {trades: [...]}
+          var arr = null;
+          if (Array.isArray(data)) arr = data;
+          else if (data && Array.isArray(data.trades)) arr = data.trades;
+          if (!arr) return;
+          var trades = arr.filter(function (t) { return t && typeof t.pnlPercent === 'number'; });
           if (!trades.length) return;
           // Stats globales
           var wins = 0, losses = 0, best = trades[0];
