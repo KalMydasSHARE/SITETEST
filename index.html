@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KalMydas, Trading algorithmique sur l'or, Accessible à tous</title>
   <meta name="description" content="Stratégies de trading algorithmique sur l'or (XAUUSD) simulées sur données réelles du courtier jusqu'à 21 ans. Non-custodial, sur Base. Dès 10$." />
-  <meta name="keywords" content="trading algorithmique or, XAUUSD, DeFi or, Base, Arbitrum, trading décentralisé, non-custodial, KalMydas, KAL token, copy trading crypto" />
+  <meta name="keywords" content="trading algorithmique or, XAUUSD, DeFi or, Base, trading décentralisé, non-custodial, KalMydas, jeton KAL, copy trading crypto" />
   <meta name="author" content="Kal Mydas" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#c9a84c" />
@@ -54,7 +54,7 @@
           "width": 512,
           "height": 512
         },
-        "description": "Écosystème DeFi de trading algorithmique sur l'or (XAUUSD) déployé sur Base (mainnet) avec testnet sur Arbitrum Sepolia. Stratégies simulées sur données réelles du courtier jusqu'à 21 ans, non-custodial, transparent on-chain.",
+        "description": "Écosystème DeFi de trading algorithmique sur l'or (XAUUSD) déployé sur Base mainnet. Stratégies simulées sur données réelles du courtier jusqu'à 21 ans, non-custodial, transparent on-chain.",
         "foundingDate": "2025",
         "sameAs": [
           "https://x.com/KalMydas",
@@ -88,34 +88,38 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="glossary-tooltip.css" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #060610;
+      /* Charte de marque KalMydas (alignement V5 acté 4 mai 2026, F-015 option 1A) */
+      --bg: #060A18;
       --bg-elevated: #0c0c1a;
       --bg-card: #0f0f1e;
       --bg-card-hover: #141428;
       --border: #1a1a30;
       --border-subtle: #14142a;
-      --border-gold: rgba(201, 168, 76, 0.2);
-      --gold: #c9a84c;
-      --gold-light: #e8d48b;
-      --gold-dark: #9a7a2e;
-      --gold-glow: rgba(201, 168, 76, 0.15);
-      --text: #eaeaf2;
-      --text-secondary: #9d9db8;
-      --text-muted: #5a5a78;
+      --border-gold: rgba(190, 165, 110, 0.2);
+      --gold: #BEA56E;
+      --gold-light: #DCC799;
+      --gold-dark: #8E7A4C;
+      --gold-glow: rgba(190, 165, 110, 0.15);
+      --text: #EAEAF2;
+      --text-secondary: #C3C3CD;
+      --text-muted: #9D9DB8;
+      --text-faint: #5A5A78;
       --green: #22c55e;
       --blue: #3b82f6;
       --orange: #f97316;
       --yellow: #eab308;
       --red: #ef4444;
       --purple: #8b5cf6;
-      --gradient-gold: linear-gradient(135deg, #b8952f 0%, #e8d48b 50%, #c9a84c 100%);
-      --gradient-gold-text: linear-gradient(135deg, #c9a84c, #f0e2a0, #c9a84c);
+      --gradient-gold: linear-gradient(135deg, #8E7A4C 0%, #DCC799 50%, #BEA56E 100%);
+      --gradient-gold-text: linear-gradient(135deg, #BEA56E, #DCC799, #BEA56E);
+      --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
       --radius: 16px;
       --radius-sm: 10px;
       --radius-xs: 6px;
@@ -163,7 +167,7 @@
     }
 
     .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.4rem;
       font-weight: 700;
       background: var(--gradient-gold-text);
@@ -347,7 +351,7 @@
     }
 
     .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(2.8rem, 7vw, 5rem);
       font-weight: 800;
       line-height: 1.05;
@@ -453,7 +457,7 @@
     }
 
     .stat-value {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--gold);
@@ -484,7 +488,7 @@
     }
 
     .section-title {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 800;
       margin-bottom: 1rem;
@@ -536,14 +540,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-weight: 800;
       font-size: 1.1rem;
       margin-bottom: 1.5rem;
     }
 
     .step-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 0.6rem;
@@ -585,7 +589,7 @@
     
 
     .strategy-info h3 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
@@ -624,13 +628,16 @@
     }
 
     .strategy-historical-perf {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-mono);
       font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       line-height: 1;
       margin-bottom: 0.3rem;
     }
+
+    /* Classe utilitaire pour chiffres techniques (adresses, hashes, montants exacts) */
+    .mono { font-family: var(--font-mono); font-feature-settings: 'tnum' 1; }
 
     .strategy-meta {
       font-size: 0.78rem;
@@ -681,7 +688,7 @@
     .comparison-table .highlight {
       color: var(--gold);
       font-weight: 700;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
     }
 
     .comparison-table .strat-name {
@@ -731,9 +738,10 @@
     }
 
     .token-symbol {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-mono);
       font-size: 3rem;
-      font-weight: 800;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       background: var(--gradient-gold-text);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -744,7 +752,7 @@
     }
 
     .token-info h3 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 1rem;
@@ -826,7 +834,7 @@
     }
 
     .security-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
@@ -927,7 +935,7 @@
     }
 
     .roadmap-item h3 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
@@ -1082,7 +1090,7 @@
     }
 
     .cta-content h2 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 800;
       margin-bottom: 1rem;
@@ -1104,7 +1112,7 @@
     }
 
     .footer-logo {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.2rem;
       font-weight: 700;
       background: var(--gradient-gold-text);
@@ -1266,7 +1274,7 @@
       transform: translateY(-2px);
     }
     .testimonial-quote-mark {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 3rem;
       line-height: 0.6;
       color: var(--gold-light);
@@ -1290,7 +1298,7 @@
       border-top: 1px solid var(--border);
     }
     .testimonial-pseudo {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1rem;
       font-weight: 600;
       color: var(--gold-light);
@@ -1394,7 +1402,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#how" data-i18n="nav_how">Comment ça marche</a></li>
       <li><a href="#strategies" data-i18n="nav_strategies">Stratégies</a></li>
-      <li><a href="#token" data-i18n="nav_token">Token KAL</a></li>
+      <li><a href="#token" data-i18n="nav_token">Jeton KAL</a></li>
       <li><a href="#security" data-i18n="nav_security">Sécurité</a></li>
       <li><a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
       <li><a href="#presale-schedule" data-i18n="nav_presale">Prévente</a></li>
@@ -1446,11 +1454,11 @@
     </div>
     <div class="stat-item">
       <div class="stat-value">11 à 21 ans</div>
-      <div class="stat-label" data-i18n="stat_2_label">De données réelles <span class="g-term" data-g="backtest">simulées</span></div>
+      <div class="stat-label" data-i18n="stat_2_label"><span class="g-term" data-g="backtest">Simulés</span> sur données réelles</div>
     </div>
     <div class="stat-item">
       <div class="stat-value">22</div>
-      <div class="stat-label" data-i18n="stat_3_label"><span class="g-term" data-g="smart_contract">Contrats centraux</span> (26 instances)</div>
+      <div class="stat-label" data-i18n="stat_3_label"><span class="g-term" data-g="smart_contract">Contrats Solidity</span></div>
     </div>
     <div class="stat-item">
       <div class="stat-value">1 100+</div>
@@ -1470,7 +1478,7 @@
         <div class="step-card fade-in">
           <div class="step-number">1</div>
           <h3 data-i18n="step_1_h">Connectez-vous</h3>
-          <p data-i18n="step_1_p">Email ou wallet, créez votre compte en 30 secondes grâce à l'authentification simplifiée</p>
+          <p data-i18n="step_1_p">Email ou portefeuille, créez votre compte en 30 secondes grâce à l'authentification simplifiée</p>
         </div>
         <div class="step-card fade-in fade-in-delay-1">
           <div class="step-number">2</div>
@@ -1479,7 +1487,7 @@
         </div>
         <div class="step-card fade-in fade-in-delay-2">
           <div class="step-number">3</div>
-          <h3 data-i18n="step_3_h">Récoltez vos gains</h3>
+          <h3 data-i18n="step_3_h">Récoltez vos résultats</h3>
           <p data-i18n="step_3_p">Les robots tradent pour vous 24h/24. Retirez quand vous voulez, sans blocage</p>
         </div>
       </div>
@@ -1641,79 +1649,104 @@
 
   <div class="section-divider"></div>
 
-  <!-- ===== COMPARISON BLOCK =====, P1 27/04/2026 : faire émerger la value en 5 secondes -->
-  <section id="comparison">
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label" data-i18n="comp_label">Pourquoi KalMydas</p>
-        <h2 class="section-title" data-i18n="comp_title">KalMydas face aux alternatives</h2>
-        <p class="section-desc" data-i18n="comp_desc">Comparaison sur 7 critères structurants pour qui veut s'exposer au marché de l'or sans confier ses fonds à un tiers.</p>
+        <p class="section-label" data-i18n="about_label">Origines</p>
+        <h2 class="section-title" data-i18n="about_title">À propos de KalMydas</h2>
+        <p class="section-desc" data-i18n="about_desc">Pourquoi ce projet existe et comment il fonctionne</p>
       </div>
-      <div class="fade-in" style="overflow-x: auto; max-width: 1100px; margin: 2.5rem auto 0;">
-        <table style="width: 100%; border-collapse: collapse; min-width: 720px;">
-          <thead>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <th style="text-align: left; padding: 1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);" data-i18n="comp_th_criterion">Critère</th>
-              <th style="text-align: center; padding: 1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--gold-light); background: rgba(201, 168, 76, 0.05);">KalMydas</th>
-              <th style="text-align: center; padding: 1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text);" data-i18n="comp_th_manual">Trading manuel</th>
-              <th style="text-align: center; padding: 1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text);" data-i18n="comp_th_etf">ETF or (GLD, BAR)</th>
-              <th style="text-align: center; padding: 1rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text);" data-i18n="comp_th_hodl">HODL crypto</th>
-            </tr>
-          </thead>
-          <tbody style="font-size: 0.9rem;">
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r1_l">Garde des fonds</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r1_kal">Non-custodial, vos clés</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r1_man">Courtier (custodial)</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r1_etf">Banque / courtier</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r1_hodl">Plateforme ou wallet</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r2_l">Frais</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r2_kal">10–20 % sur résultats positifs uniquement</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r2_man">Spread + commissions par trade</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r2_etf">0,17–0,40 % par an + frais courtier</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r2_hodl">Frais d'achat + gas</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r3_l">Disponibilité</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r3_kal">24 h / 7</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r3_man">Heures de marché XAUUSD</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r3_etf">Heures de bourse</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r3_hodl">24 h / 7</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r4_l">Backtest historique</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r4_kal">11 à 21 ans selon stratégie</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r4_man">À la charge de l'utilisateur</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r4_etf">Suit le cours de l'or</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r4_hodl">Sans objet</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r5_l">Décorrélation marché crypto</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r5_kal">Oui, sous-jacent XAUUSD</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r5_man">Oui, sous-jacent XAUUSD</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r5_etf">Oui</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r5_hodl">Non, corrélation BTC / ETH</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r6_l">Mise en place</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r6_kal">Connexion email ou wallet · 2 min</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r6_man">Ouverture compte courtier · 1–5 j</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r6_etf">Ouverture compte titres · 1–7 j</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r6_hodl">Wallet + onboarding crypto</td>
-            </tr>
-            <tr>
-              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r7_l">Audits indépendants</td>
-              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r7_kal">3 passes Omniscient Lab PASS</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r7_man">Sans objet</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r7_etf">Régulé (AMF, SEC selon zone)</td>
-              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r7_hodl">Sans objet</td>
-            </tr>
-          </tbody>
-        </table>
+
+      <div class="about-blocks fade-in" style="display: grid; gap: 2rem; max-width: 900px; margin: 0 auto;">
+
+        <!-- Why -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_why_h3">Pourquoi KalMydas existe</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_why_p">KalMydas n'est pas qu'un agrégateur d'algorithmes. C'est un protocole décentralisé construit autour de l'or et du bitcoin, pensé pour l'autonomie de ceux qui en font partie. Les algorithmes en sont le premier morceau, pas le dernier. Le projet est né d'une frustration simple : pourquoi le trading algorithmique professionnel, dont les résultats sont documentés depuis des décennies sur les marchés institutionnels, reste-t-il réservé aux banques et aux grandes structures financières ? Notre plateforme, construite sur <span class="g-term" data-g="base_l2">Base</span>, donne à tout le monde, dès 10 $, accès aux mêmes mécaniques que les professionnels.</p>
+        </div>
+
+        <!-- Approach -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_approach_h3">Notre approche</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_approach_p">Nos 5 robots de trading sont développés et optimisés sur <span class="g-term" data-g="mt4">MetaTrader 4</span>. Ils ont été rigoureusement simulés sur les données historiques réelles du courtier (de 4 à 21 ans selon la stratégie), forward-testés et stress-testés sur les crises de 2008 et 2020. Chaque stratégie opère exclusivement sur le marché de l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>).</p>
+        </div>
+
+        <!-- Participate -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_part_h3">Comment participer</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_part_p">Un seul Pass d'accès suffit, un abonnement vérifiable sur la <span class="g-term" data-g="blockchain">blockchain</span> (1 $/jour). Choisissez votre stratégie, déposez vos fonds, et retirez-les 24h/24 sans délai. Nous gagnons uniquement quand vous gagnez : les frais de performance s'appliquent uniquement sur les nouveaux gains grâce au <span class="g-term" data-g="hwm">High-Water Mark</span>.</p>
+        </div>
+
+        <!-- Architecture -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_arch_h3">Architecture technique</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">22</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_contracts">contrats centraux</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">1 100+</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_tests">tests unitaires</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">100%</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_control">fonds sous votre contrôle</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">24/7</div>
+              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_withdrawals">retraits libres</div>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_arch_desc">Un pont sécurisé relie les robots <span class="g-term" data-g="mt4">MT4</span> à la blockchain. Aucune clé privée n'est centralisée, vos fonds restent sous votre contrôle. Tout est vérifiable en temps réel sur <span class="g-term" data-g="basescan">Basescan</span>.</p>
+        </div>
+
+        <!-- Token KAL -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_token_h3">Le jeton KAL</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;" data-i18n="about_token_desc2">Le jeton KAL (<span class="g-term" data-g="erc20">ERC-20</span>, 10 millions max) fonctionne avec une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> transparente : le prix monte avec l'adoption. 30% des frais de performance sont utilisés pour le rachat et la recirculation (philosophie Zéro Destruction). Verrouillez vos KAL en <span class="g-term" data-g="vekal">veKAL</span> pour recevoir votre part des frais en <span class="g-term" data-g="usdc">USDC</span> chaque semaine.</p>
+          <!-- Tags distribution alignés docs/tokenomics, corrigés session 298 (28/04/2026), total 100 % -->
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_lp">60 % Récompenses LP</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_vekal">30 % Récompenses veKAL</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_presale">5 % Prévente</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_curve">4,5 % Courbe</span>
+            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_community">0,5 % Testeurs</span>
+          </div>
+        </div>
+
+        <!-- Risk -->
+        <div style="background: var(--bg-card); border: 1px solid rgba(201, 168, 76, 0.15); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_risk_h3">Avertissement sur les risques</h3>
+          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_risk_p">Nous ne promettons rien de magique. Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital, y compris des pertes temporaires pouvant aller jusqu'à 70% sur certaines stratégies. Nous les assumons pleinement et nous publions tout : code source, historiques de tests, audits.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_timeline_h3">Où en sommes-nous</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold-light); flex-shrink: 0;"></span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_1"><strong>Q1 2026</strong>, Fondations posées, premiers contrats, MVP connecté</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold-light); flex-shrink: 0; box-shadow: 0 0 8px rgba(201,168,76,0.5);"></span>
+              <span style="color: var(--text); font-size: 0.9rem;" data-i18n="about_tl_2"><strong>Q2 2026</strong>, 22 contrats centraux déployés (26 instances dont 5 pools), bêta-test actif, veKAL + gouvernance</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>14 septembre 2026</strong> : ouverture publique de la prévente sur Base mainnet (paliers 4 à 9), sous condition gate 100 000 USDC. La plateforme tourne déjà sur Base depuis le 1<sup>er</sup> mai.</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
+              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_4"><strong>Q4 2026+</strong>, Croissance, listing DEX, app mobile, DAO</span>
+            </div>
+          </div>
+          <a href="#roadmap" style="color: var(--gold-light); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem;" data-i18n="about_tl_link">Voir la feuille de route complète →</a>
+        </div>
+
       </div>
-      <p style="text-align: center; color: var(--text-muted); font-size: 0.82rem; margin-top: 1.5rem; max-width: 720px; margin-left: auto; margin-right: auto;" data-i18n="comp_note">Comparatif indicatif. Chaque solution répond à un besoin différent, KalMydas est conçu pour s'exposer au marché de l'or via des stratégies algorithmiques sans confier ses fonds à un tiers.</p>
     </div>
   </section>
 
@@ -1731,19 +1764,19 @@
       <!-- Stats globales -->
       <div class="fade-in" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; max-width: 980px; margin-left: auto; margin-right: auto;">
         <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; text-align: center;">
-          <div id="track-best-pct" style="font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.3rem; letter-spacing: -0.02em;">+34,7 %</div>
+          <div id="track-best-pct" style="font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.3rem; letter-spacing: -0.02em;">+34,7 %</div>
           <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;" data-i18n="track_best_label">Meilleur trade</div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; text-align: center;">
-          <div id="track-count" style="font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; letter-spacing: -0.02em;">149</div>
+          <div id="track-count" style="font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; letter-spacing: -0.02em;">149</div>
           <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;" data-i18n="track_count_label">Trades exécutés</div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; text-align: center;">
-          <div id="track-winrate" style="font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; letter-spacing: -0.02em;">51,7 %</div>
+          <div id="track-winrate" style="font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; letter-spacing: -0.02em;">51,7 %</div>
           <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;" data-i18n="track_winrate_label">Taux de réussite global</div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; text-align: center;">
-          <div id="track-top-strat" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.3rem; letter-spacing: -0.02em;">TREASURY <span style="font-size: 1.6rem;">+16,1 %</span></div>
+          <div id="track-top-strat" style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.3rem; letter-spacing: -0.02em;">TREASURY <span style="font-size: 1.6rem;">+16,1 %</span></div>
           <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;" data-i18n="track_topstrat_label">Stratégie la plus performante</div>
         </div>
       </div>
@@ -1762,7 +1795,7 @@
 
       <!-- Périmètre + autres preuves -->
       <div class="fade-in fade-in-delay-2" style="margin-top: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto;">
-        <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;" data-i18n="track_scope">Chiffres mesurés depuis l'ouverture de la plateforme en bêta. Les algorithmes ont également tourné en live environ six mois avant cette date, et ont été simulés sur des historiques de 11 à 21 ans selon la stratégie, ces preuves complémentaires sont vérifiables auprès de la communauté <a href="https://discord.gg/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Discord</a> et <a href="https://t.me/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Telegram</a>.</p>
+        <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;" data-i18n="track_scope">Chiffres mesurés depuis l'ouverture de la plateforme en bêta. Les algorithmes ont également tourné en live environ six mois avant cette date, et ont été simulés sur des historiques de 11 à 21 ans selon la stratégie, ces preuves complémentaires sont vérifiables auprès de la communauté <a href="https://t.me/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Telegram</a>.</p>
       </div>
 
       <!-- CTA -->
@@ -1856,105 +1889,6 @@
 
   <div class="section-divider"></div>
 
-  <!-- ===== TOKEN KAL ===== -->
-  <section id="token">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-label" data-i18n="token_label">Token utilitaire</p>
-        <h2 class="section-title" data-i18n="token_title">Le token KAL</h2>
-        <p class="section-desc" data-i18n="token_desc">Un token <span class="g-term" data-g="erc20">ERC-20</span> au cœur de l'écosystème KalMydas</p>
-      </div>
-      <div class="token-grid">
-        <div class="token-visual fade-in">
-          <div class="token-circle">
-            <div class="token-symbol">KAL</div>
-          </div>
-        </div>
-        <div class="token-info fade-in">
-          <h3 data-i18n="token_h3">Conçu pour créer de la valeur</h3>
-          <p data-i18n="token_p">
-            Le token KAL utilise une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> mathématique :
-            plus la demande augmente, plus le prix monte automatiquement.
-            Les premiers participants bénéficient du meilleur prix.
-          </p>
-          <ul class="token-features">
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f1"><strong><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></strong>, Prix qui augmente avec l'adoption</span>
-            </li>
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f2"><strong><span class="g-term" data-g="pol">Rachat &amp; Recirculation</span></strong>, Une partie des frais de performance rachète du KAL sur le marché et le réinjecte dans la liquidité du protocole (pression acheteuse permanente, sans destruction)</span>
-            </li>
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f3"><strong>Partage des frais</strong>, Bloquez vos KAL en <span class="g-term" data-g="vekal">veKAL</span> pour recevoir votre part des frais en <span class="g-term" data-g="usdc">USDC</span> chaque semaine</span>
-            </li>
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f4"><strong>Récompenses <span class="g-term" data-g="lp">LP</span></strong>, <span class="g-term" data-g="staking">Staking</span> de liquidité avec rewards en KAL</span>
-            </li>
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f5"><strong>Bonus dépôt</strong>, Jusqu'à +5% en KAL sur vos dépôts</span>
-            </li>
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f6"><strong>Gouvernance</strong>, Votes communautaires on-chain + interface dédiée</span>
-            </li>
-            <li>
-              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
-              <span data-i18n="token_f7"><strong><span class="g-term" data-g="deflationniste">Déflationniste</span></strong>, Offre qui diminue avec le temps</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Distribution chart, réutilisé depuis about/index.html, P1 27/04/2026 -->
-      <div class="fade-in" style="margin-top: 5rem; max-width: 920px; margin-left: auto; margin-right: auto;">
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--gold-light); text-align: center;" data-i18n="token_dist_title">Distribution du token KAL</h3>
-        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2.5rem;" data-i18n="token_dist_subtitle">Offre totale : 10 000 000 KAL · 0 % réservé à une équipe interne · distribution productive et déflationniste</p>
-        <!-- Distribution alignée docs/tokenomics + KalToken.sol NatSpec, corrigée session 298 (28/04/2026) -->
-        <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <div style="display: flex; align-items: center;">
-            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_1">Récompenses fournisseurs de liquidité</div>
-            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
-              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 60%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">60 %</span></div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center;">
-            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_2">Récompenses verrouilleurs de KAL (veKAL)</div>
-            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
-              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 30%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">30 %</span></div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center;">
-            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_3">Prévente (500 000 KAL plafond)</div>
-            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
-              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 5%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">5 %</span></div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center;">
-            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_4">Courbe de valorisation initiale</div>
-            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
-              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 4.5%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">4,5 %</span></div>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center;">
-            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_5">Programme de reconnaissance testeurs</div>
-            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
-              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; min-width: 32px; width: 0.5%;"><span style="font-weight: 700; font-size: 0.75rem; color: #0a0a0f;">0,5 %</span></div>
-            </div>
-          </div>
-        </div>
-        <p style="text-align: center; color: var(--text-muted); font-size: 0.82rem; margin-top: 1.4rem; font-style: italic;" data-i18n="token_dist_footnote">Total = 100 %. Aucune allocation équipe : la rémunération du fondateur dépend uniquement de la performance réelle du protocole, payée en USDC.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
   <!-- ===== SECURITY ===== -->
   <section id="security">
     <div class="container">
@@ -1969,7 +1903,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
           <h3 data-i18n="sec_1_h"><span class="g-term" data-g="smart_contract">Contrats intelligents</span> vérifiables</h3>
-          <p data-i18n="sec_1_p">22 contrats Solidity centraux (déployés en 26 instances dont 5 pools de stratégie), code source public et vérifiable sur <span class="g-term" data-g="basescan">Basescan</span> (mainnet) et <span class="g-term" data-g="arbiscan">Arbiscan</span> (testnet) à tout moment</p>
+          <p data-i18n="sec_1_p">22 contrats Solidity centraux (déployés en 26 instances dont 5 pools de stratégie), code source public et vérifiable sur <span class="g-term" data-g="basescan">Basescan</span> à tout moment</p>
         </div>
         <div class="security-card fade-in fade-in-delay-1">
           <div class="card-icon">
@@ -2012,6 +1946,243 @@
 
   <div class="section-divider"></div>
 
+  <!-- ===== COMPARISON BLOCK =====, P1 27/04/2026 : faire émerger la value en 5 secondes -->
+  <section id="comparison">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="comp_label">Pourquoi KalMydas</p>
+        <h2 class="section-title" data-i18n="comp_title">KalMydas face aux alternatives</h2>
+        <p class="section-desc" data-i18n="comp_desc">Comparaison sur 7 critères structurants pour qui veut s'exposer au marché de l'or sans confier ses fonds à un tiers.</p>
+      </div>
+      <div class="fade-in" style="overflow-x: auto; max-width: 1100px; margin: 2.5rem auto 0;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 720px;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <th style="text-align: left; padding: 1rem; font-family: var(--font-display); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);" data-i18n="comp_th_criterion">Critère</th>
+              <th style="text-align: center; padding: 1rem; font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--gold-light); background: rgba(201, 168, 76, 0.05);">KalMydas</th>
+              <th style="text-align: center; padding: 1rem; font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--text);" data-i18n="comp_th_manual">Trading manuel</th>
+              <th style="text-align: center; padding: 1rem; font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--text);" data-i18n="comp_th_etf">ETF or (GLD, BAR)</th>
+              <th style="text-align: center; padding: 1rem; font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--text);" data-i18n="comp_th_hodl">HODL crypto</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: 0.9rem;">
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r1_l">Garde des fonds</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r1_kal">Non-custodial, vos clés</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r1_man">Courtier (custodial)</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r1_etf">Banque / courtier</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r1_hodl">Plateforme ou portefeuille</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r2_l">Frais</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r2_kal">10–20 % sur résultats positifs uniquement</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r2_man">Spread + commissions par trade</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r2_etf">0,17–0,40 % par an + frais courtier</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r2_hodl">Frais d'achat + gas</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r3_l">Disponibilité</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r3_kal">24 h / 7</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r3_man">Heures de marché XAUUSD</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r3_etf">Heures de bourse</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r3_hodl">24 h / 7</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r4_l">Test historique</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r4_kal">11 à 21 ans selon stratégie</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r4_man">À la charge de l'utilisateur</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r4_etf">Suit le cours de l'or</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r4_hodl">Sans objet</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r5_l">Décorrélation marché crypto</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r5_kal">Oui, sous-jacent XAUUSD</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r5_man">Oui, sous-jacent XAUUSD</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r5_etf">Oui</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r5_hodl">Non, corrélation BTC / ETH</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r6_l">Mise en place</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r6_kal">Connexion email ou portefeuille · 2 min</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r6_man">Ouverture compte courtier · 1–5 j</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r6_etf">Ouverture compte titres · 1–7 j</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r6_hodl">Portefeuille + onboarding crypto</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.95rem 1rem; color: var(--text-muted); font-weight: 500;" data-i18n="comp_r7_l">Audits indépendants</td>
+              <td style="text-align: center; padding: 0.95rem 1rem; background: rgba(201, 168, 76, 0.03); color: var(--gold-light);" data-i18n="comp_r7_kal">3 passes Omniscient Lab PASS</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r7_man">Sans objet</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r7_etf">Régulé (AMF, SEC selon zone)</td>
+              <td style="text-align: center; padding: 0.95rem 1rem;" data-i18n="comp_r7_hodl">Sans objet</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.82rem; margin-top: 1.5rem; max-width: 720px; margin-left: auto; margin-right: auto;" data-i18n="comp_note">Comparatif indicatif. Chaque solution répond à un besoin différent, KalMydas est conçu pour s'exposer au marché de l'or via des stratégies algorithmiques sans confier ses fonds à un tiers.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== TOKEN KAL ===== -->
+  <section id="token">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="token_label">Jeton utilitaire</p>
+        <h2 class="section-title" data-i18n="token_title">Le jeton KAL</h2>
+        <p class="section-desc" data-i18n="token_desc">Un jeton <span class="g-term" data-g="erc20">ERC-20</span> au cœur de l'écosystème KalMydas</p>
+      </div>
+      <div class="token-grid">
+        <div class="token-visual fade-in">
+          <div class="token-circle">
+            <div class="token-symbol">KAL</div>
+          </div>
+        </div>
+        <div class="token-info fade-in">
+          <h3 data-i18n="token_h3">Conçu pour créer de la valeur</h3>
+          <p data-i18n="token_p">
+            Le jeton KAL utilise une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> mathématique :
+            plus la demande augmente, plus le prix monte automatiquement.
+            Les premiers participants bénéficient du meilleur prix.
+          </p>
+          <ul class="token-features">
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f1"><strong><span class="g-term" data-g="bonding_curve">Courbe de valorisation</span></strong>, Prix qui augmente avec l'adoption</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f2"><strong><span class="g-term" data-g="pol">Rachat &amp; Recirculation</span></strong>, Une partie des frais de performance rachète du KAL sur le marché et le réinjecte dans la liquidité du protocole (pression acheteuse permanente, sans destruction)</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f3"><strong>Partage des frais</strong>, Bloquez vos KAL en <span class="g-term" data-g="vekal">veKAL</span> pour recevoir votre part des frais en <span class="g-term" data-g="usdc">USDC</span> chaque semaine</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f4"><strong>Récompenses <span class="g-term" data-g="lp">LP</span></strong>, <span class="g-term" data-g="staking">mise en jeu</span> de liquidité avec récompenses en KAL</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f5"><strong>Bonus dépôt</strong>, Jusqu'à +5% en KAL sur vos dépôts</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f6"><strong>Gouvernance</strong>, Votes communautaires on-chain + interface dédiée</span>
+            </li>
+            <li>
+              <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span data-i18n="token_f7"><strong><span class="g-term" data-g="deflationniste">Déflationniste</span></strong>, Offre qui diminue avec le temps</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Distribution chart, réutilisé depuis about/index.html, P1 27/04/2026 -->
+      <div class="fade-in" style="margin-top: 5rem; max-width: 920px; margin-left: auto; margin-right: auto;">
+        <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--gold-light); text-align: center;" data-i18n="token_dist_title">Distribution du jeton KAL</h3>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2.5rem;" data-i18n="token_dist_subtitle">Offre totale : 10 000 000 KAL · 0 % réservé à une équipe interne · distribution productive et déflationniste</p>
+        <!-- Distribution alignée docs/tokenomics + KalToken.sol NatSpec, corrigée session 298 (28/04/2026) -->
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center;">
+            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_1">Récompenses fournisseurs de liquidité</div>
+            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
+              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 60%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">60 %</span></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_2">Récompenses verrouilleurs de KAL (veKAL)</div>
+            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
+              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 30%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">30 %</span></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_3">Prévente (500 000 KAL plafond)</div>
+            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
+              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 5%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">5 %</span></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_4">Courbe de valorisation initiale</div>
+            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
+              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 4.5%;"><span style="font-weight: 700; font-size: 0.85rem; color: #0a0a0f;">4,5 %</span></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div style="min-width: 280px; color: var(--text-muted); font-weight: 500; font-size: 0.92rem;" data-i18n="token_dist_5">Programme de reconnaissance testeurs</div>
+            <div style="flex: 1; height: 32px; background: rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; margin: 0 1.2rem;">
+              <div style="height: 100%; background: var(--gradient-gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; min-width: 32px; width: 0.5%;"><span style="font-weight: 700; font-size: 0.75rem; color: #0a0a0f;">0,5 %</span></div>
+            </div>
+          </div>
+        </div>
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.82rem; margin-top: 1.4rem; font-style: italic;" data-i18n="token_dist_footnote">Total = 100 %. Aucune allocation équipe : la rémunération du fondateur dépend uniquement de la performance réelle du protocole, payée en USDC.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== PRESALE SCHEDULE, ajouté session 298 (28/04/2026) ===== -->
+  <section id="presale-schedule">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="presale_label">Calendrier de la prévente</p>
+        <h2 class="section-title" data-i18n="presale_title">Trois phases progressives</h2>
+        <p class="section-desc" data-i18n="presale_desc">La prévente s'ouvre par cercles, des plus proches aux plus larges, jusqu'à l'ouverture publique du 14 septembre.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+
+        <!-- Phase Alpha -->
+        <div class="fade-in" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="alpha_label">Phase Alpha</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text); margin-bottom: 1rem;" data-i18n="alpha_h">8 mai 2026</h3>
+          <div style="font-size: 1.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; font-family: var(--font-display);" data-i18n="alpha_status">Privée, sur invitation</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="alpha_p">Palier d'amorçage réservé au cercle proche, accessible uniquement par invitation directe Telegram. Pas d'inscription publique. Les phases Beta et Publique ouvrent ensuite à la communauté élargie.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
+            <div><strong style="color: var(--text);" data-i18n="alpha_meta_l1">Accès :</strong> <span data-i18n="alpha_meta_v1">Invitation Telegram directe</span></div>
+            <div><strong style="color: var(--text);" data-i18n="alpha_meta_l2">Posture :</strong> <span data-i18n="alpha_meta_v2">Privée, pas d'annonce publique du tarif</span></div>
+          </div>
+        </div>
+
+        <!-- Phase Beta -->
+        <div class="fade-in fade-in-delay-1" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+          <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="beta_label">Phase Beta</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text); margin-bottom: 1rem;" data-i18n="beta_h">À partir du 15 juillet 2026</h3>
+          <div style="font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; font-family: var(--font-display);">0,50 → 0,70 $</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="beta_p">Paliers STRATÉGIQUE et COMMUNAUTÉ ouverts à la communauté Telegram élargie. Plafond combiné 100 000 KAL = 60 000 $ levés maximum.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
+            <div><strong style="color: var(--text);" data-i18n="beta_meta_l1">Public :</strong> <span data-i18n="beta_meta_v1">Membres Telegram élargis</span></div>
+            <div><strong style="color: var(--text);" data-i18n="beta_meta_l2">Plafond :</strong> <span data-i18n="beta_meta_v2">100 000 KAL = 60 k$</span></div>
+          </div>
+        </div>
+
+        <!-- Phase Publique -->
+        <div class="fade-in fade-in-delay-2" style="background: var(--bg-card); border: 2px solid rgba(201, 168, 76, 0.4); border-radius: 16px; padding: 2rem; box-shadow: 0 0 40px rgba(201, 168, 76, 0.08);">
+          <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="public_label">Phase Publique</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text); margin-bottom: 1rem;" data-i18n="public_h">À partir du 14 septembre 2026</h3>
+          <div style="font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; font-family: var(--font-display);">1,50 → 8 $</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="public_p">7 paliers ouverts à tous, sans whitelist. Plafond combiné 332 500 KAL = 1 435 000 $ levés maximum. Conditionné à la levée minimum de 75 k$ sur Alpha + Beta au 31 août.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
+            <div><strong style="color: var(--text);" data-i18n="public_meta_l1">Public :</strong> <span data-i18n="public_meta_v1">Tout participant</span></div>
+            <div><strong style="color: var(--text);" data-i18n="public_meta_l2">Plafond :</strong> <span data-i18n="public_meta_v2">332 500 KAL = 1,435 M$</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.6;" data-i18n="presale_footnote">Plafond global de la prévente : 500 000 KAL (5 % de l'offre totale) = ~1,51 M$ maximum. Si le palier de viabilité de 75 k$ n'est pas atteint au 31 août, l'ouverture publique du 14 septembre peut être reportée ou ouverte par tranches.</p>
+
+      <!-- Bandeau disclaimer dédié prévente (F-006 audit 4 mai 2026) -->
+      <div class="fade-in" style="margin-top: 3rem; max-width: 720px; margin-left: auto; margin-right: auto; background: rgba(239,68,68,0.04); border: 1px solid rgba(239,68,68,0.15); border-radius: 12px; padding: 1.8rem 1.6rem; text-align: center;">
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin: 0;" data-i18n="presale_disclaimer_box"><strong style="color: var(--text);">Avertissement :</strong> la prévente du jeton KAL n'est pas un investissement. Les fonds versés sont une participation à un protocole DeFi expérimental. Le jeton KAL n'a aucune valeur garantie. Vous pouvez perdre la totalité de votre participation. Merci à toutes les personnes qui participent à cette phase d'amorçage.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- ===== ROADMAP ===== -->
   <section id="roadmap">
     <div class="container">
@@ -2025,14 +2196,14 @@
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase" data-i18n="road_1_phase">Phase 1, Q1 2026 <span class="tag-done">Terminé</span></div>
           <h3 data-i18n="road_1_h">Fondations</h3>
-          <p data-i18n="road_1_p">Premiers <span class="g-term" data-g="smart_contract">contrats intelligents</span> déployés sur <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Tests E2E validés. MVP frontend connecté <span class="g-term" data-g="on_chain">on-chain</span>. Livre blanc publié. 5 <span class="g-term" data-g="backtest">simulations</span> vérifiées.</p>
+          <p data-i18n="road_1_p">Premiers <span class="g-term" data-g="smart_contract">contrats intelligents</span> déployés et validés en bêta privée. Tests E2E validés. MVP frontend connecté <span class="g-term" data-g="on_chain">on-chain</span>. Livre blanc publié. 5 <span class="g-term" data-g="backtest">simulations</span> vérifiées.</p>
         </div>
 
         <div class="roadmap-item active fade-in">
           <div class="roadmap-dot"></div>
           <div class="roadmap-phase" data-i18n="road_2_phase">Phase 2, Q2 2026 <span class="tag-progress">En cours</span></div>
           <h3 data-i18n="road_2_h">Développement & Beta</h3>
-          <p data-i18n="road_2_p">22 contrats Solidity centraux validés sur testnet <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span> (26 instances dont 5 pools de stratégie) puis déployés sur <span class="g-term" data-g="base_l2">Base</span> mainnet fin avril 2026. veKAL, gouvernance, système de parrainage, auto-compound, diversificateur de performance, trésorerie RWA, mode solo individuel par stratégie, tout codé, testé et audité. 3ᵉ PASS Omniscient consécutif (retest final le 22 avril, fuzz 300 000 transitions, pause individuelle KalPool validée le 25 avril). Programme bêta-testeurs actif.</p>
+          <p data-i18n="road_2_p">22 contrats Solidity centraux (26 instances dont 5 pools de stratégie), validés en bêta privée puis déployés sur <span class="g-term" data-g="base_l2">Base</span> mainnet le 1<sup>er</sup> mai 2026. veKAL, gouvernance, système de parrainage, auto-compound, diversificateur de performance, trésorerie RWA, mode solo individuel par stratégie, tout codé, testé et audité. 3ᵉ PASS Omniscient consécutif (retest final le 22 avril, fuzz 300 000 transitions, pause individuelle KalPool validée le 25 avril). Programme bêta-testeurs actif.</p>
         </div>
 
         <div class="roadmap-item future fade-in">
@@ -2062,74 +2233,62 @@
 
   <div class="section-divider"></div>
 
-  <!-- ===== PRESALE SCHEDULE, ajouté session 298 (28/04/2026) ===== -->
-  <section id="presale-schedule">
+  <!-- ===== BUILT WITH ===== -->
+  <section id="tech">
     <div class="container">
       <div class="section-header fade-in">
-        <p class="section-label" data-i18n="presale_label">Calendrier de la prévente</p>
-        <h2 class="section-title" data-i18n="presale_title">Trois phases progressives</h2>
-        <p class="section-desc" data-i18n="presale_desc">La prévente s'ouvre par cercles, des plus proches aux plus larges, jusqu'à l'ouverture publique du 14 septembre.</p>
+        <p class="section-label" data-i18n="tech_label">Infrastructure</p>
+        <h2 class="section-title" data-i18n="tech_title">Construit avec</h2>
       </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
-
-        <!-- Phase Alpha -->
-        <div class="fade-in" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="alpha_label">Phase Alpha</div>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--text); margin-bottom: 1rem;" data-i18n="alpha_h">À partir du 8 mai 2026</h3>
-          <div style="font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">0,30 $</div>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="alpha_p">Palier AMORÇAGE réservé aux 10-20 premiers contributeurs (cercle proche). Accès par code OG distribué en direct. Plafond 50 000 KAL = 15 000 $ levés maximum.</p>
-          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
-            <div><strong style="color: var(--text);" data-i18n="alpha_meta_l1">Public :</strong> <span data-i18n="alpha_meta_v1">10-20 OGs cercle proche</span></div>
-            <div><strong style="color: var(--text);" data-i18n="alpha_meta_l2">Plafond :</strong> <span data-i18n="alpha_meta_v2">50 000 KAL = 15 k$</span></div>
-          </div>
+      <div class="tech-grid fade-in">
+        <div class="tech-item">
+          <img src="https://avatars.githubusercontent.com/u/108554348" alt="Base" width="40" height="40" style="border-radius: 50%;" loading="lazy">
+          <span class="tech-name">Base</span>
+          <span class="tech-role">Blockchain L2 mainnet</span>
         </div>
-
-        <!-- Phase Beta -->
-        <div class="fade-in fade-in-delay-1" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="beta_label">Phase Beta</div>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--text); margin-bottom: 1rem;" data-i18n="beta_h">Juin → mi-août 2026</h3>
-          <div style="font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">0,50 → 0,70 $</div>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="beta_p">Paliers STRATÉGIQUE et COMMUNAUTÉ ouverts à la communauté Discord et Telegram. Plafond combiné 100 000 KAL = 60 000 $ levés maximum.</p>
-          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
-            <div><strong style="color: var(--text);" data-i18n="beta_meta_l1">Public :</strong> <span data-i18n="beta_meta_v1">Discord + Telegram membres</span></div>
-            <div><strong style="color: var(--text);" data-i18n="beta_meta_l2">Plafond :</strong> <span data-i18n="beta_meta_v2">100 000 KAL = 60 k$</span></div>
-          </div>
+        <div class="tech-item">
+          <!-- Solidity, official logo from soliditylang.org -->
+          <svg width="40" height="40" viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.8" d="M50 44.3013L25 1L0 44.3013L25 87.6025L50 44.3013Z" fill="#627EEA"/>
+            <path opacity="0.45" d="M50 44.3091L75 1.00781L25 1.00781L0 44.3091H50Z" fill="#627EEA"/>
+            <path opacity="0.6" d="M75 1.00781L25 1.00781L50 44.3091H100L75 1.00781Z" fill="#627EEA"/>
+            <path opacity="0.8" d="M50 115.699L75 159L100 115.699L75 72.3975L50 115.699Z" fill="#627EEA"/>
+            <path opacity="0.45" d="M50 115.691L25 158.993H75L100 115.691L50 115.691Z" fill="#627EEA"/>
+            <path opacity="0.6" d="M25 158.993L75 158.993L50 115.691H0L25 158.993Z" fill="#627EEA"/>
+          </svg>
+          <span class="tech-name">Solidity</span>
+          <span class="tech-role">Smart Contracts</span>
         </div>
-
-        <!-- Phase Publique -->
-        <div class="fade-in fade-in-delay-2" style="background: var(--bg-card); border: 2px solid rgba(201, 168, 76, 0.4); border-radius: 16px; padding: 2rem; box-shadow: 0 0 40px rgba(201, 168, 76, 0.08);">
-          <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="public_label">Phase Publique</div>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--text); margin-bottom: 1rem;" data-i18n="public_h">À partir du 14 septembre 2026</h3>
-          <div style="font-size: 2.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif;">1,50 → 8 $</div>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem;" data-i18n="public_p">7 paliers ouverts à tous, sans whitelist. Plafond combiné 332 500 KAL = 1 435 000 $ levés maximum. Conditionné à la levée minimum de 75 k$ sur Alpha + Beta au 31 août.</p>
-          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted);">
-            <div><strong style="color: var(--text);" data-i18n="public_meta_l1">Public :</strong> <span data-i18n="public_meta_v1">Tout participant</span></div>
-            <div><strong style="color: var(--text);" data-i18n="public_meta_l2">Plafond :</strong> <span data-i18n="public_meta_v2">332 500 KAL = 1,435 M$</span></div>
-          </div>
+        <div class="tech-item">
+          <!-- Privy Blobby mark (official shape: circle with upper-left notch) -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="privy-mask">
+              <rect width="40" height="40" fill="white"/>
+              <circle cx="12" cy="10" r="7.5" fill="black"/>
+            </mask>
+            <circle cx="20" cy="22" r="16" fill="#eaeaf2" mask="url(#privy-mask)"/>
+          </svg>
+          <span class="tech-name">Privy</span>
+          <span class="tech-role">Auth & Wallets</span>
         </div>
-
-      </div>
-
-      <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 2.5rem; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.6;" data-i18n="presale_footnote">Plafond global de la prévente : 500 000 KAL (5 % de l'offre totale) = ~1,51 M$ maximum. Si le palier de viabilité de 75 k$ n'est pas atteint au 31 août, l'ouverture publique du 14 septembre peut être reportée ou ouverte par tranches.</p>
-
-      <!-- Capture liste OG, appel direct DM Telegram (session 301, 28/04/2026, Tally abandonné) -->
-      <div class="fade-in" style="margin-top: 4rem; max-width: 720px; margin-left: auto; margin-right: auto; background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(201,168,76,0.02)); border: 1px solid rgba(201,168,76,0.25); border-radius: 20px; padding: 2.5rem 2rem; text-align: center;">
-        <div style="font-size: 0.75rem; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.8rem;" data-i18n="og_form_label">Liste OG, Phase Alpha</div>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 1.2rem; letter-spacing: -0.01em;" data-i18n="og_form_title">Réserver une place pour la Phase Alpha</h3>
-
-        <!-- Compteur places réservées (à mettre à jour manuellement quand de nouvelles inscriptions arrivent) -->
-        <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.4); border-radius: 999px; padding: 0.5rem 1.2rem; font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 1.5rem;">
-          <span style="display: inline-block; width: 8px; height: 8px; background: #c9a84c; border-radius: 50%; box-shadow: 0 0 12px rgba(201,168,76,0.6);"></span>
-          <span data-i18n="og_form_counter">12 / 20 places réservées</span>
+        <div class="tech-item">
+          <!-- MetaTrader 4, moteur où les algos prennent leurs décisions -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" fill="#0e8be4"/>
+            <text x="20" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">MT4</text>
+          </svg>
+          <span class="tech-name">MetaTrader 4</span>
+          <span class="tech-role">Moteur algorithmique XAUUSD</span>
         </div>
-
-        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;" data-i18n="og_form_desc">20 places maximum pour la Phase Alpha à partir du 8 mai 2026 (palier AMORÇAGE 0,30 $). Pour réserver votre place, contactez directement le support sur Telegram. Premier arrivé, premier servi.</p>
-
-        <!-- CTA principal Telegram support -->
-        <a href="https://t.me/kal_mydas" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, #c9a84c, #b8943a); color: #0A0E12; padding: 1rem 2.4rem; border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(201,168,76,0.25); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(201,168,76,0.35)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(201,168,76,0.25)';" data-i18n="og_form_cta">Réserver ma place</a>
-
-        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 1.5rem; font-style: italic; line-height: 1.5;" data-i18n="og_form_disclaimer">Aucune obligation. Les phases Beta (juin) et Publique (14 septembre) ne nécessitent pas d'inscription préalable.</p>
+        <div class="tech-item">
+          <!-- gTrade by Gains Network, exécution on-chain -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" fill="#1a1f3d"/>
+            <path d="M14 12 L26 12 L26 16 L18 16 L18 20 L24 20 L24 24 L18 24 L18 32 L14 32 Z" fill="#5d95ff"/>
+          </svg>
+          <span class="tech-name">gTrade</span>
+          <span class="tech-role">Exécution on-chain XAUUSD</span>
+        </div>
       </div>
     </div>
   </section>
@@ -2151,7 +2310,7 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              <span data-i18n="faq_1_a">KalMydas est un écosystème DeFi qui propose 5 stratégies de trading algorithmique sur l'or (XAUUSD). Les robots exécutent les trades automatiquement, 24h/24. Tout est transparent et vérifiable sur la blockchain (Base en mainnet, Arbitrum Sepolia en testnet).</span>
+              <span data-i18n="faq_1_a">KalMydas est un écosystème DeFi qui propose 5 stratégies de trading algorithmique sur l'or (XAUUSD). Les robots exécutent les trades automatiquement, 24h/24. Tout est transparent et vérifiable sur la blockchain Base.</span>
             </div>
           </div>
         </div>
@@ -2201,12 +2360,12 @@
         </div>
         <div class="faq-item fade-in">
           <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            <span data-i18n="faq_6_q">Faut-il un wallet crypto pour utiliser KalMydas ?</span>
+            <span data-i18n="faq_6_q">Faut-il un portefeuille crypto pour utiliser KalMydas ?</span>
             <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              <span data-i18n="faq_6_a">Non. Vous pouvez vous connecter avec un simple email ou un compte Google. Un wallet est créé automatiquement pour vous grâce à Privy. Les utilisateurs avancés peuvent aussi connecter leur propre wallet (MetaMask, etc.).</span>
+              <span data-i18n="faq_6_a">Non. Vous pouvez vous connecter avec un simple email ou un compte Google. Un portefeuille est créé automatiquement pour vous grâce à Privy. Les utilisateurs avancés peuvent aussi connecter leur propre portefeuille (MetaMask, etc.).</span>
             </div>
           </div>
         </div>
@@ -2228,179 +2387,9 @@
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              <span data-i18n="faq_8_a">HORIZON est la plus prudente, conçue pour un profil découverte (rendement modeste, drawdown maîtrisé sur backtest). VALKYRIE offre un profil équilibré. Les stratégies plus agressives (REVOLUTION, TREASURY, ORION) supposent une compréhension claire de la volatilité. Vous pouvez en sélectionner plusieurs et répartir votre capital comme vous le souhaitez.</span>
+              <span data-i18n="faq_8_a">HORIZON est la plus prudente, conçue pour un profil découverte (rendement modeste, perte maximale maîtrisée sur tests historiques). VALKYRIE offre un profil équilibré. Les stratégies plus agressives (REVOLUTION, TREASURY, ORION) supposent une compréhension claire de la volatilité. Vous pouvez en sélectionner plusieurs et répartir votre capital comme vous le souhaitez.</span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-label" data-i18n="about_label">Origines</p>
-        <h2 class="section-title" data-i18n="about_title">À propos de KalMydas</h2>
-        <p class="section-desc" data-i18n="about_desc">Pourquoi ce projet existe et comment il fonctionne</p>
-      </div>
-
-      <div class="about-blocks fade-in" style="display: grid; gap: 2rem; max-width: 900px; margin: 0 auto;">
-
-        <!-- Why -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_why_h3">Pourquoi KalMydas existe</h3>
-          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_why_p">KalMydas est né d'une frustration simple : pourquoi le trading algorithmique professionnel, qui génère des performances régulières depuis des décennies, reste-t-il réservé aux banques et aux grandes structures financières ? Notre plateforme, construite sur <span class="g-term" data-g="base_l2">Base</span>, donne à tout le monde, dès 10 $, accès aux mêmes stratégies algorithmiques que les professionnels.</p>
-        </div>
-
-        <!-- Approach -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_approach_h3">Notre approche</h3>
-          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_approach_p">Nos 5 robots de trading sont développés et optimisés sur <span class="g-term" data-g="mt4">MetaTrader 4</span>. Ils ont été rigoureusement simulés sur les données historiques réelles du courtier (de 4 à 21 ans selon la stratégie), forward-testés et stress-testés sur les crises de 2008 et 2020. Chaque stratégie opère exclusivement sur le marché de l'or (<span class="g-term" data-g="xauusd">XAUUSD</span>).</p>
-        </div>
-
-        <!-- Participate -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_part_h3">Comment participer</h3>
-          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_part_p">Un seul Pass d'accès suffit, un abonnement vérifiable sur la <span class="g-term" data-g="blockchain">blockchain</span> (1 $/jour). Choisissez votre stratégie, déposez vos fonds, et retirez-les 24h/24 sans délai. Nous gagnons uniquement quand vous gagnez : les frais de performance s'appliquent uniquement sur les nouveaux gains grâce au <span class="g-term" data-g="hwm">High-Water Mark</span>.</p>
-        </div>
-
-        <!-- Architecture -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_arch_h3">Architecture technique</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
-            <div style="text-align: center;">
-              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">22</div>
-              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_contracts">contrats centraux</div>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">1 115+</div>
-              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_tests">tests unitaires</div>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">100%</div>
-              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_control">fonds sous votre contrôle</div>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light);">24/7</div>
-              <div style="color: var(--text-muted); font-size: 0.85rem;" data-i18n="about_arch_withdrawals">retraits libres</div>
-            </div>
-          </div>
-          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_arch_desc">Un pont sécurisé relie les robots <span class="g-term" data-g="mt4">MT4</span> à la blockchain. Aucune clé privée n'est centralisée, vos fonds restent sous votre contrôle. Tout est vérifiable en temps réel sur <span class="g-term" data-g="basescan">Basescan</span> (mainnet) et <span class="g-term" data-g="arbiscan">Arbiscan</span> (testnet).</p>
-        </div>
-
-        <!-- Token KAL -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_token_h3">Le jeton KAL</h3>
-          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;" data-i18n="about_token_desc2">Le jeton KAL (<span class="g-term" data-g="erc20">ERC-20</span>, 10 millions max) fonctionne avec une <span class="g-term" data-g="bonding_curve">courbe de valorisation</span> transparente : le prix monte avec l'adoption. 30% des frais de performance sont utilisés pour le rachat et la recirculation (philosophie Zéro Destruction). Verrouillez vos KAL en <span class="g-term" data-g="vekal">veKAL</span> pour recevoir votre part des frais en <span class="g-term" data-g="usdc">USDC</span> chaque semaine.</p>
-          <!-- Tags distribution alignés docs/tokenomics, corrigés session 298 (28/04/2026), total 100 % -->
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_lp">60 % Récompenses LP</span>
-            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_vekal">30 % Récompenses veKAL</span>
-            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_presale">5 % Prévente</span>
-            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_curve">4,5 % Courbe</span>
-            <span style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.8rem; color: var(--gold-light);" data-i18n="about_token_community">0,5 % Testeurs</span>
-          </div>
-        </div>
-
-        <!-- Risk -->
-        <div style="background: var(--bg-card); border: 1px solid rgba(201, 168, 76, 0.15); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_risk_h3">Avertissement sur les risques</h3>
-          <p style="color: var(--text-muted); line-height: 1.7;" data-i18n="about_risk_p">Nous ne promettons rien de magique. Les performances passées ne garantissent pas les résultats futurs. Le trading comporte des risques de perte en capital, y compris des pertes temporaires pouvant aller jusqu'à 70% sur certaines stratégies. Nous les assumons pleinement et nous publions tout : code source, historiques de tests, audits.</p>
-        </div>
-
-        <!-- Timeline -->
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="about_timeline_h3">Où en sommes-nous</h3>
-          <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem;">
-            <div style="display: flex; align-items: center; gap: 0.8rem;">
-              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold-light); flex-shrink: 0;"></span>
-              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_1"><strong>Q1 2026</strong>, Fondations posées, premiers contrats, MVP connecté</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.8rem;">
-              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--gold-light); flex-shrink: 0; box-shadow: 0 0 8px rgba(201,168,76,0.5);"></span>
-              <span style="color: var(--text); font-size: 0.9rem;" data-i18n="about_tl_2"><strong>Q2 2026</strong>, 22 contrats centraux déployés (26 instances dont 5 pools), bêta-test actif, veKAL + gouvernance</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.8rem;">
-              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
-              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_3"><strong>14 septembre 2026</strong> : ouverture publique de la prévente sur Base mainnet (paliers 4 à 9), sous condition gate 100 000 USDC. La plateforme tourne déjà sur Base depuis le 1<sup>er</sup> mai.</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.8rem;">
-              <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--border); flex-shrink: 0;"></span>
-              <span style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="about_tl_4"><strong>Q4 2026+</strong>, Croissance, listing DEX, app mobile, DAO</span>
-            </div>
-          </div>
-          <a href="#roadmap" style="color: var(--gold-light); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem;" data-i18n="about_tl_link">Voir la feuille de route complète →</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== BUILT WITH ===== -->
-  <section id="tech">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-label" data-i18n="tech_label">Infrastructure</p>
-        <h2 class="section-title" data-i18n="tech_title">Construit avec</h2>
-      </div>
-      <div class="tech-grid fade-in">
-        <div class="tech-item">
-          <img src="https://avatars.githubusercontent.com/u/108554348" alt="Base" width="40" height="40" style="border-radius: 50%;" loading="lazy">
-          <span class="tech-name">Base</span>
-          <span class="tech-role">Blockchain L2 mainnet</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cryptologos.cc/logos/arbitrum-arb-logo.svg" alt="Arbitrum" width="40" height="40" style="border-radius: 50%;" loading="lazy">
-          <span class="tech-name">Arbitrum</span>
-          <span class="tech-role">Blockchain L2 testnet</span>
-        </div>
-        <div class="tech-item">
-          <!-- Solidity, official logo from soliditylang.org -->
-          <svg width="40" height="40" viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.8" d="M50 44.3013L25 1L0 44.3013L25 87.6025L50 44.3013Z" fill="#627EEA"/>
-            <path opacity="0.45" d="M50 44.3091L75 1.00781L25 1.00781L0 44.3091H50Z" fill="#627EEA"/>
-            <path opacity="0.6" d="M75 1.00781L25 1.00781L50 44.3091H100L75 1.00781Z" fill="#627EEA"/>
-            <path opacity="0.8" d="M50 115.699L75 159L100 115.699L75 72.3975L50 115.699Z" fill="#627EEA"/>
-            <path opacity="0.45" d="M50 115.691L25 158.993H75L100 115.691L50 115.691Z" fill="#627EEA"/>
-            <path opacity="0.6" d="M25 158.993L75 158.993L50 115.691H0L25 158.993Z" fill="#627EEA"/>
-          </svg>
-          <span class="tech-name">Solidity</span>
-          <span class="tech-role">Smart Contracts</span>
-        </div>
-        <div class="tech-item">
-          <!-- Privy Blobby mark (official shape: circle with upper-left notch) -->
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <mask id="privy-mask">
-              <rect width="40" height="40" fill="white"/>
-              <circle cx="12" cy="10" r="7.5" fill="black"/>
-            </mask>
-            <circle cx="20" cy="22" r="16" fill="#eaeaf2" mask="url(#privy-mask)"/>
-          </svg>
-          <span class="tech-name">Privy</span>
-          <span class="tech-role">Auth & Wallets</span>
-        </div>
-        <div class="tech-item">
-          <!-- MetaTrader 4, moteur où les algos prennent leurs décisions -->
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18" fill="#0e8be4"/>
-            <text x="20" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">MT4</text>
-          </svg>
-          <span class="tech-name">MetaTrader 4</span>
-          <span class="tech-role">Moteur algorithmique XAUUSD</span>
-        </div>
-        <div class="tech-item">
-          <!-- gTrade by Gains Network, exécution on-chain -->
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18" fill="#1a1f3d"/>
-            <path d="M14 12 L26 12 L26 16 L18 16 L18 20 L24 20 L24 24 L18 24 L18 32 L14 32 Z" fill="#5d95ff"/>
-          </svg>
-          <span class="tech-name">gTrade</span>
-          <span class="tech-role">Exécution on-chain XAUUSD</span>
         </div>
       </div>
     </div>
@@ -2410,7 +2399,7 @@
   <section id="start" class="cta-section">
     <div class="cta-content fade-in">
       <h2 data-i18n="cta_h2">Prêt à participer à <span style="background: var(--gradient-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">l'or algorithmique</span> ?</h2>
-      <p data-i18n="cta_p">Rejoignez les premiers participants de KalMydas. Le meilleur prix du token KAL est maintenant.</p>
+      <p data-i18n="cta_p">Rejoignez les premiers participants de KalMydas. Le prix du jeton KAL est plus bas en début de courbe de valorisation : plus tôt vous participez, plus le prix est bas.</p>
       <div class="hero-buttons">
         <a href="https://app.kalmydas.com" class="btn-primary" style="font-size: 1.05rem; padding: 1rem 2.5rem;" data-i18n="cta_btn_primary">
           Lancer l'app
@@ -2435,12 +2424,12 @@
 
       <!-- Plateforme -->
       <div>
-        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_platform">Plateforme</h4>
+        <h4 style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_platform">Plateforme</h4>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <a href="https://app.kalmydas.com" data-i18n="footer_app">Application</a>
           <a href="https://docs.kalmydas.com/whitepaper" target="_blank" rel="noopener" data-i18n="footer_wp">Livre blanc</a>
           <a href="#strategies" data-i18n="footer_strategies">Stratégies</a>
-          <a href="#token" data-i18n="footer_token">Token KAL</a>
+          <a href="#token" data-i18n="footer_token">Jeton KAL</a>
           <a href="#security" data-i18n="footer_security">Sécurité</a>
           <a href="#roadmap" data-i18n="footer_roadmap">Feuille de route</a>
         </div>
@@ -2448,22 +2437,21 @@
 
       <!-- Communauté -->
       <div>
-        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_community">Communauté</h4>
+        <h4 style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_community">Communauté</h4>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <a href="https://discord.gg/gCD2zunaBy" target="_blank" rel="noopener">Discord</a>
           <a href="https://t.me/kal_mydas" target="_blank" rel="noopener">Telegram</a>
           <a href="https://x.com/KalMydas" target="_blank" rel="noopener">X</a>
           <a href="https://www.tiktok.com/@kalmydas" target="_blank" rel="noopener">TikTok</a>
           <a href="https://www.instagram.com/kalmydas" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://basescan.org/" target="_blank" rel="noopener"><span class="g-term" data-g="basescan">Basescan (mainnet)</span></a>
-          <a href="https://sepolia.arbiscan.io/address/0x821708EB22b9A2c4ea54c35B539bed9a8250227d" target="_blank" rel="noopener"><span class="g-term" data-g="arbiscan">Arbiscan (testnet)</span></a>
+          <a href="https://basescan.org/" target="_blank" rel="noopener"><span class="g-term" data-g="basescan">Basescan</span></a>
           <a href="mailto:kal@kalmydas.ch" data-i18n="footer_contact">Contact</a>
         </div>
       </div>
 
       <!-- Ressources -->
       <div>
-        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_resources">Ressources</h4>
+        <h4 style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_resources">Ressources</h4>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <a href="https://docs.kalmydas.com" target="_blank" rel="noopener" data-i18n="footer_docs">Documentation</a>
           <a href="https://docs.kalmydas.com/architecture" target="_blank" rel="noopener" data-i18n="footer_architecture">Architecture</a>
@@ -2476,7 +2464,7 @@
 
       <!-- Légal -->
       <div>
-        <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_legal">Légal</h4>
+        <h4 style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-light); margin-bottom: 1rem;" data-i18n="footer_col_legal">Légal</h4>
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
           <a href="#about" data-i18n="footer_about">À propos</a>
           <a href="#faq" data-i18n="footer_faq">FAQ</a>
@@ -2491,7 +2479,7 @@
 
     <div style="border-top: 1px solid var(--border); max-width: 1100px; margin: 2rem auto 0; padding: 1.5rem 1.5rem 0;">
       <p class="footer-copy" data-i18n="footer_copy">
-        &copy; 2026 KalMydas, Trading algorithmique décentralisé sur l'or. Non-custodial, vos clés, vos fonds.
+        &copy; 2026 KalMydas, Trading algorithmique sur l'or, fonds non-custodial. Vos clés, vos fonds.
         <br>
         <span style="font-size: 0.72rem; display: block; max-width: 820px; margin: 0.6rem auto 0;">
           <strong data-i18n="footer_risk_title">Avertissement risques :</strong> <span data-i18n="footer_risk_text">KalMydas est une plateforme DeFi expérimentale. Le trading algorithmique et les crypto-actifs comportent un risque élevé de perte totale du capital. Les performances passées ne préjugent pas des performances futures. Ce site ne constitue ni un conseil en investissement, ni une sollicitation, ni une offre d'achat ou de vente d'instruments financiers. Vous êtes seul responsable de vos décisions. Renseignez-vous sur la législation applicable dans votre juridiction avant toute participation.</span>
@@ -2706,3 +2694,4 @@
 
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
