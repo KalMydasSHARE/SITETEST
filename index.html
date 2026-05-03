@@ -1240,6 +1240,128 @@
       .footer-grid { grid-template-columns: 1fr !important; text-align: center !important; }
       .footer-grid p { max-width: none !important; margin: 0 auto; }
     }
+
+    /* ===== TESTIMONIALS (added session 314, 2026-05-04) ===== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+      margin-top: 3rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .testimonial-card:hover {
+      border-color: var(--border-gold);
+      transform: translateY(-2px);
+    }
+    .testimonial-quote-mark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      line-height: 0.6;
+      color: var(--gold-light);
+      opacity: 0.4;
+      height: 1.2rem;
+    }
+    .testimonial-body {
+      color: var(--text);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      flex-grow: 1;
+      white-space: pre-wrap;
+    }
+    .testimonial-body p { margin-bottom: 0.8rem; }
+    .testimonial-body p:last-child { margin-bottom: 0; }
+    .testimonial-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .testimonial-pseudo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: -0.01em;
+    }
+    .testimonial-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    .testimonial-date {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    /* Mot original conservé, flouté par prudence réglementaire (AMF/MiCA) */
+    .regulated-blur {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+      filter: blur(4px);
+      transition: filter 0.25s ease;
+      background: rgba(201, 168, 76, 0.08);
+      border-radius: 4px;
+      padding: 0 0.15rem;
+    }
+    .regulated-blur:hover, .regulated-blur:focus {
+      filter: blur(0);
+    }
+    .regulated-blur::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-elevated);
+      color: var(--text);
+      border: 1px solid var(--border-gold);
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      line-height: 1.5;
+      width: max-content;
+      max-width: 240px;
+      white-space: normal;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 10;
+      font-style: normal;
+      font-weight: 400;
+    }
+    .regulated-blur:hover::after, .regulated-blur:focus::after {
+      opacity: 1;
+    }
+    .testimonials-note {
+      max-width: 760px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .testimonials-note a {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+    @media (max-width: 1024px) {
+      .testimonials-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+    }
   </style>
 <!-- Umami analytics -->
 <script defer src="https://cloud.umami.is/script.js" data-website-id="5613819f-c081-4f1f-a3a8-2257fbcf3b73"></script>
@@ -1631,6 +1753,71 @@
         </a>
         <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; font-style: italic;" data-i18n="track_disclaimer">Performances passées non indicatives de performances futures. Données issues de la phase bêta sur Arbitrum Sepolia, reportées on-chain et vérifiables.</p>
       </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== TESTIMONIALS (added session 314, 2026-05-04) ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-label" data-i18n="test_label">Retours des premiers membres</p>
+        <h2 class="section-title" data-i18n="test_title">Ce qu'ils en disent, sans filtre</h2>
+        <p class="section-desc" data-i18n="test_desc">Trois retours publiés tels quels par des membres du canal KalMydas, en réponse à un appel à témoigner sans filtre. Aucun choix éditorial, aucune reformulation. Seuls quelques termes sont visuellement floutés par prudence réglementaire, le mot d'origine reste lisible au survol.</p>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <!-- Témoignage 1 — Sylvie Marcy -->
+        <article class="testimonial-card fade-in">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <div class="testimonial-body">
+            <p>Mon avis sera positif et pour plusieurs raisons. Avant tout je peux me décrire comme une personne qui ne s'y connaît pas beaucoup en crypto, trading etc. J'ai beaucoup fait confiance et je me suis faite régulièrement avoir par des gens malhonnêtes.</p>
+            <p>Chez Kal c'est différent. On a une personne à notre écoute et qui répond à nos questions rapidement. Ça tourne toujours depuis quelques mois. Je compte bien <span class="regulated-blur" tabindex="0" data-tooltip="Mot original conservé par engagement de transparence. Flouté par prudence réglementaire (AMF/MiCA).">investir</span> de plus en plus dans les prochains mois avec Kal car la confiance est installée.</p>
+            <p>J'ai encore beaucoup de choses à apprendre dans ce domaine mais je sais que j'ai une personne de confiance à mes côtés.</p>
+          </div>
+          <div class="testimonial-meta">
+            <span class="testimonial-pseudo">Sylvie M.</span>
+            <span class="testimonial-role" data-i18n="test_sylvie_role">Démo : 21 janv. 2026 → Réel : 15 févr. 2026</span>
+            <span class="testimonial-date" data-i18n="test_sylvie_date">Témoignage publié le 1<sup>er</sup> mai 2026</span>
+          </div>
+        </article>
+
+        <!-- Témoignage 2 — Henri Sport -->
+        <article class="testimonial-card fade-in fade-in-delay-1">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <div class="testimonial-body">
+            <p>Je voulais partager mon expérience pour que les nouveaux comprennent pourquoi je respecte le travail de Kal.</p>
+            <p>Au début, je pensais que c'était un débutant comme beaucoup… mais plus j'ai observé, plus j'ai vu qu'il y avait du sérieux dans ce qu'il fait. Avant Kal, j'étais dans un autre groupe. Les personnes n'étaient même pas développeurs. Et en une seule journée, tout a été cramé.</p>
+            <p>C'est pour ça que je me suis tourné vers Kal. Parce que lui, il développe ses robots. Il met son propre argent dedans. Il fait les mises à jour. Il suit ses stratégies. Il ne promet pas des <span class="regulated-blur" tabindex="0" data-tooltip="Mot original conservé par engagement de transparence. Flouté par prudence réglementaire (AMF/MiCA).">rendements</span> irréalistes. Il travaille proprement, sérieusement, et il écoute les gens.</p>
+            <p>Voilà pourquoi je respecte Kal et son travail. Il a passé des milliers d'heures sur son projet, et ça se voit.</p>
+          </div>
+          <div class="testimonial-meta">
+            <span class="testimonial-pseudo">Henri Sport</span>
+            <span class="testimonial-role" data-i18n="test_henri_role">Démo : 21 janv. 2026 → Réel : 15 févr. 2026</span>
+            <span class="testimonial-date" data-i18n="test_henri_date">Témoignage publié le 1<sup>er</sup> mai 2026</span>
+          </div>
+        </article>
+
+        <!-- Témoignage 3 — Streetwolf69 -->
+        <article class="testimonial-card fade-in fade-in-delay-2">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <div class="testimonial-body">
+            <p>Je connais Kal et son travail depuis quelques mois. Je ne suis certes pas passé en réel encore car j'observe, je n'ai pas réellement d'expérience dans tout ce qui est robot trading et tout ce qui tourne autour de ce sujet.</p>
+            <p>Il nous guide, nous apprend, toujours dans la transparence et à l'écoute. Pas de promesse en l'air ni irréaliste.</p>
+            <p>Il me tarde d'en apprendre de plus en plus, de commencer à faire mes vrais sous tout en acquérant des connaissances et en suivant quelqu'un qui sait ce qu'il fait, et qui ne vous volera pas.</p>
+          </div>
+          <div class="testimonial-meta">
+            <span class="testimonial-pseudo">Streetwolf69</span>
+            <span class="testimonial-role" data-i18n="test_street_role">Démo depuis le 19 mars 2026 (en cours)</span>
+            <span class="testimonial-date" data-i18n="test_street_date">Témoignage publié le 2 mai 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="testimonials-note fade-in fade-in-delay-3" data-i18n="test_note">Ces trois retours ont été publiés sur le <a href="https://t.me/KalMydas_OFFICIEL" target="_blank" rel="noopener">canal Telegram KalMydas</a>, en commentaires d'un appel à témoigner. Vérifiables publiquement. Performances passées non indicatives de performances futures.</p>
     </div>
   </section>
 

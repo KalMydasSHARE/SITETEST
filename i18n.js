@@ -173,6 +173,18 @@ const I18N_EN = {
   track_scope: `Figures measured since the platform's beta opening. The algorithms also ran live for about six months prior, and have been simulated over 11 to 21 years of historical data depending on the strategy, these complementary proofs are verifiable through the <a href="https://discord.gg/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Discord</a> and <a href="https://t.me/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Telegram</a> community.`,
   track_cta: "See full history of all trades",
   track_disclaimer: "Past performance does not guarantee future results. Data from the beta phase on Arbitrum Sepolia, reported on-chain and verifiable.",
+
+  /* ===== TESTIMONIALS (added session 314, 2026-05-04) ===== */
+  test_label: "Feedback from early members",
+  test_title: "What they say, unfiltered",
+  test_desc: "Three pieces of feedback published as-is by members of the KalMydas channel, in response to an open call for unfiltered testimonials. No editorial selection, no rewording. A few terms are visually blurred out of regulatory caution, the original word remains readable on hover. Testimonials kept in their original French language for authenticity.",
+  test_sylvie_role: "Demo: Jan 21, 2026 → Live: Feb 15, 2026",
+  test_sylvie_date: "Testimonial posted May 1, 2026",
+  test_henri_role: "Demo: Jan 21, 2026 → Live: Feb 15, 2026",
+  test_henri_date: "Testimonial posted May 1, 2026",
+  test_street_role: "Demo since March 19, 2026 (ongoing)",
+  test_street_date: "Testimonial posted May 2, 2026",
+  test_note: `These three testimonials were published on the <a href="https://t.me/KalMydas_OFFICIEL" target="_blank" rel="noopener">KalMydas Telegram channel</a>, as comments on an open call for feedback. Publicly verifiable. Past performance does not guarantee future results.`,
   road_4_phase: "Phase 4, Q4 2026",
   road_4_h: "Growth",
   road_4_p: `Community rewards program. KAL listing on <span class="g-term" data-g="dex">DEX</span>. Advanced analytics dashboard. New asset exploration.`,
