@@ -2616,6 +2616,35 @@
               .catch(function () { return null; });
           });
       }
+      // Dédup défensive (pool, ticket) — alignée sur app/docs (session 318, 4 mai 2026).
+      // Sans cette étape la landing affichait 160 trades alors que app/docs en montraient 159 :
+      // l'API peut servir un doublon si un trade a été corrigé/republié, et le front est
+      // censé garder la version la plus complète (status closed > size > exit > entry).
+      function tradeScore(t) {
+        return (t.status === 'closed' ? 4 : 0)
+          + ((t.size || 0) > 0 ? 2 : 0)
+          + (t.closeDate ? 1 : 0)
+          + ((t.entry || 0) > 0 ? 1 : 0)
+          + ((t.exit || 0) > 0 ? 1 : 0);
+      }
+      function dedupTrades(arr) {
+        var byKey = {};
+        var noKey = [];
+        for (var i = 0; i < arr.length; i++) {
+          var t = arr[i];
+          var isCorrection = !!(t.correctionId && t.correctionId > 0);
+          if (t.ticket === undefined || t.ticket === null || isCorrection) {
+            noKey.push(t); continue;
+          }
+          var key = (t.pool || '?') + '::' + t.ticket;
+          var prev = byKey[key];
+          if (!prev || tradeScore(t) > tradeScore(prev)) byKey[key] = t;
+        }
+        var deduped = [];
+        for (var k in byKey) deduped.push(byKey[k]);
+        return deduped.concat(noKey);
+      }
+
       fetchTrades()
         .then(function (data) {
           // Normaliser : API peut renvoyer [...] direct, snapshot renvoie {trades: [...]}
@@ -2623,7 +2652,14 @@
           if (Array.isArray(data)) arr = data;
           else if (data && Array.isArray(data.trades)) arr = data.trades;
           if (!arr) return;
-          var trades = arr.filter(function (t) { return t && typeof t.pnlPercent === 'number'; });
+          // Dédup AVANT filtre, pour rester aligné avec app/docs (cf. session 318)
+          arr = dedupTrades(arr);
+          // Filtre aligné sur app.kalmydas.com/transparency : trades clos sans correction (cf. session 324, MAITRE DEV BACKEND)
+          var trades = arr.filter(function (t) {
+            return t && typeof t.pnlPercent === 'number'
+              && t.status === 'closed'
+              && (!t.correctionId || t.correctionId === 0);
+          });
           if (!trades.length) return;
           // Stats globales
           var wins = 0, losses = 0, best = trades[0];
