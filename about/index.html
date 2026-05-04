@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KalMydas, À propos</title>
   <meta name="description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base (mainnet). Accessible dès 10 $." />
-  <meta name="keywords" content="trading algorithmique or, XAUUSD, DeFi or, Arbitrum, trading décentralisé, non-custodial, KalMydas, KAL token, robots trading" />
+  <meta name="keywords" content="trading algorithmique or, XAUUSD, DeFi or, Base, trading décentralisé, non-custodial, KalMydas, jeton KAL, copy trading crypto" />
   <meta name="author" content="Kal Mydas" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="theme-color" content="#c9a84c" />
+  <meta name="theme-color" content="#BEA56E" />
   <link rel="canonical" href="https://kalmydas.com/about/" />
 
   <!-- Open Graph / Facebook / LinkedIn / Telegram / Discord -->
@@ -26,8 +26,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@kalmydas" />
-  <meta name="twitter:creator" content="@kalmydas" />
+  <meta name="twitter:site" content="@KalMydas" />
+  <meta name="twitter:creator" content="@KalMydas" />
   <meta name="twitter:title" content="KalMydas, À propos" />
   <meta name="twitter:description" content="Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base (mainnet). Accessible dès 10 $." />
   <meta name="twitter:image" content="https://kalmydas.com/og-image.jpg" />
@@ -43,7 +43,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "KalMydas, À propos",
-    "description": "Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base mainnet (testnet sur Arbitrum Sepolia).",
+    "description": "Découvrez KalMydas : 5 robots de trading algorithmique sur l'or, simulés sur données réelles du courtier, déployés sur Base mainnet.",
     "url": "https://kalmydas.com/about/",
     "publisher": {
       "@type": "Organization",
@@ -56,7 +56,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../glossary-tooltip.css" />
 
   <!-- Cookie Consent -->
@@ -66,28 +66,32 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #060610;
+      /* Charte de marque KalMydas (alignement V5 acté 4 mai 2026, F-015 / L-025 option 1A) */
+      --bg: #060A18;
       --bg-elevated: #0c0c1a;
       --bg-card: #0f0f1e;
       --bg-card-hover: #141428;
       --border: #1a1a30;
       --border-subtle: #14142a;
-      --border-gold: rgba(201, 168, 76, 0.2);
-      --gold: #c9a84c;
-      --gold-light: #e8d48b;
-      --gold-dark: #9a7a2e;
-      --gold-glow: rgba(201, 168, 76, 0.15);
-      --text: #eaeaf2;
-      --text-secondary: #9d9db8;
-      --text-muted: #5a5a78;
+      --border-gold: rgba(190, 165, 110, 0.2);
+      --gold: #BEA56E;
+      --gold-light: #DCC799;
+      --gold-dark: #8E7A4C;
+      --gold-glow: rgba(190, 165, 110, 0.15);
+      --text: #EAEAF2;
+      --text-secondary: #C3C3CD;
+      --text-muted: #9D9DB8;
+      --text-faint: #5A5A78;
       --green: #22c55e;
       --blue: #3b82f6;
       --orange: #f97316;
       --yellow: #eab308;
       --red: #ef4444;
       --purple: #8b5cf6;
-      --gradient-gold: linear-gradient(135deg, #b8952f 0%, #e8d48b 50%, #c9a84c 100%);
-      --gradient-gold-text: linear-gradient(135deg, #c9a84c, #f0e2a0, #c9a84c);
+      --gradient-gold: linear-gradient(135deg, #8E7A4C 0%, #DCC799 50%, #BEA56E 100%);
+      --gradient-gold-text: linear-gradient(135deg, #BEA56E, #DCC799, #BEA56E);
+      --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
       --radius: 16px;
       --radius-sm: 10px;
       --radius-xs: 6px;
@@ -135,7 +139,7 @@
     }
 
     .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.4rem;
       font-weight: 700;
       background: var(--gradient-gold-text);
@@ -208,7 +212,7 @@
 
     .nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.35);
+      box-shadow: 0 4px 24px rgba(190, 165, 110, 0.35);
     }
 
     .nav-hamburger {
@@ -256,7 +260,7 @@
       transform: translateX(-50%);
       width: 900px;
       height: 900px;
-      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, rgba(201, 168, 76, 0.03) 40%, transparent 70%);
+      background: radial-gradient(circle, rgba(190, 165, 110, 0.08) 0%, rgba(190, 165, 110, 0.03) 40%, transparent 70%);
       animation: hero-pulse 10s ease-in-out infinite;
     }
 
@@ -282,7 +286,7 @@
     }
 
     .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(2.8rem, 7vw, 4rem);
       font-weight: 800;
       line-height: 1.05;
@@ -322,7 +326,7 @@
     }
 
     .section-title {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 800;
       line-height: 1.15;
@@ -368,11 +372,11 @@
 
     .stat-box:hover {
       border-color: var(--gold);
-      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.1);
+      box-shadow: 0 8px 24px rgba(190, 165, 110, 0.1);
     }
 
     .stat-number {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 2.5rem;
       font-weight: 700;
       background: var(--gradient-gold-text);
@@ -406,11 +410,11 @@
 
     .robot-card:hover {
       border-color: var(--gold);
-      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.1);
+      box-shadow: 0 8px 24px rgba(190, 165, 110, 0.1);
     }
 
     .robot-name {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--gold-light);
@@ -427,7 +431,7 @@
     .robot-type {
       display: inline-block;
       padding: 0.4rem 0.8rem;
-      background: rgba(201, 168, 76, 0.1);
+      background: rgba(190, 165, 110, 0.1);
       border: 1px solid var(--border-gold);
       border-radius: 6px;
       font-size: 0.75rem;
@@ -511,13 +515,13 @@
     .cta-section {
       padding: 4rem 2rem;
       text-align: center;
-      background: linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(201, 168, 76, 0.02) 100%);
+      background: linear-gradient(135deg, rgba(190, 165, 110, 0.08) 0%, rgba(190, 165, 110, 0.02) 100%);
       border-top: 1px solid var(--border-gold);
       border-bottom: 1px solid var(--border-gold);
     }
 
     .cta-section h2 {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 800;
       margin-bottom: 1rem;
@@ -558,7 +562,7 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(201, 168, 76, 0.35);
+      box-shadow: 0 8px 32px rgba(190, 165, 110, 0.35);
     }
 
     /* ===== FOOTER ===== */
@@ -671,7 +675,7 @@
   <ul class="nav-links">
     <li><a href="/#how" data-i18n="nav_how">Comment ça marche</a></li>
     <li><a href="/#strategies" data-i18n="nav_strategies">Stratégies</a></li>
-    <li><a href="/#token" data-i18n="nav_token">Token KAL</a></li>
+    <li><a href="/#token" data-i18n="nav_token">Jeton KAL</a></li>
     <li><a href="/#security" data-i18n="nav_security">Sécurité</a></li>
     <li><a href="/#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
     <li><a href="/about/" data-i18n="nav_about">À propos</a></li>
@@ -702,8 +706,8 @@
     <h2 class="section-title" data-i18n="about_why_title" data-en="Why KalMydas exists">Pourquoi KalMydas existe</h2>
 
     <div class="section-content">
-      <p data-i18n="about_why_p1" data-en="KalMydas was born from a simple frustration: why does professional algorithmic trading, which has generated consistent historical performance for decades, remain reserved for banks and large financial structures?">
-        KalMydas est né d'une frustration simple : pourquoi le trading algorithmique professionnel, qui génère des performances régulières depuis des décennies, reste-t-il réservé aux banques et aux grandes structures financières ?
+      <p data-i18n="about_why_p1" data-en="KalMydas was born from a simple frustration: why does professional algorithmic trading, used for decades by banks and large financial structures, remain so inaccessible to the general public?">
+        KalMydas est né d'une frustration simple : pourquoi le trading algorithmique professionnel, utilisé depuis longtemps par les banques et les grandes structures financières, reste-t-il à ce point inaccessible au grand public ?
       </p>
       <p data-i18n="about_why_p2" data-en="We created KalMydas to change that. Our platform, built on Base (Ethereum's Layer 2 network), gives everyone, starting from $10, access to the same algorithmic strategies as the professionals.">
         Nous avons créé KalMydas pour changer ça. Notre plateforme, construite sur Base (réseau Layer 2 d'Ethereum), donne à tout le monde, dès 10 $, accès aux mêmes stratégies algorithmiques que les professionnels.
@@ -769,7 +773,7 @@
         <div class="stat-label" data-i18n="about_arch_stat1_label" data-en="Core contracts (26 instances)">contrats centraux (26 instances)</div>
       </div>
       <div class="stat-box">
-        <div class="stat-number" data-i18n="about_arch_stat2" data-en="1,115+">1 115+</div>
+        <div class="stat-number" data-i18n="about_arch_stat2" data-en="1,100+">1 100+</div>
         <div class="stat-label" data-i18n="about_arch_stat2_label" data-en="Unit tests">tests unitaires</div>
       </div>
       <div class="stat-box">
@@ -801,7 +805,7 @@
         Le jeton KAL (ERC-20, quantité maximale de 10 millions) fonctionne avec une courbe de valorisation transparente : le prix monte mécaniquement avec l'adoption.
       </p>
 
-      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--gold-light);" data-i18n="about_token_dist_label" data-en="Distribution">Distribution</h3>
+      <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--gold-light);" data-i18n="about_token_dist_label" data-en="Distribution">Distribution</h3>
 
       <!-- Distribution alignée KalToken.sol NatSpec + docs/tokenomics, corrigée session 299 (28/04/2026), total 100 %. Aucune allocation équipe / fondateur. -->
       <div class="distribution-chart">
@@ -902,8 +906,8 @@
     <h2 class="section-title" data-i18n="about_status_title" data-en="Where we are">Où en sommes-nous</h2>
 
     <div class="section-content">
-      <p data-i18n="about_status_p1" data-en="The platform deploys on Base mainnet on April 30, 2026 and opens to the public on May 1, 2026. After a live algorithm validation window between May 1 and May 8 (real market conditions cannot be reproduced on testnet), the protocol opens to invited contributors via Phase Alpha from May 8 (OG codes), then to the Discord and Telegram community in June (Beta phase), and finally to the broader public on September 14, 2026 (Public phase). Arbitrum Sepolia continues to serve as the test network for ongoing development.">
-        La plateforme se déploie sur Base mainnet le 30 avril 2026 et s'ouvre au public le 1ᵉʳ mai 2026. Après une fenêtre de validation des algorithmes en conditions réelles entre le 1ᵉʳ et le 8 mai (impossibles à reproduire sur testnet), le protocole s'ouvre aux contributeurs invités via la Phase Alpha à partir du 8 mai (codes OG), puis à la communauté Discord et Telegram en juin (Phase Beta) et enfin au grand public le 14 septembre 2026 (Phase Publique). Arbitrum Sepolia continue de servir de réseau de test pour le développement.
+      <p data-i18n="about_status_p1" data-en="The platform has been deployed on Base mainnet since May 1, 2026. After a live algorithm validation window between May 1 and May 8 (real market conditions cannot be reproduced on testnet), the protocol opens to invited contributors via Phase Alpha from May 8 (private invitation codes), then to the broader Telegram community starting July 15, 2026 (Beta phase), and finally to the broader public on September 14, 2026 (Public phase).">
+        La plateforme est déployée sur Base mainnet depuis le 1<sup>er</sup> mai 2026. Après une fenêtre de validation des algorithmes en conditions réelles entre le 1<sup>er</sup> et le 8 mai (impossibles à reproduire sur testnet), le protocole s'ouvre aux contributeurs invités via la Phase Alpha à partir du 8 mai (codes d'accès privés), puis à la communauté Telegram élargie à partir du 15 juillet 2026 (Phase Beta) et enfin au grand public le 14 septembre 2026 (Phase Publique).
       </p>
     </div>
   </div>
@@ -913,7 +917,7 @@
 <section class="cta-section">
   <div class="container">
     <h2 data-i18n="about_cta_h2" data-en="Ready to participate in algorithmic gold?">Prêt à participer au trading algorithmique sur l'or ?</h2>
-    <p data-i18n="about_cta_p" data-en="Join the early participants of KalMydas. The best KAL token price is now.">Rejoignez les premiers participants de KalMydas. Le meilleur prix du jeton KAL est maintenant.</p>
+    <p data-i18n="about_cta_p" data-en="Join the early participants of KalMydas. The KAL token price is lower at the start of the valuation curve: the earlier you participate, the lower the price.">Rejoignez les premiers participants de KalMydas. Le prix du jeton KAL est plus bas en début de courbe de valorisation : plus tôt vous participez, plus le prix est bas.</p>
     <div class="cta-buttons">
       <a href="https://app.kalmydas.com" class="btn-primary" data-i18n="about_cta_btn" data-en="Launch app →">Lancer l'application →</a>
     </div>
@@ -993,7 +997,7 @@
     about_hero_sub: "Our mission: make professional algorithmic trading accessible, transparent, and fair to everyone.",
     about_why_label: "Genesis",
     about_why_title: "Why KalMydas exists",
-    about_why_p1: "KalMydas was born from a simple frustration: why does professional algorithmic trading, which has generated consistent historical performance for decades, remain reserved for banks and large financial structures?",
+    about_why_p1: "KalMydas was born from a simple frustration: why does professional algorithmic trading, used for decades by banks and large financial structures, remain so inaccessible to the general public?",
     about_why_p2: "We created KalMydas to change that. Our platform, built on Base (Ethereum's Layer 2 network), gives everyone, starting from $10, access to the same algorithmic strategies as the professionals.",
     about_robots_label: "Backtested",
     about_robots_title: "5 robots, simulated on real data",
@@ -1018,7 +1022,7 @@
     about_arch_title: "Technical architecture",
     about_arch_stat1: "22",
     about_arch_stat1_label: "Core contracts (26 instances)",
-    about_arch_stat2: "1,115+",
+    about_arch_stat2: "1,100+",
     about_arch_stat2_label: "Unit tests",
     about_arch_stat3: "100%",
     about_arch_stat3_label: "User-controlled funds",
@@ -1050,9 +1054,9 @@
     about_risk_closing: "We fully assume them and publish everything: source code, test histories, audits.",
     about_status_label: "Timeline",
     about_status_title: "Where we are",
-    about_status_p1: "The platform deploys on Base mainnet on April 30, 2026 and opens to the public on May 1, 2026. After a live algorithm validation window between May 1 and May 8 (real market conditions cannot be reproduced on testnet), the protocol opens to invited contributors via Phase Alpha from May 8 (OG codes), then to the Discord and Telegram community in June (Beta phase), and finally to the broader public on September 14, 2026 (Public phase). Arbitrum Sepolia continues to serve as the test network for ongoing development.",
+    about_status_p1: "The platform has been deployed on Base mainnet since May 1, 2026. After a live algorithm validation window between May 1 and May 8 (real market conditions cannot be reproduced on testnet), the protocol opens to invited contributors via Phase Alpha from May 8 (private invitation codes), then to the broader Telegram community starting July 15, 2026 (Beta phase), and finally to the broader public on September 14, 2026 (Public phase).",
     about_cta_h2: "Ready to participate in algorithmic gold?",
-    about_cta_p: "Join the early participants of KalMydas. The best KAL token price is now.",
+    about_cta_p: "Join the early participants of KalMydas. The KAL token price is lower at the start of the valuation curve: the earlier you participate, the lower the price.",
     about_cta_btn: "Launch app →",
     about_footer_tagline: "Democratize performance.",
     logo: "KalMydas"

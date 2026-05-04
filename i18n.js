@@ -10,7 +10,7 @@ const I18N_EN = {
   _title: "KalMydas, Gold, algorithmically",
   _description: "No broker, no third-party custody: your funds stay in public smart contracts under your own key. Five algorithms take positions on gold (XAUUSD) 24 hours a day, directly on-chain via gTrade. Over 4 to 21 years of historical simulation, annual performance ranges from roughly 4% to 79% depending on the strategy, usually reserved for six-figure deposits, here from $10. Past performance does not guarantee future results.",
   _og_title: "KalMydas, Gold, algorithmically",
-  _og_description: "No broker, no third-party custody. Five algorithms trade gold 24/7 directly on-chain via gTrade. ~4% to ~79% annualized over 4 to 21 years of historical simulation. From $10. Past performance does not guarantee future results.",
+  _og_description: "No broker, no third-party custody. Five algorithms trade gold 24/7 directly on-chain via gTrade. Live on Base mainnet since May 1, 2026. Backtest history available on the platform. Past performance does not guarantee future results. From $10.",
 
   /* ===== NAV ===== */
   nav_how: "How it works",
@@ -43,8 +43,8 @@ const I18N_EN = {
   step_1_p: "Email or wallet, create your account in 30 seconds with simplified authentication",
   step_2_h: "Choose your strategy",
   step_2_p: "From conservative to high-risk, 5 risk profiles tailored to your goals. From $10",
-  step_3_h: "Collect your earnings",
-  step_3_p: "Bots trade for you 24/7. Withdraw whenever you want, no lock-up",
+  step_3_h: "Withdraw your results",
+  step_3_p: "The bots trade automatically 24/7. Withdraw whenever you want, no lock-up.",
 
   /* ===== STRATEGIES ===== */
   strat_label: "5 approaches, 5 profiles",
@@ -103,7 +103,7 @@ const I18N_EN = {
   sec_title: "Security of your funds",
   sec_desc: `Your assets are protected by auditable <span class="g-term" data-g="smart_contract">smart contracts</span>, deployed on the <span class="g-term" data-g="blockchain">blockchain</span>`,
   sec_1_h: `Verifiable <span class="g-term" data-g="smart_contract">smart contracts</span>`,
-  sec_1_p: `22 core <span class="g-term" data-g="solidity">Solidity</span> contracts (deployed across 26 instances including 5 strategy pools), public source code, verifiable on <span class="g-term" data-g="basescan">Basescan</span> (mainnet) and <span class="g-term" data-g="arbiscan">Arbiscan</span> (testnet) at any time`,
+  sec_1_p: `22 core <span class="g-term" data-g="solidity">Solidity</span> contracts (deployed across 26 instances including 5 strategy pools), public source code, verifiable on <span class="g-term" data-g="basescan">Basescan</span> at any time`,
   sec_2_h: "1,100+ unit tests",
   sec_2_p: "Every critical function is automatically tested. Complete scenario coverage",
   sec_3_h: `<span class="g-term" data-g="base_l2">Base</span> by Coinbase`,
@@ -123,27 +123,28 @@ const I18N_EN = {
   road_1_p: `First <span class="g-term" data-g="smart_contract">smart contracts</span> deployed on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. E2E tests validated. MVP frontend connected <span class="g-term" data-g="on_chain">on-chain</span>. Whitepaper published. 5 verified <span class="g-term" data-g="backtest">backtests</span>.`,
   road_2_phase: `Phase 2, Q2 2026 <span class="tag-progress">In progress</span>`,
   road_2_h: "Development & Beta",
-  road_2_p: `22 core Solidity contracts validated on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span> testnet (26 instances including 5 strategy pools), then deployed on <span class="g-term" data-g="base_l2">Base</span> mainnet end of April 2026. veKAL, governance, referral system, auto-compound, performance diversifier, RWA treasury, individual solo mode per strategy, all coded, tested and audited. 3rd consecutive Omniscient PASS (final retest on April 22, 300,000-transition fuzz, KalPool individual pause validated on April 25). Beta testing program active.`,
+  road_2_p: `22 core Solidity contracts (26 instances including 5 strategy pools), validated in private beta and then deployed on <span class="g-term" data-g="base_l2">Base</span> mainnet on May 1, 2026. veKAL, governance, referral system, auto-compound, performance diversifier, RWA treasury, individual solo mode per strategy, all coded, tested and audited. 3rd consecutive Omniscient PASS (final retest on April 22, 300,000-transition fuzz, KalPool individual pause validated on April 25). Beta testing program active.`,
   road_3_phase: "Phase 3, September 14, 2026",
   road_3_h: "Public opening",
   road_3_p: `Public opening of the presale on <span class="g-term" data-g="base_l2">Base</span> mainnet (tiers 4 to 9, $2.50 to $8) after the Alpha (OGs) and Beta (community members) phases. Activation of public <span class="g-term" data-g="vekal">veKAL</span> incentives and <span class="g-term" data-g="dao">DAO</span> governance. The platform has been running on Base since May 1, September 14 only triggers public access.`,
 
-  /* ===== PRESALE SCHEDULE (3 phases, added session 298) ===== */
+  /* ===== PRESALE SCHEDULE (3 phases, refondu session 319 + 320 conformité V5) ===== */
   presale_label: "Presale schedule",
   presale_title: "Three progressive phases",
   presale_desc: "The presale opens by circles, from the closest to the broadest, until the public opening on September 14.",
   alpha_label: "Alpha phase",
-  alpha_h: "Starting May 8, 2026",
-  alpha_p: "SEED tier reserved for the first 10-20 contributors (close circle). Access via OG code distributed directly. Hard cap 50,000 KAL = $15,000 maximum raised.",
-  alpha_meta_l1: "Audience:",
-  alpha_meta_v1: "10-20 OGs close circle",
-  alpha_meta_l2: "Cap:",
-  alpha_meta_v2: "50,000 KAL = $15k",
+  alpha_h: "May 8, 2026",
+  alpha_status: "Private, by invitation",
+  alpha_p: "Bootstrap tier reserved for the close circle, accessible only by direct Telegram invitation. No public registration. The Beta and Public phases open later to the broader community.",
+  alpha_meta_l1: "Access:",
+  alpha_meta_v1: "Direct Telegram invitation",
+  alpha_meta_l2: "Posture:",
+  alpha_meta_v2: "Private, no public tier price announcement",
   beta_label: "Beta phase",
-  beta_h: "June → mid-August 2026",
-  beta_p: "STRATEGIC and COMMUNITY tiers open to Discord and Telegram community. Combined cap 100,000 KAL = $60,000 maximum raised.",
+  beta_h: "Starting July 15, 2026",
+  beta_p: "STRATEGIC and COMMUNITY tiers open to the broader Telegram community. Combined cap 100,000 KAL = $60,000 maximum raised.",
   beta_meta_l1: "Audience:",
-  beta_meta_v1: "Discord + Telegram members",
+  beta_meta_v1: "Broader Telegram members",
   beta_meta_l2: "Cap:",
   beta_meta_v2: "100,000 KAL = $60k",
   public_label: "Public phase",
@@ -154,12 +155,7 @@ const I18N_EN = {
   public_meta_l2: "Cap:",
   public_meta_v2: "332,500 KAL = $1.435M",
   presale_footnote: "Total presale cap: 500,000 KAL (5% of total supply) = ~$1.51M maximum. If the $100k viability gate is not reached by August 31, the September 14 public opening may be postponed or opened in tranches.",
-  og_form_label: "OG List, Alpha Phase",
-  og_form_title: "Reserve a spot for the Alpha Phase",
-  og_form_counter: "12 / 20 spots reserved",
-  og_form_desc: "20 spots maximum for the Alpha Phase on May 8, 2026 (SEED tier at $0.30). To reserve your spot, contact support directly on Telegram. First come, first served.",
-  og_form_cta: "Reserve my spot",
-  og_form_disclaimer: "No obligation. The Beta Phase (June) and Public Phase (September 14) do not require prior registration.",
+  presale_disclaimer_box: "<strong>Disclaimer:</strong> the KAL token presale is not an investment. Funds contributed are a participation in an experimental DeFi protocol. The KAL token has no guaranteed value. You may lose all of your participation. Thanks to everyone taking part in this bootstrap phase.",
 
   /* ===== TRACK RECORD LIVE (added session 298, % version) ===== */
   track_label: "Real on-chain performance",
@@ -170,7 +166,7 @@ const I18N_EN = {
   track_best_label: "Best trade",
   track_topstrat_label: "Top performing strategy",
   track_breakdown_label: "Compounded performance per strategy",
-  track_scope: `Figures measured since the platform's beta opening. The algorithms also ran live for about six months prior, and have been simulated over 11 to 21 years of historical data depending on the strategy, these complementary proofs are verifiable through the <a href="https://discord.gg/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Discord</a> and <a href="https://t.me/kalmydas" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Telegram</a> community.`,
+  track_scope: `Figures measured since the platform's beta opening. The algorithms also ran live for about six months prior, and have been simulated over 11 to 21 years of historical data depending on the strategy, these complementary proofs are verifiable through the <a href="https://kalmydas.ch" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Telegram</a> community.`,
   track_cta: "See full history of all trades",
   track_disclaimer: "Past performance does not guarantee future results. Data from the beta phase on Arbitrum Sepolia, reported on-chain and verifiable.",
 
@@ -219,7 +215,7 @@ const I18N_EN = {
 
   /* ===== CTA ===== */
   cta_h2: `Ready to participate in <span style="background: var(--gradient-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">algorithmic gold</span>?`,
-  cta_p: "Join the early participants of KalMydas. The best KAL token price is now.",
+  cta_p: "Join the early participants of KalMydas. The KAL token price is lower at the start of the valuation curve: the earlier you participate, the lower the price.",
   cta_btn_primary: `Launch app <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   cta_btn_secondary: "Read the Whitepaper",
 
@@ -238,7 +234,7 @@ const I18N_EN = {
   about_arch_tests: "Unit tests",
   about_arch_control: "User-controlled funds",
   about_arch_withdrawals: "Free withdrawals",
-  about_arch_desc: `A secure bridge connects the <span class="g-term" data-g="mt4">MT4</span> robots to the blockchain. No private key is centralized, your funds remain under your control. Everything is verifiable in real-time on <span class="g-term" data-g="basescan">Basescan</span> (mainnet) and <span class="g-term" data-g="arbiscan">Arbiscan</span> (testnet).`,
+  about_arch_desc: `A secure bridge connects the <span class="g-term" data-g="mt4">MT4</span> robots to the blockchain. No private key is centralized, your funds remain under your control. Everything is verifiable in real-time on <span class="g-term" data-g="basescan">Basescan</span>.`,
   about_token_h3: "The KAL token",
   about_token_desc2: `The KAL token (<span class="g-term" data-g="erc20">ERC-20</span>, 10M max supply) uses a transparent <span class="g-term" data-g="bonding_curve">bonding curve</span>: the price rises with adoption. 30% of performance fees are used for buyback and recirculation (Zero Destruction philosophy). Lock your KAL as <span class="g-term" data-g="vekal">veKAL</span> to receive your share of fees in <span class="g-term" data-g="usdc">USDC</span> every week.`,
   about_token_lp: "60% LP rewards",
@@ -258,7 +254,7 @@ const I18N_EN = {
   token_dist_footnote: "Total = 100%. No team allocation: founder compensation depends entirely on actual protocol performance, paid in USDC.",
   about_risk_h3: "Risk disclaimer",
   about_risk_p: "We promise nothing magical. Past performance does not guarantee future results. Trading carries risk of capital loss, including temporary drawdowns of up to 70% on some strategies. We fully own that and publish everything: source code, test histories, audits.",
-  about_status_p: `The platform is live on Base mainnet since May 1, 2026 after 18 months of testing on <span class="g-term" data-g="arbitrum_sepolia">Arbitrum Sepolia</span>. Phase Alpha of the presale opens May 8, 2026, Phase Public opens September 14, 2026.`,
+  about_status_p: `The platform has been live on Base mainnet since May 1, 2026 after several months of intensive testing. Phase Alpha of the presale opens on May 8, 2026, the Beta Phase on July 15, 2026, and the Public Phase on September 14, 2026.`,
   about_timeline_h3: "Where we are",
   about_tl_1: "<strong>Q1 2026</strong>, Foundations laid, first contracts, connected MVP",
   about_tl_2: "<strong>Q2 2026</strong>, 22 core contracts deployed (26 instances including 5 strategy pools), active beta testing, veKAL + governance",
@@ -302,7 +298,7 @@ const GLOSSARY_DEFS_EN = {
   backtest: "Simulation of a trading strategy on real historical data to evaluate its past performance.",
   arbitrum_l2: "Layer 2 network built on top of Ethereum by Offchain Labs. Fast, low-cost transactions with security inherited from Ethereum.",
   smart_contract: "Autonomous computer program deployed on the blockchain. Executes automatically according to predefined rules, with no intermediary. Code is public and verifiable.",
-  erc20: "Standard technical norm for tokens on Ethereum and compatible networks (like Arbitrum). Ensures interoperability with all wallets and platforms.",
+  erc20: "Standard technical norm for tokens on Ethereum and compatible networks. Ensures interoperability with all wallets and platforms.",
   bonding_curve: "Transparent mathematical mechanism that automatically determines a token's price based on circulating supply. The more demand increases, the higher the price.",
   buyback_burn: "Automatic mechanism where a portion of performance fees is used to buy back KAL tokens. At KalMydas, bought-back KAL is recirculated as liquidity (Zero Destruction philosophy).",
   staking: "The act of locking tokens in a protocol to provide liquidity or secure the network, in exchange for rewards.",
@@ -330,18 +326,18 @@ const GLOSSARY_DEFS_EN = {
   forward_test: "Testing a strategy under real market conditions without risking real capital. Validates that backtest results hold up.",
   stress_test: "Evaluating a strategy's behavior during periods of high volatility or crises (2008, 2020). Measures resilience.",
   testnet: "A blockchain test network using worthless tokens. Allows testing applications before official launch.",
-  solidity: "Programming language used to write smart contracts on Ethereum and compatible networks (including Arbitrum).",
+  solidity: "Programming language used to write smart contracts on Ethereum and compatible networks.",
   oracle: "A service that transmits real-world data (prices, results) to the blockchain. Enables smart contracts to interact with external information.",
   epoch: "A defined time period in a protocol. At KalMydas, LP rewards are distributed per epoch with decreasing amounts.",
   flywheel: "Self-reinforcing value loop: gains generate fees, which buy back KAL, increasing the price, attracting more participants.",
   fonds_institutionnels: "Financial structures managing significant capital (banks, pension funds, hedge funds). They have access to advanced trading tools traditionally unavailable to retail participants.",
-  arbitrum_sepolia: "Test version of the Arbitrum network. Allows testing contracts and the app without using real funds before official launch.",
+  arbitrum_sepolia: "Test version of the Arbitrum network. Used during the development phase before the Base mainnet deployment in May 2026.",
   orderbook: "Order book, a system matching buyers and sellers in a market. At KalMydas, the price is determined by the bonding curve, with no orderbook.",
   vekal: "Vote-escrowed KAL, mechanism inspired by Curve Finance. By locking KAL, you receive veKAL which grants rights to weekly USDC fee sharing and protocol parameter voting.",
   erc4626: "Technical standard for tokenized vaults on Ethereum. Enables standardized auto-compounding of gains.",
   pol: "Protocol-Owned Liquidity, liquidity owned directly by the protocol (not by users). Guarantees permanent liquidity even if providers withdraw.",
   rwa: "Real World Assets, real-world assets (Treasury bonds, real estate) tokenized on the blockchain. Offer performance uncorrelated to the crypto market.",
-  base_l2: "Layer 2 network on Ethereum, optimized for consumer-facing applications. KalMydas mainnet planned on Base.",
+  base_l2: "Layer 2 network on Ethereum, optimized for consumer-facing applications. KalMydas mainnet has been live on Base since May 1, 2026.",
 };
 
 /* ===== i18n ENGINE ===== */
@@ -445,10 +441,22 @@ const GLOSSARY_DEFS_EN = {
 
   let currentLang = detectInitialLang();
 
+  // Cache FR initial meta tag values to allow restoration when switching EN -> FR.
+  // Without this, switching language back to FR would leave EN meta tags in <head>,
+  // causing copy-paste of URL while in EN to share EN description even on a FR session.
+  const META_FR_CACHE = {};
+
   function cacheFR() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       FR_CACHE[el.getAttribute('data-i18n')] = el.innerHTML;
     });
+    // Capture FR meta tag initial values once for later restoration.
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) META_FR_CACHE._description = desc.content;
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) META_FR_CACHE._og_title = ogTitle.content;
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) META_FR_CACHE._og_description = ogDesc.content;
   }
 
   function applyLang(lang) {
@@ -464,6 +472,13 @@ const GLOSSARY_DEFS_EN = {
         el.innerHTML = I18N_EN[key];
       } else if (lang === 'fr' && FR_CACHE[key] !== undefined) {
         el.innerHTML = FR_CACHE[key];
+      } else if (lang === 'en') {
+        // T-017 (audit 2026-05-04): dev warning when an EN translation is missing
+        // for a data-i18n key. Element keeps its FR content silently otherwise,
+        // creating an undetected FR/EN mix.
+        if (typeof console !== 'undefined' && console.warn) {
+          console.warn('[i18n] EN translation missing for key:', key);
+        }
       }
     });
 
@@ -478,7 +493,13 @@ const GLOSSARY_DEFS_EN = {
       if (ogDesc) ogDesc.content = I18N_EN._og_description;
     } else {
       document.title = FR_CACHE._title || document.title;
-      // meta tags restore from cache would need special handling; left as-is for SEO
+      // Restore FR meta tags from cache (T-013, audit 2026-05-04).
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc && META_FR_CACHE._description) desc.content = META_FR_CACHE._description;
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle && META_FR_CACHE._og_title) ogTitle.content = META_FR_CACHE._og_title;
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc && META_FR_CACHE._og_description) ogDesc.content = META_FR_CACHE._og_description;
     }
 
     // Update glossary definitions
@@ -486,11 +507,19 @@ const GLOSSARY_DEFS_EN = {
       window._glossarySetLang(lang);
     }
 
-    // Update toggle button appearance
+    // Update toggle button appearance + aria-pressed for accessibility (T-015, audit 2026-05-04).
     const toggle = document.getElementById('langToggle');
     if (toggle) {
-      toggle.querySelector('.lang-option[data-lang="fr"]').classList.toggle('active', lang === 'fr');
-      toggle.querySelector('.lang-option[data-lang="en"]').classList.toggle('active', lang === 'en');
+      const frOpt = toggle.querySelector('.lang-option[data-lang="fr"]');
+      const enOpt = toggle.querySelector('.lang-option[data-lang="en"]');
+      if (frOpt) {
+        frOpt.classList.toggle('active', lang === 'fr');
+        frOpt.setAttribute('aria-pressed', lang === 'fr' ? 'true' : 'false');
+      }
+      if (enOpt) {
+        enOpt.classList.toggle('active', lang === 'en');
+        enOpt.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+      }
     }
 
     // Re-init glossary click handlers for new elements
@@ -513,9 +542,10 @@ const GLOSSARY_DEFS_EN = {
     const nav = document.querySelector('.nav-links');
     if (nav) {
       const li = document.createElement('li');
-      li.innerHTML = `<div id="langToggle" class="lang-toggle" role="button" aria-label="Switch language">
-        <span class="lang-option active" data-lang="fr">FR</span>
-        <span class="lang-option" data-lang="en">EN</span>
+      // T-015 (audit 2026-05-04): role=group + aria-pressed buttons for screen readers.
+      li.innerHTML = `<div id="langToggle" class="lang-toggle" role="group" aria-label="Switch language">
+        <button type="button" class="lang-option active" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button>
       </div>`;
       // Insert before last <li> (the CTA button)
       const cta = nav.querySelector('.nav-cta');
