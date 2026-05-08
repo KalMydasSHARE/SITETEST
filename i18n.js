@@ -201,7 +201,7 @@ const I18N_EN = {
   faq_4_q: "Is future performance guaranteed?",
   faq_4_a: "No. The figures shown are based on historical backtests (up to 21 years of data). Past performance does not guarantee future results. Trading involves risk of capital loss.",
   faq_5_q: "What are the fees?",
-  faq_5_a: "No entry or exit fees. The only fees are performance fees (10% to 20% depending on strategy) charged only on new gains thanks to the High-Water Mark system. You only pay when you profit.",
+  faq_5_a: "No entry or exit fees. Performance fees of 8% to 20% depending on strategy, charged on new gains thanks to the High-Water Mark system. Annual management fees of 1% to 2.5% depending on the pool.",
   faq_6_q: "Do I need a crypto wallet to use KalMydas?",
   faq_6_a: "No. You can sign in with a simple email or Google account. A wallet is created automatically for you through Privy. Advanced users can also connect their own wallet (MetaMask, etc.).",
   faq_7_q: "Are the contracts audited?",
@@ -582,5 +582,4 @@ const GLOSSARY_DEFS_EN = {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
-  }
-})();
+  
