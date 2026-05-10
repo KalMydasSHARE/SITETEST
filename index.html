@@ -1446,6 +1446,133 @@
     </div>
   </section>
 
+  <!-- ===== COUNTDOWN PHASE ALPHA ===== -->
+  <div id="phaseAlphaCountdown" class="phase-countdown fade-in" role="region" aria-live="polite" aria-label="Compte à rebours Phase Alpha" style="background: linear-gradient(180deg, rgba(11,18,38,0.85), rgba(20,30,60,0.85)); border-top: 1px solid rgba(190,165,110,0.22); border-bottom: 1px solid rgba(190,165,110,0.22); padding: 1.8rem 1rem; text-align: center;">
+    <div class="phase-countdown-inner" style="max-width: 760px; margin: 0 auto;">
+      <p class="phase-countdown-label" data-i18n="countdown_label" style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem; font-family: var(--font-display); letter-spacing: 0.08em; text-transform: uppercase;">Phase Alpha se termine dans</p>
+      <div class="phase-countdown-grid" style="display: flex; justify-content: center; align-items: flex-start; gap: 0.6rem; flex-wrap: nowrap;">
+        <div class="phase-countdown-unit" style="display: flex; flex-direction: column; align-items: center; min-width: 64px;"><span class="phase-countdown-value" id="phaseCdDays" style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 700; color: var(--gold-light); line-height: 1; font-variant-numeric: tabular-nums;">00</span><span class="phase-countdown-unit-label" data-i18n="countdown_days" style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem;">jours</span></div>
+        <span class="phase-countdown-sep" aria-hidden="true" style="font-size: 2rem; color: rgba(190,165,110,0.3); font-family: var(--font-display); font-weight: 300; line-height: 1; padding-top: 0.2rem;">:</span>
+        <div class="phase-countdown-unit" style="display: flex; flex-direction: column; align-items: center; min-width: 64px;"><span class="phase-countdown-value" id="phaseCdHours" style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 700; color: var(--gold-light); line-height: 1; font-variant-numeric: tabular-nums;">00</span><span class="phase-countdown-unit-label" data-i18n="countdown_hours" style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem;">heures</span></div>
+        <span class="phase-countdown-sep" aria-hidden="true" style="font-size: 2rem; color: rgba(190,165,110,0.3); font-family: var(--font-display); font-weight: 300; line-height: 1; padding-top: 0.2rem;">:</span>
+        <div class="phase-countdown-unit" style="display: flex; flex-direction: column; align-items: center; min-width: 64px;"><span class="phase-countdown-value" id="phaseCdMinutes" style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 700; color: var(--gold-light); line-height: 1; font-variant-numeric: tabular-nums;">00</span><span class="phase-countdown-unit-label" data-i18n="countdown_minutes" style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem;">minutes</span></div>
+        <span class="phase-countdown-sep" aria-hidden="true" style="font-size: 2rem; color: rgba(190,165,110,0.3); font-family: var(--font-display); font-weight: 300; line-height: 1; padding-top: 0.2rem;">:</span>
+        <div class="phase-countdown-unit" style="display: flex; flex-direction: column; align-items: center; min-width: 64px;"><span class="phase-countdown-value" id="phaseCdSeconds" style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 700; color: var(--gold-light); line-height: 1; font-variant-numeric: tabular-nums;">00</span><span class="phase-countdown-unit-label" data-i18n="countdown_seconds" style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem;">secondes</span></div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    // ============================================================
+    // COUNTDOWN PHASE ALPHA — kalmydas.com
+    // ------------------------------------------------------------
+    // RUNBOOK : NE PAS modifier PHASE_ALPHA_END sans rebuild
+    // ET annonce préalable côté communication.
+    // Date de fin Phase Alpha = début Phase Beta selon le calendrier V5
+    // (cf. CLAUDE.md HOME et marketing/decisions/00_DECISIONS_V5_SOURCE_VERITE_2026-05-02.md).
+    // ============================================================
+    var PHASE_ALPHA_END_FALLBACK = new Date('2026-07-15T09:00:00Z').getTime();
+    var endsAt = PHASE_ALPHA_END_FALLBACK;
+
+    // ------------------------------------------------------------
+    // VARIANTE A (on-chain) — désactivée par défaut, à activer après
+    // confirmation par AGENT AUDIT BLOCKCHAIN.
+    // Adresse KalPresaleV2 (Base mainnet) : 0x6681bb5f980E0D9ae56B0E72e94F21A3F249782A
+    // Méthode : getTier(uint256) — selector 4 octets à confirmer.
+    // Struct Tier retournée (ordre des champs) :
+    //   [0] pricePerKal (offset 0)
+    //   [1] kalAvailable (offset 32)
+    //   [2] kalSold (offset 64)
+    //   [3] bonusBPS (offset 96)
+    //   [4] maxPerWallet (offset 128)
+    //   [5] startTime (offset 160)
+    //   [6] endTime (offset 192)  ← VALEUR CIBLE en secondes UNIX
+    //   [7] active (offset 224)
+    // Si endTime = 0 (« unlimited » selon NatSpec L50) ou si le RPC échoue,
+    // on conserve PHASE_ALPHA_END_FALLBACK sans afficher d'erreur.
+    // RPC public Base : https://mainnet.base.org (fallback https://base.llamarpc.com).
+    // Cache 60 s.
+    // ------------------------------------------------------------
+    // function readOnChainEndTime() {
+    //   var PRESALE = '0x6681bb5f980E0D9ae56B0E72e94F21A3F249782A';
+    //   var SELECTOR = '0xXXXXXXXX'; // à confirmer keccak256("getTier(uint256)")[0:4]
+    //   var data = SELECTOR + '0000000000000000000000000000000000000000000000000000000000000000'; // tierIndex = 0
+    //   return fetch('https://mainnet.base.org', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'eth_call',
+    //       params: [{ to: PRESALE, data: data }, 'latest'] })
+    //   }).then(function (r) { return r.json(); }).then(function (j) {
+    //     if (!j || !j.result || j.result === '0x') return;
+    //     var hex = j.result.slice(2);
+    //     var endTimeHex = hex.slice(384, 448); // octets 192-223 = chars 384-447
+    //     var endTimeSec = parseInt(endTimeHex, 16);
+    //     if (endTimeSec > 0) {
+    //       endsAt = endTimeSec * 1000;
+    //     }
+    //   }).catch(function () { /* fallback silencieux sur PHASE_ALPHA_END_FALLBACK */ });
+    // }
+
+    var i18nFR = { ended_label: 'Phase Alpha terminée.', ended_link: 'Voir la suite' };
+    var i18nEN = { ended_label: 'Phase Alpha ended.', ended_link: 'See what comes next' };
+
+    function getLang() {
+      // Lit le cookie km_lang (cross-subdomain kalmydas.com) puis la query ?lang=fr|en
+      try {
+        var m = document.cookie.match(/(?:^|; )km_lang=([^;]+)/);
+        if (m && (m[1] === 'fr' || m[1] === 'en')) return m[1];
+        var q = (location.search || '').match(/[?&]lang=(fr|en)\b/);
+        if (q) return q[1];
+      } catch (e) {}
+      return (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase() === 'en' ? 'en' : 'fr';
+    }
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function renderEnded() {
+      var el = document.getElementById('phaseAlphaCountdown');
+      if (!el) return;
+      var dict = getLang() === 'en' ? i18nEN : i18nFR;
+      el.innerHTML = '<div class="phase-countdown-inner" style="max-width: 760px; margin: 0 auto;">' +
+        '<p class="phase-countdown-end" style="font-size: 1.05rem; color: var(--gold-light); font-family: var(--font-display); letter-spacing: 0.04em;">' +
+        dict.ended_label +
+        ' <a href="#presale-schedule" style="color: var(--gold-light); text-decoration: underline; margin-left: 0.4rem;">' + dict.ended_link + '</a>' +
+        '</p></div>';
+    }
+
+    function update() {
+      var diff = endsAt - Date.now();
+      if (diff <= 0) { renderEnded(); return; }
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      var elD = document.getElementById('phaseCdDays');
+      var elH = document.getElementById('phaseCdHours');
+      var elM = document.getElementById('phaseCdMinutes');
+      var elS = document.getElementById('phaseCdSeconds');
+      if (elD) elD.textContent = pad(d);
+      if (elH) elH.textContent = pad(h);
+      if (elM) elM.textContent = pad(m);
+      if (elS) elS.textContent = pad(s);
+    }
+
+    function start() {
+      update();
+      setInterval(update, 1000);
+      // Activer après confirmation AUDIT BLOCKCHAIN :
+      // readOnChainEndTime();
+      // setInterval(readOnChainEndTime, 60000);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', start);
+    } else {
+      start();
+    }
+  })();
+  </script>
+
   <!-- ===== STATS BAR ===== -->
   <div class="stats-bar fade-in">
     <div class="stat-item">
@@ -2736,4 +2863,4 @@
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

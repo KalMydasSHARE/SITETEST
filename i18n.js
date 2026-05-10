@@ -29,6 +29,13 @@ const I18N_EN = {
   hero_btn_primary: `Launch app <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   hero_btn_secondary: "View strategies",
 
+  /* ===== COUNTDOWN PHASE ALPHA ===== */
+  countdown_label: "Phase Alpha ends in",
+  countdown_days: "days",
+  countdown_hours: "hours",
+  countdown_minutes: "minutes",
+  countdown_seconds: "seconds",
+
   /* ===== STATS ===== */
   stat_1_label: "Trading robots",
   stat_2_label: `Of <span class="g-term" data-g="backtest">backtested</span> data`,
@@ -572,14 +579,4 @@ const GLOSSARY_DEFS_EN = {
     // cap cannot desynchronize the user's language choice.
     installCrossSubdomainClickShim();
 
-    // Apply saved language preference
-    if (currentLang === 'en') {
-      applyLang('en');
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  
+    // Apply saved language prefere
