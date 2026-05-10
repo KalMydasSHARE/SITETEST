@@ -35,6 +35,7 @@ const I18N_EN = {
   countdown_hours: "hours",
   countdown_minutes: "minutes",
   countdown_seconds: "seconds",
+  countdown_cta: `Join the presale <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
 
   /* ===== STATS ===== */
   stat_1_label: "Trading robots",
@@ -573,10 +574,4 @@ const GLOSSARY_DEFS_EN = {
 
     // If we arrived with ?lang=XX (came from another subdomain), promote it to cookie and
     // strip the query so it does not pollute copy/paste of the URL.
-    cleanLangFromUrl();
-
-    // Decorate outgoing links to sibling subdomains with ?lang=XX so Safari ITP's 7-day cookie
-    // cap cannot desynchronize the user's language choice.
-    installCrossSubdomainClickShim();
-
-    // Apply saved language prefere
+    c

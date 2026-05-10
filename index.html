@@ -1447,7 +1447,7 @@
   </section>
 
   <!-- ===== COUNTDOWN PHASE ALPHA ===== -->
-  <div id="phaseAlphaCountdown" class="phase-countdown fade-in" role="region" aria-live="polite" aria-label="Compte à rebours Phase Alpha" style="background: linear-gradient(180deg, rgba(11,18,38,0.85), rgba(20,30,60,0.85)); border-top: 1px solid rgba(190,165,110,0.22); border-bottom: 1px solid rgba(190,165,110,0.22); padding: 1.8rem 1rem; text-align: center;">
+  <div id="phaseAlphaCountdown" class="phase-countdown fade-in" role="region" aria-live="polite" aria-label="Compte à rebours Phase Alpha" style="background: linear-gradient(180deg, rgba(11,18,38,0.85), rgba(20,30,60,0.85)); border-top: 1px solid rgba(190,165,110,0.22); border-bottom: 1px solid rgba(190,165,110,0.22); padding: 1.8rem 1rem 4.5rem; text-align: center;">
     <div class="phase-countdown-inner" style="max-width: 760px; margin: 0 auto;">
       <p class="phase-countdown-label" data-i18n="countdown_label" style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem; font-family: var(--font-display); letter-spacing: 0.08em; text-transform: uppercase;">Phase Alpha se termine dans</p>
       <div class="phase-countdown-grid" style="display: flex; justify-content: center; align-items: flex-start; gap: 0.6rem; flex-wrap: nowrap;">
@@ -1458,6 +1458,12 @@
         <div class="phase-countdown-unit" style="display: flex; flex-direction: column; align-items: center; min-width: 64px;"><span class="phase-countdown-value" id="phaseCdMinutes" style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 700; color: var(--gold-light); line-height: 1; font-variant-numeric: tabular-nums;">00</span><span class="phase-countdown-unit-label" data-i18n="countdown_minutes" style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem;">minutes</span></div>
         <span class="phase-countdown-sep" aria-hidden="true" style="font-size: 2rem; color: rgba(190,165,110,0.3); font-family: var(--font-display); font-weight: 300; line-height: 1; padding-top: 0.2rem;">:</span>
         <div class="phase-countdown-unit" style="display: flex; flex-direction: column; align-items: center; min-width: 64px;"><span class="phase-countdown-value" id="phaseCdSeconds" style="font-size: 2.4rem; font-family: var(--font-display); font-weight: 700; color: var(--gold-light); line-height: 1; font-variant-numeric: tabular-nums;">00</span><span class="phase-countdown-unit-label" data-i18n="countdown_seconds" style="font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.4rem;">secondes</span></div>
+      </div>
+      <div class="phase-countdown-cta" style="margin-top: 1.4rem;">
+        <a href="https://app.kalmydas.com/presale/" data-i18n="countdown_cta" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold-light); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 0.7rem 1.4rem; border: 1px solid rgba(201,168,76,0.5); border-radius: 8px; transition: all 0.2s ease; font-family: var(--font-display); letter-spacing: 0.02em;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='transparent'">
+          Rejoindre la prévente
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </div>
   </div>
@@ -1513,8 +1519,8 @@
     //   }).catch(function () { /* fallback silencieux sur PHASE_ALPHA_END_FALLBACK */ });
     // }
 
-    var i18nFR = { ended_label: 'Phase Alpha terminée.', ended_link: 'Voir la suite' };
-    var i18nEN = { ended_label: 'Phase Alpha ended.', ended_link: 'See what comes next' };
+    var i18nFR = { ended_label: 'Phase Alpha terminée. Phase Beta ouverte le 15 juillet 2026.' };
+    var i18nEN = { ended_label: 'Phase Alpha ended. Phase Beta open on July 15, 2026.' };
 
     function getLang() {
       // Lit le cookie km_lang (cross-subdomain kalmydas.com) puis la query ?lang=fr|en
@@ -1536,7 +1542,6 @@
       el.innerHTML = '<div class="phase-countdown-inner" style="max-width: 760px; margin: 0 auto;">' +
         '<p class="phase-countdown-end" style="font-size: 1.05rem; color: var(--gold-light); font-family: var(--font-display); letter-spacing: 0.04em;">' +
         dict.ended_label +
-        ' <a href="#presale-schedule" style="color: var(--gold-light); text-decoration: underline; margin-left: 0.4rem;">' + dict.ended_link + '</a>' +
         '</p></div>';
     }
 
@@ -2863,4 +2868,4 @@
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
