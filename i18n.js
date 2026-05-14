@@ -574,4 +574,21 @@ const GLOSSARY_DEFS_EN = {
 
     // If we arrived with ?lang=XX (came from another subdomain), promote it to cookie and
     // strip the query so it does not pollute copy/paste of the URL.
-    c
+    cleanLangFromUrl();
+
+    // Decorate outgoing links to sibling subdomains with ?lang=XX so Safari ITP's 7-day cookie
+    // cap cannot desynchronize the user's language choice.
+    installCrossSubdomainClickShim();
+
+    // Apply saved language preference
+    if (currentLang === 'en') {
+      applyLang('en');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
